@@ -1,0 +1,12 @@
+version: 0.1
+fields:
+  evidence: {type: list, required: true}
+  facts: {type: list, required: true}
+  hypotheses: {type: list, required: true}
+  assumptions: {type: list, required: true}
+  recommendation: {type: object, required: false}
+  risks: {type: list, required: true}
+  unresolved_questions: {type: list, required: true}
+  confidence: {type: string, required: true}
+  human_decision_required: {type: list, required: true}
+  provenance: {type: list, required: true}
