@@ -1,0 +1,128 @@
+Now it's time to talk about one of the most important topics in growth, retention.
+
+This is just going to be an introduction as to why retention is impactful. What the f different stages of retention are? And then also what are the differences between activation and retention? Because I think when people talk about retention, they often get those two confused. We'll also talk a bit about KPIs in each stage to help give you an idea of how you can measure each part of the journey.
+
+Now, when it comes to why retention is important, it's so much, it barely fits onto one slide. There's really a huge amount of reasons as to why we need to focus in on retention from the fact that it actually reduces the number of new customers we need, which makes it a lot easier to scale, because customer acquisition is often where the bottleneck is.
+
+It also means we save a lot in terms of marketing budget. New customers cost more to acquire, and they often also cost more to onboard. Versus actually keeping customers on board. Means we end up with more profitable customers, and it reduces overall the average cost per customer.
+
+As I mentioned, customer acquisition is often where the challenges are, because for a lot of channels, it actually increases in terms of cost with scale, rather than decreasing, making it harder and harder to keep scaling with the same churn amount. Because as you're growing, 5% might not feel so bad at a small amount, but as you get bigger and bigger, that's a lot more to replenish every single month.
+
+It also helps improve your lifetime value, how much value you get per customer. And that makes you competitive in the market. It means you able to have that higher cost of acquisition as well. It also drives word of mouth because happy customers who stay longer tend to recommend other people more, driving more revenue for that.
+
+You get the stronger community all around which drives also additional value for other customers. People talking about it, helping each other, supporting each other. And those closer relationships with those customers also means you can get more product insights. You can ask them questions and learn more. And that helps drive this really strong brand loyalty. So when you then mess up, which we all do at times, they're much more forgiving those retained customers versus a new customer.
+
+Bad experience on your first order versus on your fifth is very different. On your fifth, if they solve it in a good way, you're more likely to forgive them than maybe with the first, where you don't trust them, and you're a bit skeptical.
+
+And that customer base also then is ready to buy future things, making it easy to extend your line and get new things on board. And it's also easy to get them to review because these longer-term happier customers are more likely to leave a review and give feedback.
+
+So I hope this is enough to convince you just how important retention is and why it really matters. It's driving so much value. Not just in terms of revenue, but in terms of that whole community, that whole thing you're building around your brand for the long term.
+
+But what are the stages of retention? So, I really like to break it down into three stages, and this is a diagram I made together with Forston Schafs from Hello Grove, and we talked about the first stage being that onboarding, that WOW moment.
+
+And this is where a lot of brands, especially those with average retention tend to lose a lot of customers. There tends to be quite a big drop-off here.
+
+Then move into phase two, the habit phase, the ongoing usage of the product. And then the final phase is that drop-off, churn. It's where we're losing those customers.
+
+And this is where a lot of people get caught up on, but I hope you'll see that actually focusing more on phase one and phase two is much more impactful. And a brand that has a strong versus an average retention curve will lose fewer people in that final stage and have fewer people drop off over time.
+
+So that first stage, the onboarding and activation of it. The duration of this really varies per rand. It's all about that time to see value and a complexity of actions. I would say a customer is activated, once they've hit a point of using your product or your service as a habit. And once they've gotten into the habit of it, that's when they move to that ongoing part. Your activation rate is usually calculated by defining how many users are activated, divided by the users that have signed up to use it. And that helps you work out how many people are actually starting to actively use it. And as a result, are more likely to stay.
+
+Onboarding is a really, really key part of this. I've already said it. A lot of people jump to reduce churn, but that big drop-off, we lose a lot of people at the beginning.
+
+So we're better off seeing how can we reduce that? And there's a major opportunity here because if we reduce this part, if we make sure that they actually get free to onboard and get to the WOW moment, they're more likely to stay around for long term. And what I've seen is that a few small adjustments in your onboarding can actually be very, very impactful because they just set customers up for success. They ensure that they understand how and why they should keep using it. What do activation metrics look like?
+
+The way of measuring this first phase? Let's look at it per business type, because it will vary a bit. And there isn't one metric for each business type, but this should hopefully give you an idea so that you can think about your own business and work out what activation metric would be relevant.
+
+So for SAS. It usually has to be a valuable metric that suggests that they've actually used the software and gotten value from it. So I would say just signing up is not a good indication of activation.
+
+That's a good indication of acquisition, but it doesn't mean that they've actually started using it. If we take something like Loom, which allows you to record little videos of your screen or yourself, to share with team members or to share with other people, you know, they might use something like free videos created with Loom with at least one view of a video, because that means that someone's using They definitely know how it works and have gotten value from it to use it more than a few times?
+
+And they've gotten at least one person to view it, which means that they're actually able to share it and use it for someone else? Obviously, this depends? Is the value in recording or is it in sharing? But if they think it's in sharing, they might do that.
+
+Now, obviously, they wouldn't just decide this on a whim. They've done all kinds of, like, research behind it to actually measure how it correlates. But assuming that's the case, this could be a really good activation metric photo.
+
+Now, ECMs. Here is always the challenge with a physical product. Are they actually using it? Have they actually gotten value from it? So for an activation metric, I usually suggest, instead of that, if they're ordering more often, focus on the second or third order.
+
+It can be that first order. But for me, that is really more an acquisition metric, and I'd rather have some other type of activation metric to make sure that they're actually using it.
+
+For example, LV is a personalized supplement brand I've worked with in the past. What they found is that once they hit three months, they're much more likely to stay.
+
+They're kind of pivot a point and that churn curve shows, Okay, from that point on, we lose a lot fewer people because they've gone from trying and activating to a habit. So for them, the activation metric might be three-month retention rate to actually see, like, Okay, are people staying at least at that point.
+
+For an app, you want to look at what the key value is, and you might have one action, but you might have multiple within a time period. So for something like Peaton, where they have cycling and lots of other workouts, they might focus on free workouts completed in the first 14 days. Again, they probably worked out what the right amount is, but they might see, hey, that actually correlates with people using it more frequently.
+
+And so they'll do everything they can that once someone's actually downloaded it to try and get as many people as possible to doing at least three workouts.
+
+With a marketplace, you're going to have two sides of it. Whilst with the North Su metric, the focus is really to have one metric that reflects both. I think in the activation case, it can be okay to have two activation metrics to make sure that both sides are getting the value. And there'll often be two sides of a similar action. So Hack job, another brand I've worked with in the past, they're a job-seeking platform, and they have developers and scale-ups on there. So lots of different developers, tech people looking for new roles, and scale-ups who are looking to hire.
+
+So they're likely to have two metrics. One that applies like, Hey, they've applied to their first job as an activation metric on the developer side. And on the scale-up side, it might be something like posting the first job because that means they've actually started actively looking. If they're really expecting that they're going to get a high volume of, quickly filled jobs, they might even say, like, Okay, the activation metric is first hire.
+
+Or if they're finding that a lot of companies are posting jobs and not actually finding anyone with it, they might say, like, instead, let's focus on the first interview to show that someone's actually got through that stage.
+
+It will all depend on what they can and can't measure. They'll probably have a few different activation metrics throughout it to measure the different steps along the way.
+
+I think it's really okay with activation to have a few different metrics but to really understand what the main overall activation metric is that best reflects value has been delivered. Let's move on to the retention side, so that the phase two part of it. Here, they've activated, and we're really focused on a habit, building ongoing usage for the long term, and making sure that they're constantly getting value out of it. Now, the duration of this again, depends so much per product. With a high-usage product, you might be focusing on that they're using it one day or one week. With a low-usage product, we might be looking at, like, every two weeks, using it, every one month.
+
+You really want to get the right metric that makes sure that they're using it at the right amount for what they need it for. I do try to focus on at least once a month because any less than that is really hard to build a habit around. For this, I absolutely love Nara Al's habit loop. He revised the traditional habit loop to add another step of investment. And shows it as this typical little figure eight.
+
+This is what Phase two is about, creating this habit. Understanding what triggers drive people to use it. These can be internal triggers. So emotions, things triggering us to take action, but they can also be external triggers, things that we do, like notifications, e-mails, SMS, to drive people to actually use the product.
+
+From there, it's the action. What is the behavior that we want them to take? How are they then rewarded for that and left to be wanting more? And what is also the investment that they can do? That little bit of extra work that increases the chance that they come back. Because once we've invested in something and put more into it, we're more likely to keep using it because there's this switching cost of moving to something new.
+
+Here are again, some examples of different retention metrics that different types of businesses might be looking at. With SAS, they're probably going to be looking at things like churn rate, monthly recurring revenue. What is the net promoter score? The customer lifetime value? How much is each customer worth?
+
+And it can also be valuable to break down and understand segments based on what engaged looks like and dormant looks like, to understand which percentage of customers right now are engaged, which percentage are dormant? And how is that changing over time? With ECMs, they're probably going to be looking more at things like repeat purchase rate. They may also have a subscription, in which case, they're looking at more similar metrics to the SA side.
+
+They'll be looking at things like first to second order rate, second to third, third to fourth order, to work out where they're losing people in that journey. Again, customer lifetime value, a very important metric for retention. They'll also be looking at things like average order value.
+
+This isn't necessarily an indication of, are they retaining better, but sometimes what you see is that people are ordering more in one go. And as a result, they're not purchasing as quickly again. And so that average time between orders increases. And that might look like a bad thing.
+
+But if it's more profitable to have a higher average order value and slightly lower frequencies of purchases, you might choose for that. And that's why it's important to keep an eye on that metric as well. And then there's also return rate. How often are they returning products and are unhappy with it?
+
+Because that can also be a sign that your attention will be going down. For a b2c app, they'll be looking also at like A rate. But they'll probably also look at something like daily or weekly, or monthly active users, as well, and also the app stickiness, how quickly are people coming back, how frequently are they using it?
+
+They might also look at retention rate per relevant time period? What percentage are coming back within that time period? Again, customer lifetime value, very important. And they also will likely look at those engaged dormant users.
+
+And then finally with the marketplace, they might also look at other metrics like buyer retention versus seller retention, average revenue per user. And also, what is that net promoter score?
+
+Again, they might look at it per side of the market and frequency of transactions. So the metrics will vary slightly per organization, and it's often that they'll have quite a few different metrics that they'll be looking at to gauge, how is retention going, and where are the issues? So activation versus retention. Now, a lot of brands say they have a retention problem, but if we actually see where people are dropping off, it's in that first phase. And that means that they actually have an activation problem. People haven't got into the habit of using their product. They haven't hit a wow moment.
+
+They haven't actually seen the value. And so that whole phase is actually focused on activating rather than retaining. It's about successfully onboarding customers and getting them set up and driven to keep using the product, making sure that that value is important for them. While, if we compare it with, Phase two and three, that's more about that habit, keeping them on board, continuing to deliver value. It's very different focus points and very different actions.
+
+So if you see that high drop-off in that first phase, don't get caught up on trying to keep them, but instead make sure that you're getting them to the value moment and that the value moment is there in that first phase.
+
+As mentioned before, activation and retention can get a bit mixed up. Because a lot of people say they have a retention problem, but they're losing people in phase one.
+
+And so if you need to focus on that first phase before people have actually hit that WOW moment and have gotten into a habit of your product, you actually have an activation problem. They don't understand the value of it. So of course, they're not retaining.
+
+So if they aren't getting to that value moment, you really need to focus on onboarding them and getting that set up right, versus if they are getting on boarded correctly and they are getting the value, but then stopping with using it, it's a lot less about that, but keeping them on board, making sure that they're continuing to get value, continuing to build that habit. An example of this is QuickBooks. Now, QuickBooks is a B2B accounting software, and one of their target audiences is freelancers. Imagine if they saw a high drop-off in the first month of signups of the freelancers.
+
+Now, they'd probably then think, Okay, we've got an activation issue. And what they would be looking at is like, Okay, which actions do the people take that stay longer than just the first month versus those that don't? So what is actually driving activation?
+
+How many people have actually started setting up their clients in there or added expenses, things like that, for example, could be an indication that they've activated. Now, in comparison, let's say they see people stopping after a year.
+
+What's important with this is not just the period of, like, okay, if they've got a year subscription, and they stop after that, but they haven't used it, that still might be an activation issue. 
+
+If they've been on there for a year and they have actively used it or they've gone past kind of the reset period of when they should be paying again, and they've chosen to pay again, not just because they forgot it, but because they wanted to use it. We might look instead at very different things. We'll be looking at frequency of usage of those who left versus those who stayed. We'd look at what type of usage is driving it, and also understanding, well, what did their needs change over time? Maybe the freelancer grew in terms of their business, and it was too much work to use QuickBooks, and they changed a different software. 
+
+So, if they've activated, does it always mean that they've seen the value? Well, It could be that when I started out as a freelancer, as a customer of Quickbooks, I used it because someone recommended it, or accountant showed me how to set up my first invoice. It doesn't mean that I've automatically seen the value. What I'm trying to say with this is, like, just because they've activated and they are on it, it doesn't mean that they fully are understanding the value. It should be, but there's always cases like this where there are exceptions. 
+
+So if you saw, yes, they activated, yes, they used it in the beginning, but they weren't using it very frequently afterwards, you could still actually have an activation. And that's where the Gardner Hype curve is really important to understand. This idea of false activation. This is really important with new technologies or like hype technologies, but it's still relevant to understand, if, for example, you have a lot of people who are being onboarded by others, or they're being referred onboard, is that when we have this adoption of new technology, what we see is that there's excitement in the beginning. And there's this type of short term gratification versus long term value that's been gained. But once that short term gratification kind of wears off, we tend to lose people. 
+
+So a lot of people sign up, activate, but they don't keep using it. You see this sometimes with these new social media platforms that gain a huge amount of people on there who all make an account and maybe do a first post or consume a first piece of content, but they don't come back. And with those, I would say it's still an activation problem because they've never actually seen the value. Even though they've appeared to activate, They never even got close to that habit point, because they were just buying into that hype. And to get out of this, it's really important to focus on this long term education and value adding and inserting moments also to check in on them and reiterate that value again and again and understand what they're struggling with.
+
+The final phase is that churn deflection and win back part. This is that pace free. And again, brands can really get caught up on this pace. The amount of brands I've had who've been like, Yeah, we're just going to do a win back campaign to get our customers back. Because we've got a retention issue. But it's too late. This is the last phase. Yes, there is a chance that they come back, but it's just not as high as with a new customer. You can win back part of it, but it is going to be a lot challenging. And the percentage you'll actually get coming back, versus focusing on keeping your existing customers is a lot lower. So we often grossly overestimate what we can do here, and it's less favorable than focusing on activation or retention. So try to really focus on if someone is canceling, how can you stop them, or if they have canceled already, how can you get them back? For a physical product, this can be quite hard to do. 
+
+With a subscription, it's quite a clear moment. They've gone in, they've canceled, they've said they're leaving. And there's a moment you can stop them. With a physical product, it's like, are they coming back, or are they not coming back? Have they just not ordered for a while? Have they ordered a lot and one go? And I've even seen physical brands be like, Why did you leave me? And the customers like, No, I didn't. I just still have stock. Like, calm down. And it's because order and usage frequency can change. So what I usually tried to look at is like, Okay, this is normally the average time that someone would reorder. And then I look at like two to four times that average frequency, depending on what the range is for that brand. If there's a really big range in terms of how often people order, I tend to look at a longer phase.
+
+So for holes up, a brand where I'm working for right now, they're a super food meal shape. They have 15 portions per bag. Well, if customers consume on average three or four times a week, which we know they do, then that means that they're getting through one bag in about three to five weeks, depending on how often they're using it. So, if a customer has an order for ten weeks, we can be quite confident that if they've only bought one bag, they may have churned in our perception. We can use the data to understand this, like how many customers who didn't order after ten weeks suddenly did return to make sure we're not jumping the gun. But we can also just make sure we ask the question in a way that we're not saying, Hey, you've churned. But just checking in on them. Why have you ordered in a while? What's going on? Is there any feedback?
+
+With digital products instead, we'll be focusing on, okay, inactive customers who are still subscribed. So customers not using the products as dormant customers, because they're a churn risk. We'll be looking at what percentage of churn per period that we're looking at. How many are we able to deflect with a cancellation, and how many canceled customers can we actually get to repurchase. And that will also give us an indication of how impactful it is to keep focusing on these areas. But we can see with our first efforts, what we've managed to do. With this, I think it's really important to be aware of those sleeping bears. I think this is where the biggest impact comes on the Churn side, because it's again focusing that step earlier. So Elena Verner, who's a BTB SAS product led growth and sales expert, She says, these customers are like sleeping bears. If you prod them, you might cause them to wake up. And so it's this almost risk that you've got the sleeping bear in your way. If you prod it, it wakes up and they leave, but if you don't prod it, you're just creating a false sense of strong retention, and also creating a negative experience because no one's happy to be paying for something that they forgot that they were paying for and that they're not getting value of.
+
+And so, again, physical products, it's hard to find these sleeping bears. So we instead need to look at other signs and be aware of those sleeping bears, because it's an indicator that we might not have a retention problem now, but we might be expecting a huge churn and that drop off to come. So for E commerce, it's more like who's not opening any e mails anymore? Are they actually engaging online with us, loyalty programs, getting those in between moments, and using things like surveys and user interviews to gauge how people are feeling. 
+
+So you really want to design your metrics around retention to not be scared to focus on prodding them. And that you instead focus on reducing the amount of bears that basically fall asleep, so focusing on those earlier stage metrics. And we again need to target those customers who are inactive or hitting that inactive part with specific communication, but even better building into the product a way to keep them active and get value and get them to come back. Because there's a lot we can do with communication around it, but especially with a digital product, there's a lot of ways we can build it into the product. So to do this, what are the signs they're going to churn and what lack of actions correlates strongly with canceling. And identifying those can help us prevent those sleeping bears. 
+
+So to recap what we've covered in this introduction to retention, there's three different stages with the first being all about activation, successfully onboarding your customers and getting them to that well moment. From there, it's about retaining the customers and building the strong habit loop, and then making sure that we prevent the churn and can win back those customers. And whilst this can be impactful, it's a lot less impactful than actually making sure they stay active in the first place, and that we focus on building the habit in.
+
