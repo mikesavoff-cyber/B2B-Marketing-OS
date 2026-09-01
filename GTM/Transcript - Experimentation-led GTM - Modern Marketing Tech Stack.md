@@ -1,0 +1,32 @@
+  
+So once we built our minimum viable marketing sprint and we start to see success here, the very next thing we need to figure out is our lead generation. What are we doing on platform to build people in? But while we're doing that, we also need to prepare our website for the next stage. This usually takes 2 or 3, even four weeks.
+
+So we're gonna be doing some parallel work here, and we'll be talking a little bit later about building your Legion campaigns. But let me start right now with what's a modern tech stack? What is it you need to build your marketing engine around so you understand everything you can about your buyer's journey? There are a few different pieces to your data stack, and I'm going to make some recommendations for what I tend to use.
+
+But there are tons of competitors for all of these, and long as you're covering each of these areas, you're probably going to be fine. The first one is what's happening on your website. And importantly, in your app. If you're a software product that is product lead, I cannot tell you how many times I see teams have a marketing website with Google Analytics and then their app has something written on read this, or they've got their own crazy MySQL database or whatever, and the marketing team can't see what happens after signup.
+
+The most important thing as a marketer, when you crossed from the attention gap into actual consideration, is one of the people doing in your websites app. And if you don't know that, then you can't steer the decisions that make money. So frequently data teams are going to go and your dev teams are going to go, I don't want Google Analytics in my app.
+
+It slows things down. There are ways to solve this. And if you take the Google Analytics four course from Kql, they talk about it. But making sure that you have the data picture in your app is crucial to being able to make money and scale. The next thing is you have to understand who your leads are because if I get an email address, sign up.
+
+That's, I don't know, someone's personal Gmail address. Right. I'm here in Texas today. Aggie fan, 79, signs up and you go, I don't know if this is a real person or not, but then with a lead insight tool, you discover, oh, they're CEO of a fortune 500 company. Cool. We probably want to do something with that lead now.
+
+So getting lead insight tools lets you understand for the majority of your leads, but never all of them who they are, what industry they're in, and give you the insight you need to understand who's actually making their way across the interest gap and the consideration gap and the decision gap, and who's not. Because just because we brought somebody to the website and they started to sign up, doesn't mean they made the whole journey through.
+
+Then we got to figure out how do we connect all of the data across all of the different places into I mean, data warehouse is the old fashioned term, but really we want to source source of truth. We want to figure out what do we believe is true. And there's always some room for numbers being not quite perfectly correct.
+
+But what do we believe to be true enough that all of us make decisions around it? I've been using segment for years. It's a very, very powerful. And the pricing is reasonable enough where if you want enterprise scale, this is going to solve it for you. And if you want enterprise scale, then you're probably writing something on your own.
+
+Then if you're doing recurring revenue, if that's part of your business model. I really like paddle as a way to understand new revenue, revenue expansion, revenue contraction, revenue churn, and even have ways to bring back churned revenue with reminder emails and trying to get folks to attach new credit cards when all want to expire. And then finally, you need to have the core piece of who's signing up, what's their information?
+
+How do you automate choices on SMS, email, content marketing, outreach, all of these things into one place? I use high level and have for a while now, but hubspot's a perfectly good choice and many people still use Salesforce when you have all of these pieces together, you've got basically for 320 bucks a month. The kind of thing that when I got started doing marketing 20 years ago, you might have spent 40 or 50 grand a month and you still wouldn't have all of this.
+
+This is a really modest investment in understanding what your business needs to know, to take people who've never heard of you and turn them into money. If you have any gaps in this, all this is quite reasonably priced and most any marketing team should be able to invest in this. Now, as you were building out your minimum viable sprints and as you were building out your Legion campaigns so that when you're ready to send traffic to a website, you're ready to do something with that traffic and not just kind of hope they sign up.
+
+So I've mentioned high level. I've mentioned HubSpot and Salesforce. I used to hold every single certification that HubSpot offered, and I even had Mike Volpi, the CMO at the time, come to speak at events I was doing because I was a big fan of HubSpot. I still am a big fan of HubSpot. If you need all of the tools it provides and if you're willing to invest the grand to five grand a month, that you need to really unlock all of those things.
+
+For a lot of marketers, that is worth it because they have tens or hundreds of thousands of contacts, and they need all the advanced automations and lead nurturing feature built in HubSpot. What you have to decide as the marketers watching this right now is, is that where my business is or is high level, which is, I would argue, about 80% of the toolset and about 10% of the price.
+
+Is that something you can work with for now at 100 bucks a month instead of a thousand bucks a month and build your business around it? Increasingly, as I'm working with companies that are doing less than 5 or 10 million a year in revenue. I tend to choose high level, and then eventually we might point over to HubSpot if it becomes necessary.
+
+This is a personal judgment call of yours. In this course, I'm going to be showing high level, but it's not a ironclad recommendation. If you use this, you succeed. And if you don't, you fail. Find the tool that works for you. As long as you have your lead, as long as you can reach out to them through email, through SMS, through WhatsApp, through Facebook Messenger, wherever you're bringing them in, you've got the right tool and you're ready to move forward.  
