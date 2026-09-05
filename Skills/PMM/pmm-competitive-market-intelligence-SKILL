@@ -1,0 +1,31 @@
+---
+name: pmm-competitive-market-intelligence
+description: 'Required reading before any positioning, messaging, ICP, storytelling, pricing, or launch work begins for a product — this is the mandatory research gate that produces the evidence those jobs depend on. Use whenever Mike gives you a product/homepage to work on and no current Market & Competitive Reality artifact exists yet for it, or when competitive/market facts need refreshing before a downstream PM job runs. Draws on the Competitive Intel discipline of the B2B Marketing OS: https://app.notion.com/p/3d019b7dd90881cf97b9e7473739b50b (Gathering Competitive & Market Insights for Startups, Mid-Market, and Enterprise; Competitive Newsletters for Product & the C-Suite; Developing a Competitive Strategy through Win/Loss).'
+---
+
+# Competitive & Market Intelligence
+
+## Goal
+One Market & Competitive Reality artifact: what the product actually claims about itself right now, who the real alternatives are, how they position, and what evidence (not assumption) exists about the competitive landscape. "Done" means every downstream PM job (ICP, Positioning, Messaging, Storytelling, Pricing, Launches) can build on this instead of guessing.
+
+## Why this runs first, always
+Positioning, ICP, and Messaging are strategic decisions. They cannot be made credibly from training-data assumptions about what a product or its competitors do — that's plausibility, not evidence. This job exists to replace assumption with current reality before any of those decisions get made. Nothing downstream should run without this artifact existing and being current.
+
+## Required input
+The product: homepage URL at minimum. Named competitors/alternatives if Mike knows them; otherwise identify likely ones from the homepage's own positioning and category signals.
+
+## What you must do — tools, not steps
+- **Firecrawl, first action, every time.** Pull the actual current homepage content. Pull 2-3 real competitor/alternative homepages — named by Mike if given, otherwise the ones the product's own copy implies it's competing against. Do not describe a competitor from memory without pulling their actual current page.
+- **MKT1 connector, alongside Firecrawl.** Check `mkt1_state_of_b2b_marketing_data` for the company by exact name. If relevant, run `mkt1_competitive_research` for a second read on the competitive set. Don't treat MKT1's ~150-company list as exhaustive — it's a supplementary source, not the only one.
+- **Apply the Notion methodology to structure what you find** — the Gathering Competitive & Market Insights transcripts (startup vs. mid-market vs. enterprise have different gathering approaches; use whichever matches the product's actual stage) and the Win/Loss transcript if any win/loss evidence exists to work from.
+
+## Constraints
+- Don't invent competitors that don't actually exist or aren't actually comparable — check what you pulled, don't pattern-match to "typical SaaS competitors."
+- Don't skip Firecrawl and rely on training knowledge of a well-known product — training data goes stale, homepages change.
+- Flag directly if evidence is thin (e.g., no win/loss data, no named competitors) rather than filling the gap with generic category assumptions.
+
+## Output artifact
+Market & Competitive Reality: what the product currently claims → who the real alternatives are and what they claim → observed differentiation or lack of it → confidence level per claim (confirmed via Firecrawl/MKT1 vs. inferred) → open questions that ICP/Positioning will need to resolve.
+
+## What's deliberately left open
+Which specific competitors matter most, how many to pull, how deep the win/loss research goes — scale to what the product and the request actually need.
