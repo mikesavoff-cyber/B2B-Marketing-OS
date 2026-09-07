@@ -1,0 +1,110 @@
+# PMM Strategy Foundation
+
+## Purpose
+
+Build the strategic foundation required before downstream PMM work.
+
+This workflow orchestrates existing skills. It does not contain
+the methodology for those jobs.
+
+## Execution sequence
+
+1. Market & Competitive Intelligence
+2. Segmentation & ICP
+3. Positioning
+
+Do not skip forward in this sequence.
+
+## Job 1 — Market & Competitive Intelligence
+
+Skill:
+pmm-competitive-market-intelligence-SKILL
+
+Required input:
+- product/company name
+- homepage URL
+
+Execute the skill completely.
+
+Required output:
+Market & Competitive Reality artifact.
+
+The artifact must contain:
+- current product claims
+- real alternatives
+- competitor claims
+- observed differentiation
+- evidence/confidence for claims
+- open questions
+
+Do not begin Job 2 until this artifact exists.
+
+## Job 2 — Segmentation & ICP
+
+Skill:
+pmm-segmentation-icp-SKILL
+
+Input:
+Market & Competitive Reality artifact produced by Job 1.
+
+Execute the skill completely.
+
+Required output:
+ICP Profile.
+
+Do not begin Job 3 until the ICP artifact exists.
+
+## Job 3 — Positioning
+
+Skill:
+pmm-positioning-SKILL
+
+Inputs:
+- Market & Competitive Reality
+- ICP Profile
+
+Execute the skill according to its own case classification
+and dependency rules.
+
+Do not invent missing upstream artifacts.
+
+## Artifact handoff
+
+Every completed job produces a named artifact.
+
+Job 1:
+Market & Competitive Reality
+
+Job 2:
+ICP Profile
+
+Job 3:
+Positioning Statement
+
+The next job reads the actual artifact produced by the previous
+job. It must not reconstruct the previous job from memory.
+
+## Failure handling
+
+If required input is missing:
+stop at that job.
+
+If required evidence cannot be obtained:
+produce the artifact with the evidence gap explicitly marked.
+
+If a methodology source cannot be retrieved:
+do not silently substitute model knowledge.
+
+If two sources disagree:
+surface the disagreement.
+
+If an upstream artifact is stale or invalid:
+do not proceed as though it were valid.
+
+## Completion
+
+The workflow is complete only when the requested jobs have produced
+their required artifacts.
+
+Never report a workflow step as complete merely because the skill
+was invoked.
