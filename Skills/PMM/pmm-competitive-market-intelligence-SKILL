@@ -1,279 +1,109 @@
 ---
 name: pmm-competitive-market-intelligence
-description: 'Required reading before any positioning, messaging, ICP, storytelling, pricing, or launch work begins for a product — this is the mandatory research gate that produces the evidence those jobs depend on. Use whenever Mike gives you a product/homepage to work on and no current Market & Competitive Reality artifact exists yet for it, or when competitive/market facts need refreshing before a downstream PM job runs. Builds a running insight log as it researches (KB cataloging method), tests every insight before logging it, stops at defined judgment checkpoints to get Mike''s call on the calls that need real experience rather than guessing them, then synthesizes live with the relevant MKT1 strategy tools before producing the final artifact. Draws on the Competitive Intel discipline of the B2B Marketing OS: https://app.notion.com/p/3d019b7dd90881cf97b9e7473739b50b (Gathering Competitive & Market Insights for Startups, Mid-Market, and Enterprise; Understanding Your Audience; Competitive Newsletters for Product & the C-Suite; Developing a Competitive Strategy through Win/Loss). Produces a compact, evidence-labeled intelligence artifact — not a polished report. For a client-ready or leadership-facing writeup built from that artifact, see the sibling file `pmm-competitive-market-intelligence-EXECUTIVE-REPORT-TEMPLATE.md` in this same folder, loaded only on explicit request.'
+description: 'Required before any positioning, messaging, ICP, storytelling, pricing, or launch work begins for a product. Produces one decisive strategic document — an executive bet on positioning, a market map built independently (not from the company's own claims), named buyer personas, a competitive narrative with sales attack lines, a GTM wedge, and a customer-research plan to validate all of it. Written the way a senior PMM director actually writes: a stance, not a survey. Use whenever Mike gives you a product/homepage to work on and no current Market & Competitive Reality document exists yet, or when it needs refreshing before downstream PM work runs. Draws on the Competitive Intel discipline of the B2B Marketing OS: https://app.notion.com/p/3d019b7dd90881cf97b9e7473739b50b (Gathering Competitive & Market Insights; Understanding Your Audience; Competitive Newsletters; Win/Loss). Live-runs the relevant MKT1 strategy tools (mkt1_icp_prioritization, mkt1_positioning, mkt1_perceptions, mkt1_marketing_advantages, mkt1_channel_strategy) with Mike rather than treating them as one-shot lookups.'
 ---
 
 # Competitive & Market Intelligence
 
-## Goal
-One compact Market & Competitive Reality artifact: what the product actually claims right now, who the real alternatives are, how they position, and what evidence — not assumption — exists about the competitive landscape. Done means every downstream PMM job (ICP, Positioning, Messaging, Storytelling, Pricing, Launches) can build on this instead of guessing.
+## What this produces, and why the shape changed
+One document that reads like a senior PMM director's strategic memo — an opinionated bet, backed by real research, that Positioning/ICP/Messaging/GTM work can act on immediately. Not an audit. Not a bounded evidence table. A previous version of this skill produced exactly that — compact, evidence-labeled, fully sourced — and it was correctly rejected as unusable: technically accurate, strategically inert. The problem wasn't the research underneath it. It was that the format optimized for auditability (a label on every bullet, brackets, tables) instead of for a decision. Auditability and decisiveness are different goals; this version picks decisiveness, and keeps research honesty as a discipline underneath the writing, not as its visible skeleton.
 
-This is a **research and synthesis artifact for downstream skills to consume, not a long-form executive report.** Keep it bounded. A complete artifact is not the same thing as a polished one — see the Output artifact section below.
-
-## Why this runs first, always
-Positioning, ICP, and Messaging are strategic decisions. They cannot be made credibly from training-data assumptions. This job replaces assumption with current reality before any of those decisions are made. Nothing downstream runs without this artifact existing and being current.
+**The test for whether this worked:** could Mike hand this to someone and have them understand, in the first two paragraphs, what bet is being made and why — the way a sharp outside consultant's first memo reads? If the document reads like a compliance form, it failed regardless of how well-sourced it is.
 
 ## Required input
-Company name and product name. Homepage URL if available — if not, find it.
-That's all that's needed. Competitors are not required upfront; identifying them is part of this job, not a precondition for it.
+Company name and homepage URL. That's it. Competitors, personas, and category are research outputs, not inputs — never start with an assumed list, and never trust the company's own comparison pages as the complete competitive set (see Step 2).
 
-## How this actually works: log, then judge, then write — never write straight from raw research
-This is the single most important mechanical change in this skill. The KB's own practitioners never go from "found something" straight to "wrote it in a report" — they catalog first (a running log: source, plain-language summary, why it matters), and only build a deliverable from that log afterward. Skipping the log and writing prose directly from research is exactly what produces generic-sounding output — there's nothing forcing each sentence to trace back to a specific, tested piece of evidence.
+## Depth mode — pick one, say it out loud
+**Rapid** — first read on an unfamiliar product: homepage + pricing only, 2-3 obvious competitors, skip customer-research-plan depth, skip live checkpoints unless something looks high-stakes.
+**Standard** (default) — a real Positioning/ICP/Messaging/GTM job depends on this: full method below.
+**Deep** — explicit request, or a major repositioning/competitive shift: Standard plus deeper review-site and community sampling, and a fuller customer-research plan.
 
-**The insight log.** As you research (Steps 2–7 below), every candidate insight gets a row before it can be used anywhere else:
-| Source | Plain-language summary (your own words, 1-2 sentences) | Three-question test | Feeds | Evidence label |
+## Research discipline (the part that stays boring on purpose)
+This is where rigor lives — invisibly, in the final document. Get this right so the opinions above it are earned, not asserted.
 
-**The three-question test — every insight must pass this before it's logged, per the KB:**
-1. **How does this relate to [Company] specifically?** Not "this is true of the market" — the specific link to this product's situation.
-2. **Is there a bigger story here?** A single fact (a price, a feature) is not yet an insight. A trend, a shift, a pattern across sources is. If you can't articulate the bigger story, that's a sign it's a fact worth having in the log but not worth promoting into a finding.
-3. **What question does this raise?** If it raises no question and closes no question, it's decoration, not intelligence.
+1. **Pull the actual homepage, live, via Firecrawl.** Never describe a product from training knowledge.
+2. **Follow every linked evidence page, not just the homepage.** Case studies, the blog post explaining why the product was built the way it was, help docs, the pricing page's full comparison table. A prior run declared "no proof exists" while the case-studies link sat unread in its own nav scrape — that is the single most expensive mistake this skill can make, because it turns real evidence into a fabricated gap. If a nav or footer link says "case studies," "customers," "results," or similar, pull it before concluding proof doesn't exist.
+3. **Build the competitive set two ways, not one:**
+   - **What the company itself claims** (its `/alternatives/` or `/vs/` pages, G2 category listing) — real signal, but only the company's own framing of the fight.
+   - **What the buyer's actual job-to-be-done touches**, mapped independently: name the 4-7 adjacent categories a buyer solving this problem would naturally shop across (not just the ones the target names), and pull 1-2 representative live homepages per category. A product claiming to unify performance + behavior analytics + CRO + competitive intel is not competing in one category — map all of them, the way the buyer actually experiences the choice.
+   - **Name the status quo as a competitor.** "Doing nothing," "the existing stack of 6 tools stitched together by a human," or "hire an agency" is very often the real thing being replaced. State explicitly what a buyer does today without this product.
+4. **G2/Trustradius — filter to 1-3 star reviews and search by keyword.** This is where competitor weaknesses and buyer language actually live, per the KB. Do this for both the target and its top 2 competitors.
+5. **Community search** (Reddit, Quora) for `[competitor] alternative` or `switch from [competitor]` — skip only at Rapid depth.
+6. **State confidence once, in plain language, near the top — then stop labeling.** One short paragraph: what's directly observed (live pages, pricing, case-study numbers), what's the company's own claim not independently verified, and what's your own strategic judgment as opposed to a researched fact. Inline-cite a specific source only when a claim is a specific hard number or quote worth someone checking — not on every sentence. If something genuinely isn't publicly available (funding, headcount) after two targeted searches, say so once and move on; don't chase it and don't silently omit it.
 
-An insight that can't clear this test does not get logged as a finding — it can stay as a raw fact in Research status/Source register, but it does not get to become a bullet in Company reality, Market reality, or the differentiation table. This is the actual filter against generic-sounding output: nothing goes into the artifact prose without having been tested, not just found.
+## Step 1 — The executive bet (write this last, put it first)
+After research is done, force yourself to state one sentence: what should this company NOT position itself as, and what should it fight for instead. Every one of the strongest examples of this kind of work opens exactly this way — a stance stated before any evidence is walked through. If you can't state it in one sentence, the research isn't finished; go back and find what's missing, don't ship a hedge dressed as a bet.
 
-**Downstream jobs care about different things** — the KB's own distinction (battlecards for sales are short "quick dismisses"; newsletters for product/leadership carry the trend and the "so what") applies here too. Tag each logged insight with which downstream job it actually feeds (ICP / Positioning / Messaging / Pricing / Sales enablement) — don't write one paragraph and assume it serves everyone equally.
+## Step 2 — Market map (independent, not self-reported)
+A table: category → what the buyer thinks they're solving in that category → 1-2 representative vendors → the target's row. Then one paragraph: which of these categories is genuinely crowded/commoditized, and which is the target actually trying to own. Name the status quo/do-nothing option as its own row.
 
-## Research depth mode — choose before Step 0
-Pick a mode before starting anything else, and say which one out loud. Default to **Standard** unless Mike asks for something else or the situation clearly calls for it.
+## Step 3 — Personas, not buyer signals
+3-4 named personas (role + company context, not just "SaaS buyer"). For each: their problem stated as a quote in plausible first-person voice, their underlying fear as a quote, one sentence on what they secretly want (not what the homepage says they want), and the one message that would actually land with them — contrasted against a generic message that would fall flat. Close with an explicit **who NOT to target yet, and why** — this is as valuable as who to target.
 
-**Rapid scan** — exploratory, or the product is unfamiliar and you just need a first read:
-- Target homepage + pricing page only.
-- One competitor-identification source (homepage `/alternatives/` page or G2/Trustradius category page — whichever exists).
-- 2 competitors max, homepage only, no review-site or community pass.
-- Skip Steps 5–7 (review-site depth, MKT1 dataset checks, win/loss) entirely.
-- Artifact only — do not offer the executive report at this depth.
+If Mike is live, run `mkt1_icp_prioritization` interactively at this point to rank these personas by maturity/priority rather than asserting a ranking alone.
 
-**Standard audit** (default) — a real ICP/Positioning/Messaging job is about to run on top of this:
-- Full Step 0–5 pass as written below.
-- 2–4 priority competitors.
-- Step 6 dataset checks: run them.
-- Step 7 win/loss: only if evidence already exists; otherwise flag and move on, don't chase it.
-- Step 8 differentiation synthesis done by direct reasoning over the evidence gathered (see the MKT1-tool note below) — do not treat it as optional.
+## Step 4 — Competitive narrative with attack lines
+For the top 2-3 competitors (not every name found): what they win on, their weakness (from Step research-discipline #4's negative-review filter, not guessed), and — the part that makes this usable by sales — a one-line answer to "when a prospect says we already use [competitor], say ___." Include the status-quo competitor here too, with its own attack line. Then one paragraph naming what's converging into table stakes across the set (commonly: "AI" itself, once three or more players claim it) so positioning doesn't lean on something about to stop being a differentiator.
 
-**Deep audit** — only when Mike explicitly asks for a full audit, or the decision is high-stakes (e.g. a major repositioning, a competitive threat that just changed materially):
-- Standard audit, plus: deeper review-site sampling, community research across more threads, hiring/headcount signal, and win/loss research even where evidence is thin (treat "no evidence found" as itself worth one more targeted look, not a repeated open-ended search).
-- This is the only mode where producing the full executive report (see `pmm-competitive-market-intelligence-EXECUTIVE-REPORT-TEMPLATE.md`, same folder) is in scope by default.
+## Step 5 — Positioning: options, then a recommendation
+Write 2-3 named positioning options (a category + a one-sentence promise each), state the tradeoff of each honestly, then recommend one and say why the others lose. Follow with an explicit **"what I would NOT position this as"** list — specific claims, each with a one-line reason (too crowded, too vague, already someone else's territory, undersells the product). This list is often more useful to Messaging than the recommendation itself.
 
-Do not run Deep audit merely because a product happens to have many plausible competitors. Depth is a decision about stakes, not about how much there is to look at.
+If Mike is live: run `mkt1_positioning` as a second, MKT1-native cross-check on the recommendation, and `mkt1_perceptions` to define the 3-4 beliefs the company should be actively driving once the category is chosen.
 
-## Stopping conditions
-Research is complete — stop — when:
-- The company's core claim, category, buyer, use case, and pricing signal are documented.
-- At least 2 credible alternatives have been identified, or the market is explicitly flagged as thin (per the mode's competitor count above).
-- Each priority competitor has current first-party positioning evidence (homepage pulled live).
-- At least 3 evidence-backed findings are established, or the evidence is explicitly judged thin and flagged as such.
-- The main differentiation claim has been tested against the competitive set.
-- Critical open questions are recorded.
+## Step 6 — GTM wedge
+Not full campaign planning — one phased motion: who to land first (design partners / initial segment), the one high-value problem to wedge in on rather than the whole platform, and what a proof-driven launch narrative could sound like (a real sample headline, not a category description). If Mike is live, pull `mkt1_channel_strategy` and, only if a launch/campaign decision is actually in scope, `mkt1_big_bets`.
 
-**Do not keep searching to eliminate every unknown.** Facts that aren't publicly disclosed (funding, headcount, founders, revenue) get **2 targeted searches maximum**, then get recorded as `Unknown` in the artifact and left alone. Chasing a negative result past that point is a budget failure, not thoroughness — Crunchbase doesn't have a page for every company, and confirming that a second time doesn't change the answer.
+## Step 7 — Differentiation gut-check
+Run the candidate differentiator(s) through: **Real** (can it demonstrably deliver this), **Valuable** (does it solve a problem a named persona actually has), **Distinct** (do the mapped competitors lack it), **Provable** (is there a case study or audited number, or only the company's own claim). State plainly which category it falls in — durable, currently-ahead-but-closing, table stakes, or asserted-not-proven — and name the single biggest threat to that durability if one exists (a competitor's own recent move, not a guess).
 
-## Step -1 — Get the self-reported baseline, when a human is actually available
-`mkt1_company_overview` is an **interactive tool** — it's built to interview a person across several turns, not to return data from a single call. Only invoke it if Mike is live in this conversation and can answer its follow-up questions.
+If Mike is live, run `mkt1_marketing_advantages` as its own conversation to surface advantages the public evidence can't see (founder credibility, channel access, GTM wedge) — separate from, and feeding into, this section.
 
-If this is an unattended or background run with no one to interview: **skip this tool entirely.** Note in the artifact's Research status section that no self-reported baseline exists, and proceed straight to Step 0 using public sources only. Don't call the tool anyway hoping it degrades gracefully — it doesn't; it will return its own instruction set into your context instead of a summary.
+## Live checkpoints — the calls that need Mike, not more research
+Cap this at the 2-3 calls that actually change the document's conclusion, presented with the evidence and 2-3 real readings, not a dump of every open question:
+- The executive bet itself (Step 1) — confirm or redirect before the rest of the document is framed around it.
+- The positioning recommendation (Step 5) — especially if it runs against what the evidence alone would suggest is lower-risk; if Mike overrides the lower-risk reading, name that explicitly as a deliberate bet in the document, don't smooth it into agreement.
+- Persona/segment priority (Step 3), only if the research genuinely can't resolve it.
 
-When a self-report does exist (from a live conversation, or because Mike already has a `marketing-strategy.md` on file for this company), treat it as Self-reported evidence only — not Confirmed — until Step 2 corroborates or contradicts it. Agreement between the self-report and the live homepage strengthens both; disagreement is itself a finding, named directly.
+If unattended with no one to check in with: resolve these yourself and say so plainly in the confidence paragraph up top — don't present an unchecked call with the same certainty as one Mike actually weighed in on.
 
-## Step 0 — Read the KB before touching any other source
-Read the methodology from the B2B Marketing OS knowledge base:
-
-**GitHub path:**
-`Product Marketing/Competitive Intel/`
-
-Read these files in order:
-1. `Transcript - ... - Gathering Competitive & Market Insights_ Startups & Mid-Market.md` — primary methodology for most products
-2. `Transcript - ... - Gathering Competitive & Market Insights_ Enterprise.md` — additional depth if the product sells to enterprise (skip at Rapid scan)
-
-**What to extract before proceeding:**
-- The three stakeholder question sets (sales/marketing, product, leadership) — these define what the research must answer
-- The ordered source stack the KB prescribes for the product's stage
-- The specific signals to look for on a competitor's homepage vs. what to look for on their G2/Trustradius profile vs. what communities reveal that neither of those will
-
-Do not proceed to research until you can state: *"For this product, the questions I need to answer are X, Y, Z, and the sources I'll use to answer them are A, B, C in that order."* That formulation comes from the KB, not from defaults.
-
-**Notion fallback:** If GitHub isn't accessible in this task, search Notion for "Gathering Competitive Market Insights" to find the same transcripts. Same content, same extraction requirement.
-
-## Step 1 — Determine company stage
-From the homepage and any available signals, determine whether this is a startup/mid-market company or an enterprise-focused company. Check this against the self-report from Step -1 first, if one exists. Use the homepage only to fill in what the self-report didn't cover, or as the sole source if there's no self-report. This controls which source stack you use:
-
-- **Startup / mid-market** (seed to Series C, <200 employees, SMB/mid-market buyers, no Gartner Magic Quadrant presence): Use the free/affordable stack — homepage, G2/Trustradius, communities, Google Alerts, LinkedIn headcount
-- **Enterprise** (Fortune 2000 buyers, analyst-covered category, Gartner/Forrester presence, large sales team): Add Crayon/Clue equivalent tracking, Chorus.ai-style competitive mention analysis, SEMrush for SEM strategy, analyst reports where accessible
-
-Most products Mike works on will be startup/mid-market. Default there unless signals clearly indicate otherwise.
-
-## Step 2 — Pull the product homepage (Firecrawl, first action)
-Use Firecrawl to pull the actual current homepage. Do not rely on training knowledge of any product — homepages change.
-
-Extract per the KB methodology:
-- **Positioning signal**: What is the headline claim? What problem does it name? What outcome does it promise?
-- **Category signal**: What category are they claiming or implying? ("CRM", "self-driving product platform", "AI for sales teams")
-- **Buyer signal**: Who does the copy address? What company size, role, or pain point is named?
-- **Competitor signal**: Do they name competitors, claim alternatives, or use comparison language? ("switch from X", "unlike X", "the X alternative")
-- **Stage signal**: Funding mentions, customer logos, pricing page existence, enterprise vs. PLG language
-
-Then compare these live signals against the Step -1 self-report, if one exists. Agreement is a corroboration — it strengthens confidence in both sources. Disagreement is itself a finding: it means the company's public story and its internal story have drifted apart, and that drift belongs in the artifact, named directly, not smoothed over.
-
-These signals from the homepage directly drive Step 3.
-
-## Step 3 — Identify real competitors using KB methodology
-Competitors are found through research, not assumed. Using the category, buyer, and positioning signals from Step 2, work through the KB's identification stack:
-
-**Source 1 — G2 / Trustradius category search**
-Find the product's category on G2 or Trustradius. The vendors listed in the same category are real alternatives the market already recognizes. Note the top 3–5 by review volume. These are the competitors to pull.
-
-**Source 2 — Community search**
-Search Reddit, Quora, or relevant Slack/Discord communities using the competitor's name + "alternative", "vs", or "switch from". As the KB notes, these communities are "way less filtered" than review sites — people name real alternatives they actually evaluated. Look for patterns across multiple threads, not single mentions. Skip at Rapid scan.
-
-**Source 3 — Comparison language on the homepage**
-If the product names or implies competitors in its own copy (a dedicated `/alternatives/` or `/vs/` page counts), those are confirmed real alternatives — the company is already positioning against them. This is usually the fastest and highest-confidence source; check it first if it exists.
-
-**Do not pattern-match to "typical SaaS competitors" for this category.**
-Use only what the research surfaces. If fewer than 2–3 real alternatives emerge, flag it directly: thin competitive landscape is a finding, not a gap to fill with guesses. If the category page (G2, etc.) surfaces mostly mismatched tools with only weak category overlap, say so — that's itself a signal the product's category positioning is still unresolved.
-
-## Step 4 — Pull competitor homepages
-For each identified competitor (2–4, scaled to the depth mode), pull their actual current homepage via Firecrawl. Per the KB: do not describe a competitor from memory without pulling their current page.
-
-For each competitor, extract the same signals as Step 2:
-- What they claim, what category they're in, who they target
-- Any direct comparison or differentiation language
-- Pricing model signals (freemium, trial, enterprise, usage-based)
-
-**`mkt1_competitive_research` is an interactive spreadsheet-building tool, not a single-call lookup.** It walks a live user through progressive intake (which competitors, which of its 53 columns, which surface) and only then scrapes. Called standalone with no one to answer its intake questions, it returns its own multi-thousand-word methodology as output instead of data — this has happened before and burned a large share of a session's budget for zero research value. Only invoke it when Mike is live and wants to build the full spreadsheet deliverable himself. In every other case, treat the direct Firecrawl pulls in this step as the primary and sufficient method — which is what the KB prescribes anyway — and don't call this tool as a "cross-check."
-
-## Step 5 — Deepen with review sites and communities
-Skip this step entirely at Rapid scan. Per the KB methodology for the startup/mid-market stack:
-
-**G2 / Trustradius — filter to 1–3 star reviews**
-The KB specifically flags this filter as where the real signal lives. Search within those reviews for keywords relevant to the product's claimed strengths. Patterns in negative reviews of competitors = real weaknesses to exploit or avoid replicating.
-
-**Community threads**
-Reddit, Quora, relevant Slack groups. The KB notes these are "gold mines" because opinions are unfiltered — no incentive to soften feedback. Look for: what alternatives get recommended, what pain points appear repeatedly, what buying criteria people name.
-
-**LinkedIn headcount trends** (Standard/Deep audit only, if enterprise-stage or leadership angle matters) The KB calls headcount a "proxy" for business health when companies are private. A hiring spike = demand; tapering or decline = trouble. Check the competitor's LinkedIn company page for the past 12–18 months.
-
-## Step 6 — MKT1 dataset checks
-Check the target company against both curated MKT1 datasets, in one pass: `mkt1_state_of_b2b_marketing_data` (100-company benchmark dataset) and `mkt1_high_growth_b2b_company_list` (~150 curated B2B startups). These two are read-only lookups against a fixed dataset — safe to call standalone, unlike the tools flagged in Steps 4 and 8. Most products Mike works on will not be in either — that's the expected result, not a gap to chase. If the target is in one or both, treat the match as corroborating evidence, not a primary source.
-
-## Step 7 — Win/Loss check
-If any win/loss evidence exists (Mike mentions it, it's referenced in Notion, or public reviews reveal competitive deal outcomes), apply the Win/Loss framework from the KB:
-
-`Transcript - ... - Developing a Competitive Strategy through Win_Loss (part 1).md` and `(part 2).md`
-
-If no win/loss data exists, flag it directly. Do not fill the gap with inference, and do not spend Standard-audit budget hunting for it if an initial check turns up nothing.
-
-## Step 8 — Judgment checkpoints, then differentiation synthesis
-This is where logged, tested insights become a judgment: what's genuinely different, what's table stakes, what's claimed but unproven. This is also the step most likely to come out sounding generic if it's done by the agent alone — because durability calls (will this advantage hold, is this the real opportunity) are exactly the kind of call a senior director makes from having watched many markets play out, which the agent hasn't done. Handle it accordingly.
-
-### Live judgment checkpoints — stop and ask when Mike is present
-If Mike is live in this conversation, do not resolve these calls unilaterally. Present the evidence and 2-3 competing readings, and let him pick or correct before the artifact locks the verdict:
-- **Is the leading differentiation claim durable, or just currently unmatched?** (i.e., how easily could a competitor close this gap, and does the evidence say anything about whether they're already moving that way)
-- **Which competitor is the real threat, vs. a distraction?** Review volume and name recognition aren't the same as competitive relevance to this specific buyer.
-- **Which segment/buyer is the real opportunity** vs. one the copy merely mentions in passing?
-- **The positioning verdict itself** — the direction to test, before it gets written into the Positioning handoff paragraph.
-
-Ask these as short, direct questions with the evidence attached — not as a wall of open questions dumped at the end. The point is to get a real, experience-based call at the moment it's needed, not to make Mike review a finished document after the fact.
-
-If this is an unattended or background run with no one to check in with: resolve these calls yourself using the four-test rubric below, but mark every resulting classification and the Positioning handoff paragraph as **Hypothesis**, not settled — and say explicitly, once, in Research status, that these calls haven't been checked against a human's judgment yet. Don't silently present an unchecked call with the same confidence as one Mike actually weighed in on.
-
-### Four-test rubric (mechanical baseline, used either way)
-Run every candidate differentiator through four tests:
-1. **Real?** Can the product demonstrably deliver it, or is it only asserted in copy?
-2. **Valuable?** Does it solve a problem the buyer actually named, in Steps 2/5?
-3. **Distinct?** Do the competitors identified in Steps 3–4 lack it, or approach it meaningfully differently — if they all have it, it's table stakes, not a differentiator.
-4. **Provable?** Is there case-study, review, or audited-number proof behind it, or only the target's own claim?
-
-Classify each one: **Defensible advantage** / **Credible but emerging advantage** / **Meaningful positioning opportunity** / **Table stakes** / **Claimed but unproven** / **Not meaningfully differentiated**. This produces the `Differentiation assessment` section of the artifact below.
-
-### Live synthesis with MKT1 strategy tools — when Mike is present
-These are interactive tools built to be run with a person, not called standalone for a verdict. If Mike is live and wants the deeper strategic layer on top of this artifact, run them as their own interactive sessions at this point, feeding them the insight log as context:
-- **`mkt1_marketing_advantages`** — surfaces advantages the public evidence alone can't see (founder credibility, channel mastery, GTM wedge) through a live conversation with the company's own team.
-- **`mkt1_positioning`** — who it's for, what it is, why it's better, product type — a second, MKT1-native cross-check on the Positioning handoff paragraph below.
-- **`mkt1_perceptions`** — defines the 3-4 perceptions to actively drive in-market, useful once differentiation is classified and the question shifts to "what do we want buyers to believe."
-
-None of these three are required to produce the compact artifact below — they're the deeper layer available specifically because a human is present to have the conversation they're built for. Don't call any of them in an unattended run; they'll return their own instructions instead of a verdict, same failure mode as before.
-
-## Constraints
-- Competitors are research outputs, not inputs. Never start with a default list.
-- Never describe a competitor from training data alone — pull the page.
-- Never upgrade a self-reported claim (Step -1) to "Confirmed" status just because it sounds plausible — it stays "Self-reported" until an external source (Firecrawl, G2, community, MKT1) backs it up.
-- Flag thin evidence directly: sparse homepage, no G2 presence, no community discussion, no win/loss data. These are real findings.
-- Do not invent alternatives that the research doesn't surface.
-- The artifact is not a research diary. Do not narrate which tool calls succeeded or failed, which searches you tried, or process commentary of any kind inside the artifact — evidence labels carry that job. If a tool genuinely couldn't be used (see Steps 4 and 8), note it once in Research status/limitations, not throughout the document.
-
-## Output artifact
-Produce one canonical artifact, generated **from the insight log and resolved judgment checkpoints** — not written fresh from memory of the research. Every claim in the artifact should trace back to a logged, tested insight; if it can't, it doesn't belong in the artifact. This is a research and synthesis object for downstream PMM skills to consume — bounded, evidence-labeled, and ending in a decision-ready handoff. It is not a long-form report; do not pad sections with prose that repeats what the table already shows.
-
-**Evidence labels** — every substantive claim in the artifact carries one:
-- **Confirmed** — pulled live via Firecrawl or another primary source this run.
-- **Corroborated** — found independently in G2/community/MKT1 dataset checks, agreeing with a Confirmed or Self-reported claim.
-- **Self-reported** — from `mkt1_company_overview` or Mike directly; not yet checked against an outside source.
-- **Inferred** — derived from signals, no direct source.
-- **Hypothesis** — a reasonable read that downstream jobs should test, not treat as settled.
-- **Unknown** — checked (per the 2-search stopping rule) and genuinely not publicly available. Distinct from a gap nobody looked into.
-- **Contradicted** — two sources disagree; name both and the disagreement, don't silently pick one.
-
-A claim repeated many times on the company's own site is still one source (Self-reported or Confirmed-as-claimed, not Corroborated) — repetition on the same site is not independent corroboration.
+## Output document
+Publish to Notion as `[Company] — Positioning & Competitive Strategy — [Date]`. Structure:
 
 ```markdown
-# Market & Competitive Reality — [Company] — [Product] — [Date]
+# [Company] — Positioning & Competitive Strategy — [Date]
 
-## Research status
-- Research depth mode: [Rapid / Standard / Deep]
-- Self-reported baseline available: [Yes / No — no one available to interview]
-- Evidence coverage: [what was checked]
-- Critical limitations: [what wasn't — thin category, no reviews, tool unavailable, etc.]
+**Confidence note:** [one paragraph — what's directly observed, what's the company's own unverified claim, what's strategic judgment. State once, don't repeat per-bullet.]
 
-## Company reality
-[Core claim / category claim / target buyer / primary use case / business model / pricing signal / proof signal / stage signal / category ambiguity — each with an evidence label. Name any Self-report vs. live-homepage disagreement directly here.]
+## Executive bet
+[2-4 sentences. The stance. State it before any evidence walkthrough.]
 
-## Market reality
-[Category maturity / adjacent categories / status quo alternatives / buyer problems and criteria — with evidence labels, flagging gaps as Unknown rather than skipping them silently.]
+## What [Company] actually is
+[Short — architecture/mechanism in plain language, not a feature list.]
 
-## Competitive set — one consolidated table, target included
-| Company | Alternative type | Core claim | Core mechanism | Pricing signal | Main strength | Main weakness | Confidence |
-|---|---|---|---|---|---|---|---|
-| [Target — row one] | — | | | | | | |
-| [Competitor 1] | | | | | | | |
+## The market it's actually competing in
+[Market map table: category | what the buyer thinks they're solving | representative vendors | target's position. Include the status quo/do-nothing row. One paragraph: crowded vs. the category worth owning.]
 
-## Evidence-backed findings
-Numbered list, 3+ findings minimum (or explicitly flagged as thin). Each: the finding, the evidence behind it, its strategic meaning, its confidence label.
+## Who should buy this
+[3-4 named personas: quoted problem, quoted fear, what they secretly want, the message that lands vs. one that doesn't. Then: who NOT to target yet, and why.]
 
-## Differentiation assessment
-For each candidate differentiator, run it through the four-test rubric above (Real? Valuable? Distinct? Provable?) and assign one classification:
+## Competitive narrative
+[Top 2-3 competitors + status quo: what they win on, real weakness, sales attack line each. One paragraph on what's becoming table stakes.]
 
-| Claimed differentiator | Real? | Valuable? | Distinct? | Provable? | Classification |
-|---|---|---|---|---|---|
-| [Claim] | Y/N/Unknown | Y/N/Unknown | Y/N/Unknown | Y/N/Unknown | [Defensible advantage / Credible but emerging / Meaningful positioning opportunity / Table stakes / Claimed but unproven / Not meaningfully differentiated] |
+## Positioning
+[2-3 named options with tradeoffs, a recommendation with reasoning, then "what I would NOT position this as" with one-line reasons each.]
 
-Then name, in a sentence each: the strongest defensible advantage (if any), the most crowded/commoditized territory, and the single biggest strategic threat to the target.
+## Differentiation reality check
+[Real/Valuable/Distinct/Provable read on the core claim(s); durability call; the biggest named threat to it, if any.]
 
-## Positioning handoff
-Close with one mandatory paragraph — not a bullet list, a single coherent statement that forces a call instead of restating the findings above:
+## GTM wedge
+[Who to land first, the one problem to wedge on, a sample launch narrative line.]
 
-> **Bottom line for Positioning:** [Company] should not position itself primarily as [crowded or weak category]. The strongest direction to test is [specific category, problem, buyer, or outcome], differentiated by [specific mechanism]. This is supported by [the one or two strongest evidence-backed findings], but constrained by [the most important proof gap or open uncertainty]. The next Positioning/ICP job should validate [specific buyer/segment] and test [specific framing]. Until that evidence exists, avoid claiming [specific overreach the current evidence doesn't support].
-
-Every bracket above must be filled with something specific to this research — no placeholder-shaped generic language. If a bracket can't be filled with anything specific, that's itself a critical open question, not something to paper over with a vague claim.
-
-## Open questions
-- Critical: [blocks downstream work without an answer]
-- Important: [affects quality but doesn't block]
-- Useful: [nice to resolve, not urgent]
-
-## Insight log
-The full working log this artifact was generated from — every tested insight, including ones that didn't make it into the prose above. Kept for auditability: anyone should be able to trace a claim in this artifact back to its row here.
-| Source | Summary | Three-question test passed? | Feeds | Evidence label |
-|---|---|---|---|---|
-
-## Source register
-| ID | Source | Type | Date pulled | Claims it supports |
-|---|---|---|---|---|
+## What to validate before locking this
+[A real interview plan: segment split and count (e.g. "10-15 interviews: 5 ecommerce, 3 SaaS, 3 agencies, 2 enterprise"), and 8-12 actual questions to ask — reconstructing the buying decision (trigger, alternatives considered, what almost stopped the purchase, what they'd replace it with if it disappeared), not "what do you like about it."]
 ```
 
-## Artifact destination
-Publish to Notion via the Notion MCP as a new page titled:
-`[Company] — Market & Competitive Reality — [Date]`
-Place it in the relevant client or project folder Mike specifies, or ask where it should live if not specified.
-
-If Mike explicitly asks for a polished, client- or leadership-facing version on top of this artifact (a board deck input, a client deliverable, a full narrative report), read `pmm-competitive-market-intelligence-EXECUTIVE-REPORT-TEMPLATE.md` (same folder as this file) and produce that as a second, separate page — don't replace the compact artifact with it, and don't produce it by default even in Deep audit mode unless asked.
-
-## What's deliberately left open
-How many competitors to pull, how deep the review-site analysis goes, whether win/loss research is in scope — scale to what the product and the specific request actually need, within the depth mode selected above.
+## Constraints
+- Never invent a competitor, persona detail, or quote-style claim the research doesn't support — the personas' quotes are plausible reconstructions of a real pattern in the evidence (buyer language from reviews/case studies), not fabricated color.
+- Never accept the company's own category language as the final word — Step 2 exists specifically to route around that.
+- Don't let hedging replace judgment. If evidence is genuinely thin, say so once in the confidence note and still make the strongest call the evidence supports — a senior PMM ships a bet, not a shrug.
+- Depth mode governs research volume, not conviction — even a Rapid-depth read should still open with a real executive bet, not a watered-down one.
