@@ -1,6 +1,6 @@
 ---
 name: pmm-competitive-market-intelligence
-description: 'Required reading before any positioning, messaging, ICP, storytelling, pricing, or launch work begins for a product — this is the mandatory research gate that produces the evidence those jobs depend on. Use whenever Mike gives you a product/homepage to work on and no current Market & Competitive Reality artifact exists yet for it, or when competitive/market facts need refreshing before a downstream PM job runs. Draws on the Competitive Intel discipline of the B2B Marketing OS: https://app.notion.com/p/3d019b7dd90881cf97b9e7473739b50b (Gathering Competitive & Market Insights for Startups, Mid-Market, and Enterprise; Competitive Newsletters for Product & the C-Suite; Developing a Competitive Strategy through Win/Loss). Produces a compact, evidence-labeled intelligence artifact — not a polished report. For a client-ready or leadership-facing writeup built from that artifact, see the sibling file `pmm-competitive-market-intelligence-EXECUTIVE-REPORT-TEMPLATE.md` in this same folder, loaded only on explicit request.'
+description: 'Required reading before any positioning, messaging, ICP, storytelling, pricing, or launch work begins for a product — this is the mandatory research gate that produces the evidence those jobs depend on. Use whenever Mike gives you a product/homepage to work on and no current Market & Competitive Reality artifact exists yet for it, or when competitive/market facts need refreshing before a downstream PM job runs. Builds a running insight log as it researches (KB cataloging method), tests every insight before logging it, stops at defined judgment checkpoints to get Mike''s call on the calls that need real experience rather than guessing them, then synthesizes live with the relevant MKT1 strategy tools before producing the final artifact. Draws on the Competitive Intel discipline of the B2B Marketing OS: https://app.notion.com/p/3d019b7dd90881cf97b9e7473739b50b (Gathering Competitive & Market Insights for Startups, Mid-Market, and Enterprise; Understanding Your Audience; Competitive Newsletters for Product & the C-Suite; Developing a Competitive Strategy through Win/Loss). Produces a compact, evidence-labeled intelligence artifact — not a polished report. For a client-ready or leadership-facing writeup built from that artifact, see the sibling file `pmm-competitive-market-intelligence-EXECUTIVE-REPORT-TEMPLATE.md` in this same folder, loaded only on explicit request.'
 ---
 
 # Competitive & Market Intelligence
@@ -16,6 +16,21 @@ Positioning, ICP, and Messaging are strategic decisions. They cannot be made cre
 ## Required input
 Company name and product name. Homepage URL if available — if not, find it.
 That's all that's needed. Competitors are not required upfront; identifying them is part of this job, not a precondition for it.
+
+## How this actually works: log, then judge, then write — never write straight from raw research
+This is the single most important mechanical change in this skill. The KB's own practitioners never go from "found something" straight to "wrote it in a report" — they catalog first (a running log: source, plain-language summary, why it matters), and only build a deliverable from that log afterward. Skipping the log and writing prose directly from research is exactly what produces generic-sounding output — there's nothing forcing each sentence to trace back to a specific, tested piece of evidence.
+
+**The insight log.** As you research (Steps 2–7 below), every candidate insight gets a row before it can be used anywhere else:
+| Source | Plain-language summary (your own words, 1-2 sentences) | Three-question test | Feeds | Evidence label |
+
+**The three-question test — every insight must pass this before it's logged, per the KB:**
+1. **How does this relate to [Company] specifically?** Not "this is true of the market" — the specific link to this product's situation.
+2. **Is there a bigger story here?** A single fact (a price, a feature) is not yet an insight. A trend, a shift, a pattern across sources is. If you can't articulate the bigger story, that's a sign it's a fact worth having in the log but not worth promoting into a finding.
+3. **What question does this raise?** If it raises no question and closes no question, it's decoration, not intelligence.
+
+An insight that can't clear this test does not get logged as a finding — it can stay as a raw fact in Research status/Source register, but it does not get to become a bullet in Company reality, Market reality, or the differentiation table. This is the actual filter against generic-sounding output: nothing goes into the artifact prose without having been tested, not just found.
+
+**Downstream jobs care about different things** — the KB's own distinction (battlecards for sales are short "quick dismisses"; newsletters for product/leadership carry the trend and the "so what") applies here too. Tag each logged insight with which downstream job it actually feeds (ICP / Positioning / Messaging / Pricing / Sales enablement) — don't write one paragraph and assume it serves everyone equally.
 
 ## Research depth mode — choose before Step 0
 Pick a mode before starting anything else, and say which one out loud. Default to **Standard** unless Mike asks for something else or the situation clearly calls for it.
@@ -145,20 +160,36 @@ If any win/loss evidence exists (Mike mentions it, it's referenced in Notion, or
 
 If no win/loss data exists, flag it directly. Do not fill the gap with inference, and do not spend Standard-audit budget hunting for it if an initial check turns up nothing.
 
-## Step 8 — Differentiation synthesis
-This is where the evidence gathered in Steps -1 through 7 becomes a judgment: what's genuinely different, what's table stakes, what's claimed but unproven.
+## Step 8 — Judgment checkpoints, then differentiation synthesis
+This is where logged, tested insights become a judgment: what's genuinely different, what's table stakes, what's claimed but unproven. This is also the step most likely to come out sounding generic if it's done by the agent alone — because durability calls (will this advantage hold, is this the real opportunity) are exactly the kind of call a senior director makes from having watched many markets play out, which the agent hasn't done. Handle it accordingly.
 
-**`mkt1_marketing_advantages` is also an interactive discovery tool**, built as a collaborative conversation with the company's own team to surface advantages neither party would find alone. Called standalone with no one to converse with, it returns its own framework and discovery-question script instead of a verdict. Don't invoke it in an unattended run.
+### Live judgment checkpoints — stop and ask when Mike is present
+If Mike is live in this conversation, do not resolve these calls unilaterally. Present the evidence and 2-3 competing readings, and let him pick or correct before the artifact locks the verdict:
+- **Is the leading differentiation claim durable, or just currently unmatched?** (i.e., how easily could a competitor close this gap, and does the evidence say anything about whether they're already moving that way)
+- **Which competitor is the real threat, vs. a distraction?** Review volume and name recognition aren't the same as competitive relevance to this specific buyer.
+- **Which segment/buyer is the real opportunity** vs. one the copy merely mentions in passing?
+- **The positioning verdict itself** — the direction to test, before it gets written into the Positioning handoff paragraph.
 
-Do this synthesis directly instead, reasoning over the evidence already collected. Run every candidate differentiator through four tests:
+Ask these as short, direct questions with the evidence attached — not as a wall of open questions dumped at the end. The point is to get a real, experience-based call at the moment it's needed, not to make Mike review a finished document after the fact.
+
+If this is an unattended or background run with no one to check in with: resolve these calls yourself using the four-test rubric below, but mark every resulting classification and the Positioning handoff paragraph as **Hypothesis**, not settled — and say explicitly, once, in Research status, that these calls haven't been checked against a human's judgment yet. Don't silently present an unchecked call with the same confidence as one Mike actually weighed in on.
+
+### Four-test rubric (mechanical baseline, used either way)
+Run every candidate differentiator through four tests:
 1. **Real?** Can the product demonstrably deliver it, or is it only asserted in copy?
 2. **Valuable?** Does it solve a problem the buyer actually named, in Steps 2/5?
 3. **Distinct?** Do the competitors identified in Steps 3–4 lack it, or approach it meaningfully differently — if they all have it, it's table stakes, not a differentiator.
 4. **Provable?** Is there case-study, review, or audited-number proof behind it, or only the target's own claim?
 
-Classify each one: **Defensible advantage** / **Credible but emerging advantage** / **Meaningful positioning opportunity** / **Table stakes** / **Claimed but unproven** / **Not meaningfully differentiated**. This produces the `Differentiation assessment` section of the artifact below directly — it does not require a separate tool call.
+Classify each one: **Defensible advantage** / **Credible but emerging advantage** / **Meaningful positioning opportunity** / **Table stakes** / **Claimed but unproven** / **Not meaningfully differentiated**. This produces the `Differentiation assessment` section of the artifact below.
 
-If Mike is live and wants the deeper, team-informed version of this exercise (surfacing advantages the public evidence alone can't see — founder credibility, channel mastery, GTM wedge), invoke `mkt1_marketing_advantages` as its own interactive session at that point, separate from this artifact.
+### Live synthesis with MKT1 strategy tools — when Mike is present
+These are interactive tools built to be run with a person, not called standalone for a verdict. If Mike is live and wants the deeper strategic layer on top of this artifact, run them as their own interactive sessions at this point, feeding them the insight log as context:
+- **`mkt1_marketing_advantages`** — surfaces advantages the public evidence alone can't see (founder credibility, channel mastery, GTM wedge) through a live conversation with the company's own team.
+- **`mkt1_positioning`** — who it's for, what it is, why it's better, product type — a second, MKT1-native cross-check on the Positioning handoff paragraph below.
+- **`mkt1_perceptions`** — defines the 3-4 perceptions to actively drive in-market, useful once differentiation is classified and the question shifts to "what do we want buyers to believe."
+
+None of these three are required to produce the compact artifact below — they're the deeper layer available specifically because a human is present to have the conversation they're built for. Don't call any of them in an unattended run; they'll return their own instructions instead of a verdict, same failure mode as before.
 
 ## Constraints
 - Competitors are research outputs, not inputs. Never start with a default list.
@@ -169,7 +200,7 @@ If Mike is live and wants the deeper, team-informed version of this exercise (su
 - The artifact is not a research diary. Do not narrate which tool calls succeeded or failed, which searches you tried, or process commentary of any kind inside the artifact — evidence labels carry that job. If a tool genuinely couldn't be used (see Steps 4 and 8), note it once in Research status/limitations, not throughout the document.
 
 ## Output artifact
-Produce one canonical artifact. This is a research and synthesis object for downstream PMM skills to consume — bounded, evidence-labeled, and ending in a decision-ready handoff. It is not a long-form report; do not pad sections with prose that repeats what the table already shows.
+Produce one canonical artifact, generated **from the insight log and resolved judgment checkpoints** — not written fresh from memory of the research. Every claim in the artifact should trace back to a logged, tested insight; if it can't, it doesn't belong in the artifact. This is a research and synthesis object for downstream PMM skills to consume — bounded, evidence-labeled, and ending in a decision-ready handoff. It is not a long-form report; do not pad sections with prose that repeats what the table already shows.
 
 **Evidence labels** — every substantive claim in the artifact carries one:
 - **Confirmed** — pulled live via Firecrawl or another primary source this run.
@@ -226,6 +257,11 @@ Every bracket above must be filled with something specific to this research — 
 - Critical: [blocks downstream work without an answer]
 - Important: [affects quality but doesn't block]
 - Useful: [nice to resolve, not urgent]
+
+## Insight log
+The full working log this artifact was generated from — every tested insight, including ones that didn't make it into the prose above. Kept for auditability: anyone should be able to trace a claim in this artifact back to its row here.
+| Source | Summary | Three-question test passed? | Feeds | Evidence label |
+|---|---|---|---|---|
 
 ## Source register
 | ID | Source | Type | Date pulled | Claims it supports |
