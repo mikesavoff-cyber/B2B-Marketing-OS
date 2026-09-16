@@ -150,7 +150,13 @@ This is where the evidence gathered in Steps -1 through 7 becomes a judgment: wh
 
 **`mkt1_marketing_advantages` is also an interactive discovery tool**, built as a collaborative conversation with the company's own team to surface advantages neither party would find alone. Called standalone with no one to converse with, it returns its own framework and discovery-question script instead of a verdict. Don't invoke it in an unattended run.
 
-Do this synthesis directly instead, reasoning over the evidence already collected: for each candidate differentiator, ask (a) do the competitors identified in Steps 3–4 have this too — if yes, it's table stakes, not a differentiator; (b) is it demonstrated with real proof (case studies, reviews, audited numbers) or only asserted in the target's own copy; (c) does it change the category conversation in one sentence a non-expert would get. This produces the `Differentiation assessment` section of the artifact below directly — it does not require a separate tool call.
+Do this synthesis directly instead, reasoning over the evidence already collected. Run every candidate differentiator through four tests:
+1. **Real?** Can the product demonstrably deliver it, or is it only asserted in copy?
+2. **Valuable?** Does it solve a problem the buyer actually named, in Steps 2/5?
+3. **Distinct?** Do the competitors identified in Steps 3–4 lack it, or approach it meaningfully differently — if they all have it, it's table stakes, not a differentiator.
+4. **Provable?** Is there case-study, review, or audited-number proof behind it, or only the target's own claim?
+
+Classify each one: **Defensible advantage** / **Credible but emerging advantage** / **Meaningful positioning opportunity** / **Table stakes** / **Claimed but unproven** / **Not meaningfully differentiated**. This produces the `Differentiation assessment` section of the artifact below directly — it does not require a separate tool call.
 
 If Mike is live and wants the deeper, team-informed version of this exercise (surfacing advantages the public evidence alone can't see — founder credibility, channel mastery, GTM wedge), invoke `mkt1_marketing_advantages` as its own interactive session at that point, separate from this artifact.
 
@@ -173,6 +179,8 @@ Produce one canonical artifact. This is a research and synthesis object for down
 - **Hypothesis** — a reasonable read that downstream jobs should test, not treat as settled.
 - **Unknown** — checked (per the 2-search stopping rule) and genuinely not publicly available. Distinct from a gap nobody looked into.
 - **Contradicted** — two sources disagree; name both and the disagreement, don't silently pick one.
+
+A claim repeated many times on the company's own site is still one source (Self-reported or Confirmed-as-claimed, not Corroborated) — repetition on the same site is not independent corroboration.
 
 ```markdown
 # Market & Competitive Reality — [Company] — [Product] — [Date]
@@ -199,22 +207,20 @@ Produce one canonical artifact. This is a research and synthesis object for down
 Numbered list, 3+ findings minimum (or explicitly flagged as thin). Each: the finding, the evidence behind it, its strategic meaning, its confidence label.
 
 ## Differentiation assessment
-- Genuine advantage(s): [with proof status]
-- Table stakes: [what every competitor already has]
-- Claimed but unproven: [asserted in copy, not evidenced]
-- Crowded / commoditized territory: [where price or table-stakes competition dominates]
-- Main strategic threat: [one sentence]
+For each candidate differentiator, run it through the four-test rubric above (Real? Valuable? Distinct? Provable?) and assign one classification:
+
+| Claimed differentiator | Real? | Valuable? | Distinct? | Provable? | Classification |
+|---|---|---|---|---|---|
+| [Claim] | Y/N/Unknown | Y/N/Unknown | Y/N/Unknown | Y/N/Unknown | [Defensible advantage / Credible but emerging / Meaningful positioning opportunity / Table stakes / Claimed but unproven / Not meaningfully differentiated] |
+
+Then name, in a sentence each: the strongest defensible advantage (if any), the most crowded/commoditized territory, and the single biggest strategic threat to the target.
 
 ## Positioning handoff
-The decision-ready close. Do not leave this section as a restatement of the findings above — force a call:
-- Category to test:
-- Buyer/segment to investigate first:
-- Problem to consider owning:
-- Outcome to emphasize:
-- Differentiating mechanism to lead with:
-- Claims to avoid (table stakes or unproven):
-- Single highest-priority proof gap:
-- Three highest-priority validation questions for the next ICP/Positioning job
+Close with one mandatory paragraph — not a bullet list, a single coherent statement that forces a call instead of restating the findings above:
+
+> **Bottom line for Positioning:** [Company] should not position itself primarily as [crowded or weak category]. The strongest direction to test is [specific category, problem, buyer, or outcome], differentiated by [specific mechanism]. This is supported by [the one or two strongest evidence-backed findings], but constrained by [the most important proof gap or open uncertainty]. The next Positioning/ICP job should validate [specific buyer/segment] and test [specific framing]. Until that evidence exists, avoid claiming [specific overreach the current evidence doesn't support].
+
+Every bracket above must be filled with something specific to this research — no placeholder-shaped generic language. If a bracket can't be filled with anything specific, that's itself a critical open question, not something to paper over with a vague claim.
 
 ## Open questions
 - Critical: [blocks downstream work without an answer]

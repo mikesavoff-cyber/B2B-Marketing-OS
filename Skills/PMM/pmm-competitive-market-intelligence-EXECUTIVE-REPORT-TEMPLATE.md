@@ -5,37 +5,58 @@ description: 'Reference file for pmm-competitive-market-intelligence. Only read 
 
 # Executive Report Template (on-request only)
 
-This is editorial production, not research. Only reach for this after the compact Market & Competitive Reality artifact already exists — this template turns that artifact into a longer, polished writeup for a specific audience (a client, Mike's leadership, a board). Never run this in place of the compact artifact, and never run it by default just because a Deep audit was requested; ask explicitly whether Mike wants this on top.
+This is editorial production, not research. Only reach for this after the compact Market & Competitive Reality artifact already exists.
 
-Feed this template the finished artifact's content directly. Do not re-research; if a section below needs evidence the artifact doesn't have, that's a gap to name, not a reason to go back and do open-ended research under a different name.
+**Feed this template the finished artifact's content directly. Do not re-research.** If a section below needs evidence the compact artifact doesn't have, write `Unknown` (or `Not evidenced`) in that spot — that's a gap to name, not a reason to go start new searches under a different name. A report with a few honest `Unknown` cells is more credible than one padded with generic language to look complete.
+
+Do not narrate tool failures, failed searches, or connector limitations inline — the evidence labels and the Evidence gaps subsection carry that job. The reader needs to know how reliable a conclusion is, not the mechanics of how the research happened.
+
+This template is deliberately narrower than a full strategic audit. It does not include an ongoing monitoring/refresh cadence — that's a separate concern for a future refresh skill, not something to rebuild inside a one-time report.
 
 ```markdown
 # [Company] — Market & Competitive Reality
 ### Prepared for [Mike / client name] — [Date]
 
 ## Executive verdict
-3–5 sentences. The one or two things that actually matter: what's genuinely different, what's the biggest risk, what should happen next. This is the only section most readers will absorb in full — write it that way.
+Write this section last, after the rest of the report is drafted. 3–6 sentences answering: What market is this product actually competing in? What is it trying to win on? Who are the most consequential alternatives? Is the differentiation credible, weak, emerging, or unproven? What's the single most important implication for positioning? State the verdict plainly — don't just repeat the company's own headline back.
 
-## Market reality
-Category, category maturity, and where this product sits in the buyer's actual decision — not a restatement of the compact artifact's bullet list, but the narrative version of it.
+## Highest-value findings
+3–7 findings, pulled from the compact artifact's Evidence-backed findings section, each in this format:
 
-## Company reality
-What [Company] claims today, in plain language, with the self-report vs. live-homepage drift (if any) called out as a finding, not a footnote.
+**Finding:** [Evidence-backed observation]
+**Strategic meaning:** [Why it matters to the company, buyer, or positioning]
+**Confidence:** [Confirmed / Corroborated / Self-reported / Inferred / Hypothesis / Unknown / Contradicted]
 
-## The competitive landscape
-The consolidated table from the compact artifact, reproduced, followed by a short narrative profile per competitor (2-4 sentences each) — what they win on, what they're vulnerable on, and how a prospect evaluating both would actually experience the difference.
+## Market and company reality
+Narrative version of the compact artifact's Market reality and Company reality sections — not a re-listing, but the connected story: what category this actually competes in, who claims what, and where the company's public narrative and its operating reality (pricing, proof, review sentiment) agree or diverge. Call out any narrative drift explicitly; don't smooth it over.
 
-## Strategic implications
-For ICP, Positioning, Messaging, and Pricing — pull directly from the compact artifact's "Positioning handoff" section and "Downstream implications," expanded into full sentences a non-marketer stakeholder can act on without translation.
+## Competitive landscape
 
-## Open questions and validation priorities
-Same content as the compact artifact's Open questions section, reframed as a short action list: what needs to be true before the next PMM job can safely build on this.
+### Target vs. competitors — consolidated
+Reproduce the compact artifact's table, and only extend it with additional rows/columns already evidenced there — don't invent new dimensions that require fresh research.
 
-## Bottom line for positioning
-One paragraph. The single clearest instruction for whoever runs the next PMM job.
+### Competitor profiles
+One short profile per priority competitor (not every competitor mentioned in passing) — 4–6 lines each: role in the market, current positioning, key strengths and weaknesses (evidence-backed), likely reason a buyer picks it vs. rejects it, and the specific implication for the target. End each with a confidence label.
 
-## Evidence appendix
-The compact artifact's full evidence-backed findings and source register, included for anyone who wants to audit the underlying research rather than take the verdict on faith.
+### Competitive patterns
+2–4 sentences: what's converged into table stakes across the set, where the field is genuinely diverging, and which single competitor creates the most pricing or positioning pressure on the target.
+
+## Differentiation and strategic interpretation
+Pull directly from the compact artifact's Differentiation assessment table (the four-test rubric: Real / Valuable / Distinct / Provable). Add, only if evidenced: the 1–3 most important strategic gaps or whitespace opportunities, each stated as [gap] / [evidence] / [who'd care] / [why competitors don't already own it] / [what proof the company would need].
+
+## Implications for downstream work
+Short, decision-oriented bullets — not essays — under each:
+- **ICP:** segments to prioritize investigating vs. not yet treat as primary.
+- **Positioning:** category to test, problem to consider owning, mechanism to lead with, claims to avoid.
+- **Messaging:** messages to amplify, claims that need substantiation before they're used, objections to address.
+- **Pricing:** whether the pricing model matches the promised value, and against what free/cheap alternatives it's actually competing.
+- **Growth/demand gen:** highest-potential use cases or comparison content, only if the research surfaced something specific — skip this bullet entirely rather than filling it with generic advice.
+
+## Open questions and evidence gaps
+Reproduce the compact artifact's Open questions (Critical / Important / Useful), plus a short Evidence gaps note: strongest evidence in this report, thinnest evidence, and any claim that shouldn't support a major decision without further validation.
+
+## Bottom line for Positioning
+Reproduce the compact artifact's mandatory "Bottom line for Positioning" paragraph verbatim — this report doesn't get its own separate version of the verdict; it's the same call, just placed at the end of a longer document for a reader who wants the full trail behind it.
 ```
 
-Keep the whole thing scannable in under 5 minutes for the executive verdict plus landscape section; the appendix can run longer since it's reference material, not the pitch.
+Keep the Executive verdict and Competitive landscape sections scannable in under 5 minutes; the rest is there for whoever wants to audit the reasoning, not the primary read.
