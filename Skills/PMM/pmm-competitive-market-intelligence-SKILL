@@ -1,6 +1,6 @@
 ---
 name: pmm-competitive-market-intelligence
-description: 'Required reading before any positioning, messaging, ICP, storytelling, pricing, or launch work begins for a product — this is the mandatory research gate that produces the evidence those jobs depend on. Use whenever Mike gives you a product/homepage to work on and no current Market & Competitive Reality artifact exists yet for it, or when competitive/market facts need refreshing before a downstream PM job runs. Draws on the Competitive Intel discipline of the B2B Marketing OS: https://app.notion.com/p/3d019b7dd90881cf97b9e7473739b50b (Gathering Competitive & Market Insights for Startups, Mid-Market, and Enterprise; Competitive Newsletters for Product & the C-Suite; Developing a Competitive Strategy through Win/Loss). Produces a compact, evidence-labeled intelligence artifact — not a polished report. For a client-ready or leadership-facing writeup built from that artifact, see `references/executive-report-template.md`, loaded only on explicit request.'
+description: 'Required reading before any positioning, messaging, ICP, storytelling, pricing, or launch work begins for a product — this is the mandatory research gate that produces the evidence those jobs depend on. Use whenever Mike gives you a product/homepage to work on and no current Market & Competitive Reality artifact exists yet for it, or when competitive/market facts need refreshing before a downstream PM job runs. Draws on the Competitive Intel discipline of the B2B Marketing OS: https://app.notion.com/p/3d019b7dd90881cf97b9e7473739b50b (Gathering Competitive & Market Insights for Startups, Mid-Market, and Enterprise; Competitive Newsletters for Product & the C-Suite; Developing a Competitive Strategy through Win/Loss). Produces a compact, evidence-labeled intelligence artifact — not a polished report. For a client-ready or leadership-facing writeup built from that artifact, see the sibling file `pmm-competitive-market-intelligence-EXECUTIVE-REPORT-TEMPLATE.md` in this same folder, loaded only on explicit request.'
 ---
 
 # Competitive & Market Intelligence
@@ -36,7 +36,7 @@ Pick a mode before starting anything else, and say which one out loud. Default t
 
 **Deep audit** — only when Mike explicitly asks for a full audit, or the decision is high-stakes (e.g. a major repositioning, a competitive threat that just changed materially):
 - Standard audit, plus: deeper review-site sampling, community research across more threads, hiring/headcount signal, and win/loss research even where evidence is thin (treat "no evidence found" as itself worth one more targeted look, not a repeated open-ended search).
-- This is the only mode where producing the full executive report (see `references/executive-report-template.md`) is in scope by default.
+- This is the only mode where producing the full executive report (see `pmm-competitive-market-intelligence-EXECUTIVE-REPORT-TEMPLATE.md`, same folder) is in scope by default.
 
 Do not run Deep audit merely because a product happens to have many plausible competitors. Depth is a decision about stakes, not about how much there is to look at.
 
@@ -237,7 +237,7 @@ Publish to Notion via the Notion MCP as a new page titled:
 `[Company] — Market & Competitive Reality — [Date]`
 Place it in the relevant client or project folder Mike specifies, or ask where it should live if not specified.
 
-If Mike explicitly asks for a polished, client- or leadership-facing version on top of this artifact (a board deck input, a client deliverable, a full narrative report), read `references/executive-report-template.md` and produce that as a second, separate page — don't replace the compact artifact with it, and don't produce it by default even in Deep audit mode unless asked.
+If Mike explicitly asks for a polished, client- or leadership-facing version on top of this artifact (a board deck input, a client deliverable, a full narrative report), read `pmm-competitive-market-intelligence-EXECUTIVE-REPORT-TEMPLATE.md` (same folder as this file) and produce that as a second, separate page — don't replace the compact artifact with it, and don't produce it by default even in Deep audit mode unless asked.
 
 ## What's deliberately left open
 How many competitors to pull, how deep the review-site analysis goes, whether win/loss research is in scope — scale to what the product and the specific request actually need, within the depth mode selected above.
