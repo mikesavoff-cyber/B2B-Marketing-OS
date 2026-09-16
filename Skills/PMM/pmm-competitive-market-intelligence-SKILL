@@ -1,31 +1,148 @@
 ---
 name: pmm-competitive-market-intelligence
-description: 'Required reading before any positioning, messaging, ICP, storytelling, pricing, or launch work begins for a product — this is the mandatory research gate that produces the evidence those jobs depend on. Use whenever Mike gives you a product/homepage to work on and no current Market & Competitive Reality artifact exists yet for it, or when competitive/market facts need refreshing before a downstream PM job runs. Draws on the Competitive Intel discipline of the B2B Marketing OS: https://app.notion.com/p/3d019b7dd90881cf97b9e7473739b50b (Gathering Competitive & Market Insights for Startups, Mid-Market, and Enterprise; Competitive Newsletters for Product & the C-Suite; Developing a Competitive Strategy through Win/Loss).'
+description: 'Required reading before any positioning, messaging, ICP, storytelling, pricing, or launch work begins for a product — this is the mandatory research gate that produces the evidence those jobs depend on. Use whenever Mike gives you a product/homepage to work on and no current Market & Competitive Reality artifact exists yet for it, or when competitive/market facts need refreshing before a downstream PM job runs. Draws on the Competitive Intel discipline of the B2B Marketing OS: https://app.notion.com/p/3d019b7dd90881cf97b9e7473739b50b (Gathering Competitive & Market Insights for Startups, Mid-Market, and Enterprise; Competitive Newsletters for Product & the C-Suite; Developing a Competitive Strategy through Win/Loss). Sequenced with the MKT1 MCP connector''s own skills — `mkt1_company_overview`, `mkt1_competitive_research`, `mkt1_state_of_b2b_marketing_data`, `mkt1_high_growth_b2b_company_list`, `mkt1_marketing_advantages` — as live cross-checks, not replacements, for the KB-driven research below.'
 ---
 
 # Competitive & Market Intelligence
 
 ## Goal
-One Market & Competitive Reality artifact: what the product actually claims about itself right now, who the real alternatives are, how they position, and what evidence (not assumption) exists about the competitive landscape. "Done" means every downstream PM job (ICP, Positioning, Messaging, Storytelling, Pricing, Launches) can build on this instead of guessing.
+One Market & Competitive Reality artifact: what the product actually claims right now, who the real alternatives are, how they position, and what evidence — not assumption — exists about the competitive landscape. Done means every downstream PMM job (ICP, Positioning, Messaging, Storytelling, Pricing, Launches) can build on this instead of guessing.
 
 ## Why this runs first, always
-Positioning, ICP, and Messaging are strategic decisions. They cannot be made credibly from training-data assumptions about what a product or its competitors do — that's plausibility, not evidence. This job exists to replace assumption with current reality before any of those decisions get made. Nothing downstream should run without this artifact existing and being current.
+Positioning, ICP, and Messaging are strategic decisions. They cannot be made credibly from training-data assumptions. This job replaces assumption with current reality before any of those decisions are made. Nothing downstream runs without this artifact existing and being current.
 
 ## Required input
-The product: homepage URL at minimum. Named competitors/alternatives if Mike knows them; otherwise identify likely ones from the homepage's own positioning and category signals.
+Company name and product name. Homepage URL if available — if not, find it.
+That's all that's needed. Competitors are not required upfront; identifying them is part of this job, not a precondition for it.
 
-## What you must do — tools, not steps
-- **Firecrawl, first action, every time.** Pull the actual current homepage content. Pull 2-3 real competitor/alternative homepages — named by Mike if given, otherwise the ones the product's own copy implies it's competing against. Do not describe a competitor from memory without pulling their actual current page.
-- **MKT1 connector, alongside Firecrawl.** Check `mkt1_state_of_b2b_marketing_data` for the company by exact name. If relevant, run `mkt1_competitive_research` for a second read on the competitive set. Don't treat MKT1's ~150-company list as exhaustive — it's a supplementary source, not the only one.
-- **Apply the Notion methodology to structure what you find** — the Gathering Competitive & Market Insights transcripts (startup vs. mid-market vs. enterprise have different gathering approaches; use whichever matches the product's actual stage) and the Win/Loss transcript if any win/loss evidence exists to work from.
+## Step -1 — Get the self-reported baseline (`mkt1_company_overview`)
+Before reading the KB or opening Firecrawl, run `mkt1_company_overview` for this company. This gives the self-reported baseline — who the company says it is, what it sells, who it sells to, and where the business stands today.
+
+This is Mike's or the company's own account. It has not been checked against anything outside the company yet — treat it as a **self-reported** input, not a confirmed one. Its job is to give Steps 1 and 2 something real to compare against, instead of guessing stage and positioning cold from a homepage.
+
+## Step 0 — Read the KB before touching any other source
+Read the methodology from the B2B Marketing OS knowledge base:
+
+**GitHub path:**
+`Product Marketing/Competitive Intel/`
+
+Read these files in order:
+1. `Transcript - ... - Gathering Competitive & Market Insights_ Startups & Mid-Market.md` — primary methodology for most products
+2. `Transcript - ... - Gathering Competitive & Market Insights_ Enterprise.md` — additional depth if the product sells to enterprise
+
+**What to extract before proceeding:**
+- The three stakeholder question sets (sales/marketing, product, leadership) — these define what the research must answer
+- The ordered source stack the KB prescribes for the product's stage
+- The specific signals to look for on a competitor's homepage vs. what to look for on their G2/Trustradius profile vs. what communities reveal that neither of those will
+
+Do not proceed to research until you can state: *"For this product, the questions I need to answer are X, Y, Z, and the sources I'll use to answer them are A, B, C in that order."* That formulation comes from the KB, not from defaults.
+
+**Notion fallback:** If GitHub isn't accessible in this task, search Notion for "Gathering Competitive Market Insights" to find the same transcripts. Same content, same extraction requirement.
+
+## Step 1 — Determine company stage
+From the homepage and any available signals, determine whether this is a startup/mid-market company or an enterprise-focused company. Check this against the self-report from Step -1 first — Mike's own account of funding stage, buyer type, and company size is often faster and more reliable than inferring stage from the homepage alone. Use the homepage only to fill in what the self-report didn't cover. This controls which source stack you use:
+
+- **Startup / mid-market** (seed to Series C, <200 employees, SMB/mid-market buyers, no Gartner Magic Quadrant presence): Use the free/affordable stack — homepage, G2/Trustradius, communities, Google Alerts, LinkedIn headcount
+- **Enterprise** (Fortune 2000 buyers, analyst-covered category, Gartner/Forrester presence, large sales team): Add Crayon/Clue equivalent tracking, Chorus.ai-style competitive mention analysis, SEMrush for SEM strategy, analyst reports where accessible
+
+Most products Mike works on will be startup/mid-market. Default there unless signals clearly indicate otherwise.
+
+## Step 2 — Pull the product homepage (Firecrawl, first action)
+Use Firecrawl to pull the actual current homepage. Do not rely on training knowledge of any product — homepages change.
+
+Extract per the KB methodology:
+- **Positioning signal**: What is the headline claim? What problem does it name? What outcome does it promise?
+- **Category signal**: What category are they claiming or implying? ("CRM", "self-driving product platform", "AI for sales teams")
+- **Buyer signal**: Who does the copy address? What company size, role, or pain point is named?
+- **Competitor signal**: Do they name competitors, claim alternatives, or use comparison language? ("switch from X", "unlike X", "the X alternative")
+- **Stage signal**: Funding mentions, customer logos, pricing page existence, enterprise vs. PLG language
+
+Then compare these live signals against the Step -1 self-report. Agreement is a corroboration — it strengthens confidence in both sources. Disagreement is itself a finding: it means the company's public story and its internal story have drifted apart, and that drift belongs in the artifact, named directly, not smoothed over.
+
+These signals from the homepage directly drive Step 3.
+
+## Step 3 — Identify real competitors using KB methodology
+Competitors are found through research, not assumed. Using the category, buyer, and positioning signals from Step 2, work through the KB's identification stack:
+
+**Source 1 — G2 / Trustradius category search**
+Find the product's category on G2 or Trustradius. The vendors listed in the same category are real alternatives the market already recognizes. Note the top 3–5 by review volume. These are the competitors to pull.
+
+**Source 2 — Community search**
+Search Reddit, Quora, or relevant Slack/Discord communities using the competitor's name + "alternative", "vs", or "switch from". As the KB notes, these communities are "way less filtered" than review sites — people name real alternatives they actually evaluated. Look for patterns across multiple threads, not single mentions.
+
+**Source 3 — Comparison language on the homepage**
+If the product names or implies competitors in its own copy, those are confirmed real alternatives — the company is already positioning against them.
+
+**Do not pattern-match to "typical SaaS competitors" for this category.**
+Use only what the research surfaces. If fewer than 2–3 real alternatives emerge, flag it directly: thin competitive landscape is a finding, not a gap to fill with guesses.
+
+## Step 4 — Pull competitor homepages, then cross-check with `mkt1_competitive_research`
+For each identified competitor (2–3, scaled to what the request needs), pull their actual current homepage via Firecrawl. Per the KB: do not describe a competitor from memory without pulling their current page.
+
+For each competitor, extract the same signals as Step 2:
+- What they claim, what category they're in, who they target
+- Any direct comparison or differentiation language
+- Pricing model signals (freemium, trial, enterprise, usage-based)
+
+Once this competitor set is built, run `mkt1_competitive_research` against the same target and the same competitor set. This is a cross-check, not a second pipeline — it is checking the set Steps 3-4 just built by hand, not building a separate one. If it surfaces a competitor the KB stack missed, add it and pull its homepage too. If its read of an existing competitor disagrees with what Firecrawl showed, name the disagreement in the artifact — don't silently merge the two reads into one.
+
+## Step 5 — Deepen with review sites and communities
+Per the KB methodology for the startup/mid-market stack:
+
+**G2 / Trustradius — filter to 1–3 star reviews**
+The KB specifically flags this filter as where the real signal lives. Search within those reviews for keywords relevant to the product's claimed strengths. Patterns in negative reviews of competitors = real weaknesses to exploit or avoid replicating.
+
+**Community threads**
+Reddit, Quora, relevant Slack groups. The KB notes these are "gold mines" because opinions are unfiltered — no incentive to soften feedback. Look for: what alternatives get recommended, what pain points appear repeatedly, what buying criteria people name.
+
+**LinkedIn headcount trends** (if enterprise-stage or leadership angle matters) The KB calls headcount a "proxy" for business health when companies are private. A hiring spike = demand; tapering or decline = trouble. Check the competitor's LinkedIn company page for the past 12–18 months.
+
+## Step 6 — MKT1 dataset checks
+Check the target company against both curated MKT1 datasets, in one pass: `mkt1_state_of_b2b_marketing_data` (100-company benchmark dataset) and `mkt1_high_growth_b2b_company_list` (~150 curated B2B startups). Most products Mike works on will not be in either — that's the expected result, not a gap to chase. If the target is in one or both, treat the match as corroborating evidence, not a primary source.
+
+## Step 7 — Win/Loss check
+If any win/loss evidence exists (Mike mentions it, it's referenced in Notion, or public reviews reveal competitive deal outcomes), apply the Win/Loss framework from the KB:
+
+`Transcript - ... - Developing a Competitive Strategy through Win_Loss (part 1).md` and `(part 2).md`
+
+If no win/loss data exists, flag it directly. Do not fill the gap with inference.
+
+## Step 8 — Differentiation synthesis (`mkt1_marketing_advantages`)
+Once Steps -1 through 7 are done, run `mkt1_marketing_advantages` last. By this point you have the self-report (Step -1), the live homepage and drift check (Step 2), and the full competitive set (Steps 3-5 plus the Step 4 cross-check). This tool turns all of that into a specific differentiation verdict for the "Observed differentiation" section below — not a fresh, independent read done in isolation.
 
 ## Constraints
-- Don't invent competitors that don't actually exist or aren't actually comparable — check what you pulled, don't pattern-match to "typical SaaS competitors."
-- Don't skip Firecrawl and rely on training knowledge of a well-known product — training data goes stale, homepages change.
-- Flag directly if evidence is thin (e.g., no win/loss data, no named competitors) rather than filling the gap with generic category assumptions.
+- Competitors are research outputs, not inputs. Never start with a default list.
+- Never describe a competitor from training data alone — pull the page.
+- Never upgrade a self-reported claim (Step -1) to "Confirmed" status just because it sounds plausible — it stays "Self-reported" until an external source (Firecrawl, G2, community, MKT1) backs it up.
+- Flag thin evidence directly: sparse homepage, no G2 presence, no community discussion, no win/loss data. These are real findings.
+- Do not invent alternatives that the research doesn't surface.
 
 ## Output artifact
-Market & Competitive Reality: what the product currently claims → who the real alternatives are and what they claim → observed differentiation or lack of it → confidence level per claim (confirmed via Firecrawl/MKT1 vs. inferred) → open questions that ICP/Positioning will need to resolve.
+**Market & Competitive Reality — [Company] — [Date]**
+
+### What [Company] currently claims
+[Self-report from Step -1, then what's pulled from Firecrawl in Step 2 — headline, category claim, buyer, key proof points. If the self-report and the live homepage disagree, name the disagreement here directly.]
+
+### Real alternatives and what they claim
+[Per competitor: pulled homepage positioning, category claim, pricing model signal, plus the `mkt1_competitive_research` cross-check result — agreement or named disagreement]
+
+### Observed differentiation (or lack of it)
+[From Step 8's `mkt1_marketing_advantages` synthesis: where the product is genuinely different; where the field is crowded; where differentiation is claimed but not yet evidenced]
+
+### Confidence per claim
+- **Self-reported**: from `mkt1_company_overview` or Mike directly — not yet checked against an outside source
+- **Confirmed**: pulled live via Firecrawl
+- **Corroborated**: found in G2/community/MKT1 dataset checks
+- **Inferred**: derived from signals, no direct source
+- **Assumed**: no live source — flagged
+
+### Open questions for ICP/Positioning
+[What this research couldn't answer that downstream jobs need to know]
+
+## Artifact destination
+Publish to Notion via the Notion MCP as a new page titled:
+`[Company] — Market & Competitive Reality — [Date]`
+Place it in the relevant client or project folder Mike specifies, or ask where it should live if not specified.
 
 ## What's deliberately left open
-Which specific competitors matter most, how many to pull, how deep the win/loss research goes — scale to what the product and the request actually need.
+How many competitors to pull, how deep the review-site analysis goes, whether win/loss research is in scope — scale to what the product and the specific request actually need.
