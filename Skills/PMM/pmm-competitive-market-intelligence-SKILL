@@ -1,12 +1,14 @@
 ---
 name: pmm-competitive-market-intelligence
-description: 'Required reading before any positioning, messaging, ICP, storytelling, pricing, or launch work begins for a product — this is the mandatory research gate that produces the evidence those jobs depend on. Use whenever Mike gives you a product/homepage to work on and no current Market & Competitive Reality artifact exists yet for it, or when competitive/market facts need refreshing before a downstream PM job runs. Draws on the Competitive Intel discipline of the B2B Marketing OS: https://app.notion.com/p/3d019b7dd90881cf97b9e7473739b50b (Gathering Competitive & Market Insights for Startups, Mid-Market, and Enterprise; Competitive Newsletters for Product & the C-Suite; Developing a Competitive Strategy through Win/Loss). Sequenced with the MKT1 MCP connector''s own skills — `mkt1_company_overview`, `mkt1_competitive_research`, `mkt1_state_of_b2b_marketing_data`, `mkt1_high_growth_b2b_company_list`, `mkt1_marketing_advantages` — as live cross-checks, not replacements, for the KB-driven research below.'
+description: 'Required reading before any positioning, messaging, ICP, storytelling, pricing, or launch work begins for a product — this is the mandatory research gate that produces the evidence those jobs depend on. Use whenever Mike gives you a product/homepage to work on and no current Market & Competitive Reality artifact exists yet for it, or when competitive/market facts need refreshing before a downstream PM job runs. Draws on the Competitive Intel discipline of the B2B Marketing OS: https://app.notion.com/p/3d019b7dd90881cf97b9e7473739b50b (Gathering Competitive & Market Insights for Startups, Mid-Market, and Enterprise; Competitive Newsletters for Product & the C-Suite; Developing a Competitive Strategy through Win/Loss). Produces a compact, evidence-labeled intelligence artifact — not a polished report. For a client-ready or leadership-facing writeup built from that artifact, see the sibling file `pmm-competitive-market-intelligence-EXECUTIVE-REPORT-TEMPLATE.md` in this same folder, loaded only on explicit request.'
 ---
 
 # Competitive & Market Intelligence
 
 ## Goal
-One Market & Competitive Reality artifact: what the product actually claims right now, who the real alternatives are, how they position, and what evidence — not assumption — exists about the competitive landscape. Done means every downstream PMM job (ICP, Positioning, Messaging, Storytelling, Pricing, Launches) can build on this instead of guessing.
+One compact Market & Competitive Reality artifact: what the product actually claims right now, who the real alternatives are, how they position, and what evidence — not assumption — exists about the competitive landscape. Done means every downstream PMM job (ICP, Positioning, Messaging, Storytelling, Pricing, Launches) can build on this instead of guessing.
+
+This is a **research and synthesis artifact for downstream skills to consume, not a long-form executive report.** Keep it bounded. A complete artifact is not the same thing as a polished one — see the Output artifact section below.
 
 ## Why this runs first, always
 Positioning, ICP, and Messaging are strategic decisions. They cannot be made credibly from training-data assumptions. This job replaces assumption with current reality before any of those decisions are made. Nothing downstream runs without this artifact existing and being current.
@@ -15,10 +17,46 @@ Positioning, ICP, and Messaging are strategic decisions. They cannot be made cre
 Company name and product name. Homepage URL if available — if not, find it.
 That's all that's needed. Competitors are not required upfront; identifying them is part of this job, not a precondition for it.
 
-## Step -1 — Get the self-reported baseline (`mkt1_company_overview`)
-Before reading the KB or opening Firecrawl, run `mkt1_company_overview` for this company. This gives the self-reported baseline — who the company says it is, what it sells, who it sells to, and where the business stands today.
+## Research depth mode — choose before Step 0
+Pick a mode before starting anything else, and say which one out loud. Default to **Standard** unless Mike asks for something else or the situation clearly calls for it.
 
-This is Mike's or the company's own account. It has not been checked against anything outside the company yet — treat it as a **self-reported** input, not a confirmed one. Its job is to give Steps 1 and 2 something real to compare against, instead of guessing stage and positioning cold from a homepage.
+**Rapid scan** — exploratory, or the product is unfamiliar and you just need a first read:
+- Target homepage + pricing page only.
+- One competitor-identification source (homepage `/alternatives/` page or G2/Trustradius category page — whichever exists).
+- 2 competitors max, homepage only, no review-site or community pass.
+- Skip Steps 5–7 (review-site depth, MKT1 dataset checks, win/loss) entirely.
+- Artifact only — do not offer the executive report at this depth.
+
+**Standard audit** (default) — a real ICP/Positioning/Messaging job is about to run on top of this:
+- Full Step 0–5 pass as written below.
+- 2–4 priority competitors.
+- Step 6 dataset checks: run them.
+- Step 7 win/loss: only if evidence already exists; otherwise flag and move on, don't chase it.
+- Step 8 differentiation synthesis done by direct reasoning over the evidence gathered (see the MKT1-tool note below) — do not treat it as optional.
+
+**Deep audit** — only when Mike explicitly asks for a full audit, or the decision is high-stakes (e.g. a major repositioning, a competitive threat that just changed materially):
+- Standard audit, plus: deeper review-site sampling, community research across more threads, hiring/headcount signal, and win/loss research even where evidence is thin (treat "no evidence found" as itself worth one more targeted look, not a repeated open-ended search).
+- This is the only mode where producing the full executive report (see `pmm-competitive-market-intelligence-EXECUTIVE-REPORT-TEMPLATE.md`, same folder) is in scope by default.
+
+Do not run Deep audit merely because a product happens to have many plausible competitors. Depth is a decision about stakes, not about how much there is to look at.
+
+## Stopping conditions
+Research is complete — stop — when:
+- The company's core claim, category, buyer, use case, and pricing signal are documented.
+- At least 2 credible alternatives have been identified, or the market is explicitly flagged as thin (per the mode's competitor count above).
+- Each priority competitor has current first-party positioning evidence (homepage pulled live).
+- At least 3 evidence-backed findings are established, or the evidence is explicitly judged thin and flagged as such.
+- The main differentiation claim has been tested against the competitive set.
+- Critical open questions are recorded.
+
+**Do not keep searching to eliminate every unknown.** Facts that aren't publicly disclosed (funding, headcount, founders, revenue) get **2 targeted searches maximum**, then get recorded as `Unknown` in the artifact and left alone. Chasing a negative result past that point is a budget failure, not thoroughness — Crunchbase doesn't have a page for every company, and confirming that a second time doesn't change the answer.
+
+## Step -1 — Get the self-reported baseline, when a human is actually available
+`mkt1_company_overview` is an **interactive tool** — it's built to interview a person across several turns, not to return data from a single call. Only invoke it if Mike is live in this conversation and can answer its follow-up questions.
+
+If this is an unattended or background run with no one to interview: **skip this tool entirely.** Note in the artifact's Research status section that no self-reported baseline exists, and proceed straight to Step 0 using public sources only. Don't call the tool anyway hoping it degrades gracefully — it doesn't; it will return its own instruction set into your context instead of a summary.
+
+When a self-report does exist (from a live conversation, or because Mike already has a `marketing-strategy.md` on file for this company), treat it as Self-reported evidence only — not Confirmed — until Step 2 corroborates or contradicts it. Agreement between the self-report and the live homepage strengthens both; disagreement is itself a finding, named directly.
 
 ## Step 0 — Read the KB before touching any other source
 Read the methodology from the B2B Marketing OS knowledge base:
@@ -28,7 +66,7 @@ Read the methodology from the B2B Marketing OS knowledge base:
 
 Read these files in order:
 1. `Transcript - ... - Gathering Competitive & Market Insights_ Startups & Mid-Market.md` — primary methodology for most products
-2. `Transcript - ... - Gathering Competitive & Market Insights_ Enterprise.md` — additional depth if the product sells to enterprise
+2. `Transcript - ... - Gathering Competitive & Market Insights_ Enterprise.md` — additional depth if the product sells to enterprise (skip at Rapid scan)
 
 **What to extract before proceeding:**
 - The three stakeholder question sets (sales/marketing, product, leadership) — these define what the research must answer
@@ -40,7 +78,7 @@ Do not proceed to research until you can state: *"For this product, the question
 **Notion fallback:** If GitHub isn't accessible in this task, search Notion for "Gathering Competitive Market Insights" to find the same transcripts. Same content, same extraction requirement.
 
 ## Step 1 — Determine company stage
-From the homepage and any available signals, determine whether this is a startup/mid-market company or an enterprise-focused company. Check this against the self-report from Step -1 first — Mike's own account of funding stage, buyer type, and company size is often faster and more reliable than inferring stage from the homepage alone. Use the homepage only to fill in what the self-report didn't cover. This controls which source stack you use:
+From the homepage and any available signals, determine whether this is a startup/mid-market company or an enterprise-focused company. Check this against the self-report from Step -1 first, if one exists. Use the homepage only to fill in what the self-report didn't cover, or as the sole source if there's no self-report. This controls which source stack you use:
 
 - **Startup / mid-market** (seed to Series C, <200 employees, SMB/mid-market buyers, no Gartner Magic Quadrant presence): Use the free/affordable stack — homepage, G2/Trustradius, communities, Google Alerts, LinkedIn headcount
 - **Enterprise** (Fortune 2000 buyers, analyst-covered category, Gartner/Forrester presence, large sales team): Add Crayon/Clue equivalent tracking, Chorus.ai-style competitive mention analysis, SEMrush for SEM strategy, analyst reports where accessible
@@ -57,7 +95,7 @@ Extract per the KB methodology:
 - **Competitor signal**: Do they name competitors, claim alternatives, or use comparison language? ("switch from X", "unlike X", "the X alternative")
 - **Stage signal**: Funding mentions, customer logos, pricing page existence, enterprise vs. PLG language
 
-Then compare these live signals against the Step -1 self-report. Agreement is a corroboration — it strengthens confidence in both sources. Disagreement is itself a finding: it means the company's public story and its internal story have drifted apart, and that drift belongs in the artifact, named directly, not smoothed over.
+Then compare these live signals against the Step -1 self-report, if one exists. Agreement is a corroboration — it strengthens confidence in both sources. Disagreement is itself a finding: it means the company's public story and its internal story have drifted apart, and that drift belongs in the artifact, named directly, not smoothed over.
 
 These signals from the homepage directly drive Step 3.
 
@@ -68,26 +106,26 @@ Competitors are found through research, not assumed. Using the category, buyer, 
 Find the product's category on G2 or Trustradius. The vendors listed in the same category are real alternatives the market already recognizes. Note the top 3–5 by review volume. These are the competitors to pull.
 
 **Source 2 — Community search**
-Search Reddit, Quora, or relevant Slack/Discord communities using the competitor's name + "alternative", "vs", or "switch from". As the KB notes, these communities are "way less filtered" than review sites — people name real alternatives they actually evaluated. Look for patterns across multiple threads, not single mentions.
+Search Reddit, Quora, or relevant Slack/Discord communities using the competitor's name + "alternative", "vs", or "switch from". As the KB notes, these communities are "way less filtered" than review sites — people name real alternatives they actually evaluated. Look for patterns across multiple threads, not single mentions. Skip at Rapid scan.
 
 **Source 3 — Comparison language on the homepage**
-If the product names or implies competitors in its own copy, those are confirmed real alternatives — the company is already positioning against them.
+If the product names or implies competitors in its own copy (a dedicated `/alternatives/` or `/vs/` page counts), those are confirmed real alternatives — the company is already positioning against them. This is usually the fastest and highest-confidence source; check it first if it exists.
 
 **Do not pattern-match to "typical SaaS competitors" for this category.**
-Use only what the research surfaces. If fewer than 2–3 real alternatives emerge, flag it directly: thin competitive landscape is a finding, not a gap to fill with guesses.
+Use only what the research surfaces. If fewer than 2–3 real alternatives emerge, flag it directly: thin competitive landscape is a finding, not a gap to fill with guesses. If the category page (G2, etc.) surfaces mostly mismatched tools with only weak category overlap, say so — that's itself a signal the product's category positioning is still unresolved.
 
-## Step 4 — Pull competitor homepages, then cross-check with `mkt1_competitive_research`
-For each identified competitor (2–3, scaled to what the request needs), pull their actual current homepage via Firecrawl. Per the KB: do not describe a competitor from memory without pulling their current page.
+## Step 4 — Pull competitor homepages
+For each identified competitor (2–4, scaled to the depth mode), pull their actual current homepage via Firecrawl. Per the KB: do not describe a competitor from memory without pulling their current page.
 
 For each competitor, extract the same signals as Step 2:
 - What they claim, what category they're in, who they target
 - Any direct comparison or differentiation language
 - Pricing model signals (freemium, trial, enterprise, usage-based)
 
-Once this competitor set is built, run `mkt1_competitive_research` against the same target and the same competitor set. This is a cross-check, not a second pipeline — it is checking the set Steps 3-4 just built by hand, not building a separate one. If it surfaces a competitor the KB stack missed, add it and pull its homepage too. If its read of an existing competitor disagrees with what Firecrawl showed, name the disagreement in the artifact — don't silently merge the two reads into one.
+**`mkt1_competitive_research` is an interactive spreadsheet-building tool, not a single-call lookup.** It walks a live user through progressive intake (which competitors, which of its 53 columns, which surface) and only then scrapes. Called standalone with no one to answer its intake questions, it returns its own multi-thousand-word methodology as output instead of data — this has happened before and burned a large share of a session's budget for zero research value. Only invoke it when Mike is live and wants to build the full spreadsheet deliverable himself. In every other case, treat the direct Firecrawl pulls in this step as the primary and sufficient method — which is what the KB prescribes anyway — and don't call this tool as a "cross-check."
 
 ## Step 5 — Deepen with review sites and communities
-Per the KB methodology for the startup/mid-market stack:
+Skip this step entirely at Rapid scan. Per the KB methodology for the startup/mid-market stack:
 
 **G2 / Trustradius — filter to 1–3 star reviews**
 The KB specifically flags this filter as where the real signal lives. Search within those reviews for keywords relevant to the product's claimed strengths. Patterns in negative reviews of competitors = real weaknesses to exploit or avoid replicating.
@@ -95,20 +133,32 @@ The KB specifically flags this filter as where the real signal lives. Search wit
 **Community threads**
 Reddit, Quora, relevant Slack groups. The KB notes these are "gold mines" because opinions are unfiltered — no incentive to soften feedback. Look for: what alternatives get recommended, what pain points appear repeatedly, what buying criteria people name.
 
-**LinkedIn headcount trends** (if enterprise-stage or leadership angle matters) The KB calls headcount a "proxy" for business health when companies are private. A hiring spike = demand; tapering or decline = trouble. Check the competitor's LinkedIn company page for the past 12–18 months.
+**LinkedIn headcount trends** (Standard/Deep audit only, if enterprise-stage or leadership angle matters) The KB calls headcount a "proxy" for business health when companies are private. A hiring spike = demand; tapering or decline = trouble. Check the competitor's LinkedIn company page for the past 12–18 months.
 
 ## Step 6 — MKT1 dataset checks
-Check the target company against both curated MKT1 datasets, in one pass: `mkt1_state_of_b2b_marketing_data` (100-company benchmark dataset) and `mkt1_high_growth_b2b_company_list` (~150 curated B2B startups). Most products Mike works on will not be in either — that's the expected result, not a gap to chase. If the target is in one or both, treat the match as corroborating evidence, not a primary source.
+Check the target company against both curated MKT1 datasets, in one pass: `mkt1_state_of_b2b_marketing_data` (100-company benchmark dataset) and `mkt1_high_growth_b2b_company_list` (~150 curated B2B startups). These two are read-only lookups against a fixed dataset — safe to call standalone, unlike the tools flagged in Steps 4 and 8. Most products Mike works on will not be in either — that's the expected result, not a gap to chase. If the target is in one or both, treat the match as corroborating evidence, not a primary source.
 
 ## Step 7 — Win/Loss check
 If any win/loss evidence exists (Mike mentions it, it's referenced in Notion, or public reviews reveal competitive deal outcomes), apply the Win/Loss framework from the KB:
 
 `Transcript - ... - Developing a Competitive Strategy through Win_Loss (part 1).md` and `(part 2).md`
 
-If no win/loss data exists, flag it directly. Do not fill the gap with inference.
+If no win/loss data exists, flag it directly. Do not fill the gap with inference, and do not spend Standard-audit budget hunting for it if an initial check turns up nothing.
 
-## Step 8 — Differentiation synthesis (`mkt1_marketing_advantages`)
-Once Steps -1 through 7 are done, run `mkt1_marketing_advantages` last. By this point you have the self-report (Step -1), the live homepage and drift check (Step 2), and the full competitive set (Steps 3-5 plus the Step 4 cross-check). This tool turns all of that into a specific differentiation verdict for the "Observed differentiation" section below — not a fresh, independent read done in isolation.
+## Step 8 — Differentiation synthesis
+This is where the evidence gathered in Steps -1 through 7 becomes a judgment: what's genuinely different, what's table stakes, what's claimed but unproven.
+
+**`mkt1_marketing_advantages` is also an interactive discovery tool**, built as a collaborative conversation with the company's own team to surface advantages neither party would find alone. Called standalone with no one to converse with, it returns its own framework and discovery-question script instead of a verdict. Don't invoke it in an unattended run.
+
+Do this synthesis directly instead, reasoning over the evidence already collected. Run every candidate differentiator through four tests:
+1. **Real?** Can the product demonstrably deliver it, or is it only asserted in copy?
+2. **Valuable?** Does it solve a problem the buyer actually named, in Steps 2/5?
+3. **Distinct?** Do the competitors identified in Steps 3–4 lack it, or approach it meaningfully differently — if they all have it, it's table stakes, not a differentiator.
+4. **Provable?** Is there case-study, review, or audited-number proof behind it, or only the target's own claim?
+
+Classify each one: **Defensible advantage** / **Credible but emerging advantage** / **Meaningful positioning opportunity** / **Table stakes** / **Claimed but unproven** / **Not meaningfully differentiated**. This produces the `Differentiation assessment` section of the artifact below directly — it does not require a separate tool call.
+
+If Mike is live and wants the deeper, team-informed version of this exercise (surfacing advantages the public evidence alone can't see — founder credibility, channel mastery, GTM wedge), invoke `mkt1_marketing_advantages` as its own interactive session at that point, separate from this artifact.
 
 ## Constraints
 - Competitors are research outputs, not inputs. Never start with a default list.
@@ -116,33 +166,78 @@ Once Steps -1 through 7 are done, run `mkt1_marketing_advantages` last. By this 
 - Never upgrade a self-reported claim (Step -1) to "Confirmed" status just because it sounds plausible — it stays "Self-reported" until an external source (Firecrawl, G2, community, MKT1) backs it up.
 - Flag thin evidence directly: sparse homepage, no G2 presence, no community discussion, no win/loss data. These are real findings.
 - Do not invent alternatives that the research doesn't surface.
+- The artifact is not a research diary. Do not narrate which tool calls succeeded or failed, which searches you tried, or process commentary of any kind inside the artifact — evidence labels carry that job. If a tool genuinely couldn't be used (see Steps 4 and 8), note it once in Research status/limitations, not throughout the document.
 
 ## Output artifact
-**Market & Competitive Reality — [Company] — [Date]**
+Produce one canonical artifact. This is a research and synthesis object for downstream PMM skills to consume — bounded, evidence-labeled, and ending in a decision-ready handoff. It is not a long-form report; do not pad sections with prose that repeats what the table already shows.
 
-### What [Company] currently claims
-[Self-report from Step -1, then what's pulled from Firecrawl in Step 2 — headline, category claim, buyer, key proof points. If the self-report and the live homepage disagree, name the disagreement here directly.]
+**Evidence labels** — every substantive claim in the artifact carries one:
+- **Confirmed** — pulled live via Firecrawl or another primary source this run.
+- **Corroborated** — found independently in G2/community/MKT1 dataset checks, agreeing with a Confirmed or Self-reported claim.
+- **Self-reported** — from `mkt1_company_overview` or Mike directly; not yet checked against an outside source.
+- **Inferred** — derived from signals, no direct source.
+- **Hypothesis** — a reasonable read that downstream jobs should test, not treat as settled.
+- **Unknown** — checked (per the 2-search stopping rule) and genuinely not publicly available. Distinct from a gap nobody looked into.
+- **Contradicted** — two sources disagree; name both and the disagreement, don't silently pick one.
 
-### Real alternatives and what they claim
-[Per competitor: pulled homepage positioning, category claim, pricing model signal, plus the `mkt1_competitive_research` cross-check result — agreement or named disagreement]
+A claim repeated many times on the company's own site is still one source (Self-reported or Confirmed-as-claimed, not Corroborated) — repetition on the same site is not independent corroboration.
 
-### Observed differentiation (or lack of it)
-[From Step 8's `mkt1_marketing_advantages` synthesis: where the product is genuinely different; where the field is crowded; where differentiation is claimed but not yet evidenced]
+```markdown
+# Market & Competitive Reality — [Company] — [Product] — [Date]
 
-### Confidence per claim
-- **Self-reported**: from `mkt1_company_overview` or Mike directly — not yet checked against an outside source
-- **Confirmed**: pulled live via Firecrawl
-- **Corroborated**: found in G2/community/MKT1 dataset checks
-- **Inferred**: derived from signals, no direct source
-- **Assumed**: no live source — flagged
+## Research status
+- Research depth mode: [Rapid / Standard / Deep]
+- Self-reported baseline available: [Yes / No — no one available to interview]
+- Evidence coverage: [what was checked]
+- Critical limitations: [what wasn't — thin category, no reviews, tool unavailable, etc.]
 
-### Open questions for ICP/Positioning
-[What this research couldn't answer that downstream jobs need to know]
+## Company reality
+[Core claim / category claim / target buyer / primary use case / business model / pricing signal / proof signal / stage signal / category ambiguity — each with an evidence label. Name any Self-report vs. live-homepage disagreement directly here.]
+
+## Market reality
+[Category maturity / adjacent categories / status quo alternatives / buyer problems and criteria — with evidence labels, flagging gaps as Unknown rather than skipping them silently.]
+
+## Competitive set — one consolidated table, target included
+| Company | Alternative type | Core claim | Core mechanism | Pricing signal | Main strength | Main weakness | Confidence |
+|---|---|---|---|---|---|---|---|
+| [Target — row one] | — | | | | | | |
+| [Competitor 1] | | | | | | | |
+
+## Evidence-backed findings
+Numbered list, 3+ findings minimum (or explicitly flagged as thin). Each: the finding, the evidence behind it, its strategic meaning, its confidence label.
+
+## Differentiation assessment
+For each candidate differentiator, run it through the four-test rubric above (Real? Valuable? Distinct? Provable?) and assign one classification:
+
+| Claimed differentiator | Real? | Valuable? | Distinct? | Provable? | Classification |
+|---|---|---|---|---|---|
+| [Claim] | Y/N/Unknown | Y/N/Unknown | Y/N/Unknown | Y/N/Unknown | [Defensible advantage / Credible but emerging / Meaningful positioning opportunity / Table stakes / Claimed but unproven / Not meaningfully differentiated] |
+
+Then name, in a sentence each: the strongest defensible advantage (if any), the most crowded/commoditized territory, and the single biggest strategic threat to the target.
+
+## Positioning handoff
+Close with one mandatory paragraph — not a bullet list, a single coherent statement that forces a call instead of restating the findings above:
+
+> **Bottom line for Positioning:** [Company] should not position itself primarily as [crowded or weak category]. The strongest direction to test is [specific category, problem, buyer, or outcome], differentiated by [specific mechanism]. This is supported by [the one or two strongest evidence-backed findings], but constrained by [the most important proof gap or open uncertainty]. The next Positioning/ICP job should validate [specific buyer/segment] and test [specific framing]. Until that evidence exists, avoid claiming [specific overreach the current evidence doesn't support].
+
+Every bracket above must be filled with something specific to this research — no placeholder-shaped generic language. If a bracket can't be filled with anything specific, that's itself a critical open question, not something to paper over with a vague claim.
+
+## Open questions
+- Critical: [blocks downstream work without an answer]
+- Important: [affects quality but doesn't block]
+- Useful: [nice to resolve, not urgent]
+
+## Source register
+| ID | Source | Type | Date pulled | Claims it supports |
+|---|---|---|---|---|
+```
 
 ## Artifact destination
 Publish to Notion via the Notion MCP as a new page titled:
 `[Company] — Market & Competitive Reality — [Date]`
 Place it in the relevant client or project folder Mike specifies, or ask where it should live if not specified.
 
+If Mike explicitly asks for a polished, client- or leadership-facing version on top of this artifact (a board deck input, a client deliverable, a full narrative report), read `pmm-competitive-market-intelligence-EXECUTIVE-REPORT-TEMPLATE.md` (same folder as this file) and produce that as a second, separate page — don't replace the compact artifact with it, and don't produce it by default even in Deep audit mode unless asked.
+
 ## What's deliberately left open
-How many competitors to pull, how deep the review-site analysis goes, whether win/loss research is in scope — scale to what the product and the specific request actually need.
+How many competitors to pull, how deep the review-site analysis goes, whether win/loss research is in scope — scale to what the product and the specific request actually need, within the depth mode selected above.
