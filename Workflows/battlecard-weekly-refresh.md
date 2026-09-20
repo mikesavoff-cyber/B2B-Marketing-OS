@@ -8,6 +8,8 @@ This is a separate, downstream workflow. It does not identify new competitors, d
 
 **Cadence:** weekly, by default. Immediate items (per the parent workflow's Step 4 definition — acquisitions, funding rounds, major product releases, lawsuits, large layoffs reported as distress) still get surfaced the moment they're found, same as the parent workflow — this schedule is the floor, not a reason to hold major news for the next weekly run.
 
+**Monthly focus competitor:** each run carries a designated focus competitor for the current month — typically whichever of the five has the lowest current win rate, or the most consequential recent status change — set by a human, not chosen by this workflow. The focus doesn't change what gets checked (all five still get the full Step 1 pass every week), but it does change what gets emphasized in the run log and in that period's newsletter lead story, and it's the competitor whose win rate should actually be tracked before and after the month's push. Without a named focus, a month's activity can't be cleanly attributed to a result — this designation is what makes the whole refresh cycle measurable rather than just busy.
+
 ## Step 1: Re-check each competitor's online presence
 
 For each competitor already on the confirmed list, re-run the same sources Step 2 of the parent workflow used, scoped to what's changed since the last run:
@@ -51,6 +53,7 @@ Every run — even one with no changes — produces a short run log:
 - What changed, if anything (link to the Step 2 table for that run).
 - Which cards were regenerated, if any.
 - Any status-changing flags from Step 3, surfaced explicitly for a human decision — never auto-resolved.
+- This month's focus competitor, and the current win-rate read against them if that data exists — the one number this whole cycle should be moving.
 
 Publish the run log and any updated cards to the same Notion location as the parent workflow's output. Never let a scheduled run silently pass with no visible record.
 
