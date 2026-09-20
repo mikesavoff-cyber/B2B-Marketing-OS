@@ -12,6 +12,8 @@ Run `mkt1_homepage_positioning` on the target's own homepage before anything els
 
 Purpose: establish the real product type (10x Better / New Way / Vertical Solution / Buy vs Build) and the real comparator, from what the homepage actually says — not from the company's own invented category language, and not from assumption.
 
+**Before this step is considered done, crawl the full site, not just the homepage.** Follow every nav and footer link, specifically: Customers, Case Studies, Proof/Results, Product/Platform pages, Pricing, About, Resources. A real, documented failure of this workflow happened by skipping this: a run concluded a target had "no proof of value beyond a few named logos" while its actual Customers/Case Studies page — never fetched — held real proof the whole time. That is not a minor miss; it's a false claim about the target stated with confidence, built entirely on laziness about which pages got read. The homepage is where positioning language lives; it is never where proof lives. Never conclude anything about a company's evidence, customer base, or capabilities from the homepage alone.
+
 Never accept a company's self-described category name (e.g. a made-up product category) as real market structure without this check. If the check finds a category-confusion or positioning-mismatch gap, note it — that gap is itself a finding, and it will bias any later competitor search that isn't corrected for it.
 
 Output: product type, real comparator, positioning gaps.
@@ -32,7 +34,7 @@ Source: Lesson 2 (Gathering Competitive & Market Insights: Startups & Mid-Market
 For each confirmed competitor, gather ALL of the following before answering any question — never answer a lane's questions from partial research:
 
 **Marketing lane** (positioning, buyer, market sentiment):
-1. Homepage — live fetch, not memory.
+1. **The whole site, not just the homepage** — live fetch, not memory. Homepage first for positioning/hero language, then follow every nav and footer link: Customers, Case Studies, Proof/Results, Product/Platform pages, Pricing, Resources. Proof of value lives on the Customers/Case Studies page, essentially never on the homepage — a competitor's evidence does not get marked "doesn't exist" until those specific pages have actually been fetched and read, not just linked from the nav.
 2. G2 / TrustRadius / Trustpilot / Glassdoor — pull via web search when direct site access is blocked; capture both praise and complaints, not just star ratings.
 3. Community check — Reddit, Quora, LinkedIn (posts/discussion, not the company page), Facebook groups, Discord, Slack. Run all of them, not just Reddit. Report an empty result as a real finding ("no public community presence found"), never skip a source silently or fabricate chatter that isn't there.
 
@@ -216,6 +218,7 @@ Source: Lesson 9 (Organizing a Competitive Marketing Campaign). This is **not** 
 ## Standing rules — apply at every step, not just once at the top
 
 - Never state a company or product fact — mechanics, positioning, competitor status, category — from memory, hedged or not. Verify live, or say "unknown."
+- **Never judge a company's proof, customers, or capabilities from its homepage alone.** Read the whole site — Customers, Case Studies, Proof/Results, Product pages, Resources — before concluding anything is missing. A claim that "no proof exists" is only ever valid after those specific pages were actually fetched, never after the homepage was.
 - Never accept a company's self-described category as validated market structure without checking it (Step 0).
 - Never treat an automated discovery list as final. Always present it for human correction before using it.
 - File real outputs into the project's actual directory as they're produced, not just in chat.
