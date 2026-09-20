@@ -12,9 +12,20 @@ This is a separate, downstream workflow. It does not identify new competitors, d
 
 ## Step 1: Re-check each competitor's online presence
 
-For each competitor already on the confirmed list, re-run the same sources Step 2 of the parent workflow used, scoped to what's changed since the last run:
+This is the actual purpose of the whole workflow, stated plainly: track every move a competitor makes on their own website, not just a handful of named pages. Positioning changes, new product pages, new landing pages, new blog/resource content, new case studies, pricing page changes, and feature releases/changelog entries are all in scope — each one is a real signal about what the competitor is doing, and each one gets missed entirely by a check that only revisits the same few pages every week.
 
-- Homepage — re-fetch live; diff against the last captured hero/positioning text.
+**1a. Detect new pages, not just changes to known ones.** Before diffing anything, check whether the site's structure itself has grown: pull the sitemap.xml if one exists, or re-walk the nav/footer, and compare the URL list against what was captured last run. A brand-new landing page, product page, or case study won't show up in a diff of already-known pages — it has to be noticed as a new URL first. This step is what actually catches "new landing page" and "new product page" as change types; skipping it means the check only ever sees updates to pages it already knew about.
+
+**1b. Re-fetch and diff every page in scope, category by category:**
+- **Homepage** — positioning/hero language drift.
+- **Product/platform pages** — new capabilities, reworded claims, new pages covering a use case that didn't have one before.
+- **Pricing page** — tier changes, new packaging, a price that moved. Pricing changes are strategically significant on their own and should never get folded silently into a generic "product update" line.
+- **Customers / Case Studies / Proof / Results** — new logos, new named case studies, new quantified claims. This is the category that caused the original miss in the parent workflow; it does not get treated as lower-priority than the others here.
+- **Blog / Resources / content hub** — new posts, especially anything naming a competitor (including the target), a category claim, or a customer story that didn't get its own dedicated case-study page.
+- **Changelog / release notes / "what's new"** — new feature releases. A shipped feature can directly age out a claim already sitting in that competitor's battlecard ("they don't have X" stops being true the day they ship X), so this page matters as much as any review site.
+- **Landing pages** discovered via 1a — treat as their own category; a new landing page targeting a specific segment or use case is itself a positioning/GTM signal, not just content.
+
+**1c. Off-site sources, same as before:**
 - G2 / TrustRadius / Trustpilot / Glassdoor — check for new reviews or rating shifts since last check.
 - Community (Reddit, Quora, LinkedIn, Facebook groups, Discord, Slack) — check for new mentions.
 - Funding/news/leadership signal (Crunchbase, PitchBook, Tracxn, press) — check for new events: funding rounds, layoffs, acquisitions, executive hires, lawsuits.
@@ -24,10 +35,12 @@ Do not re-run Step 0 (homepage positioning) or Step 1 (competitor identification
 
 ## Step 2: Classify what changed
 
-For each new finding, classify it the same way the parent workflow's Step 4 does:
+For each new finding, classify it the same way the parent workflow's Step 4 does, plus the change-type category from Step 1:
 
-| Company | Insight | For Team | Channel | Cadence |
-|---|---|---|---|---|
+| Company | Change Type | Insight | For Team | Channel | Cadence |
+|---|---|---|---|---|---|
+
+Change Type is one of: Positioning, New Product Page, New Landing Page, New Content, New Case Study, Pricing Change, Feature/Changelog Release, Review/Rating Shift, Community Mention, Funding/Leadership Event. This category is what lets the run log and the newsletter actually say what kind of move a competitor made, not just that something changed.
 
 Only genuinely new information goes in this table — re-confirming an unchanged fact is not a finding.
 
@@ -42,6 +55,13 @@ Some events don't just update a battlecard, they invalidate its current form —
 ## Step 4: Update the affected battlecard(s)
 
 For any competitor with a genuine new finding, regenerate that specific battlecard's story arc (parent workflow Step 5) using the updated facts — don't hand-patch one line of an old arc if the new fact changes which beat it belongs in (e.g. a new lawsuit usually becomes the new climax, not an addendum to the old one).
+
+The change type from Step 2 shapes what actually needs updating, not just whether something does:
+- **Feature/Changelog Release** — check whether it directly ages out an existing claim in the card (a stated weakness that's now fixed, a gap that's now closed). This is the change type most likely to make an existing arc actively wrong, not just stale, and gets priority over the others.
+- **Pricing Change** — update any pricing-related line in the card; flag for the newsletter even if the battlecard itself doesn't otherwise need regenerating.
+- **New Case Study / New Content** — check whether it undercuts a "no proof" or "thin proof" claim already sitting in the card; if so, that claim has to go, not just get a caveat added next to it.
+- **New Product Page / New Landing Page** — signals a new segment or use case being targeted; note it even if it doesn't change the card's core arc, since it's relevant to whether this competitor is entering the target's own segment.
+- **Positioning** — re-run the diff against Step 0's original read for that competitor; if the shift is significant, treat it the same as a status-changing event even though it isn't on the Step 3 list below.
 
 Cards with no new findings that week are left untouched — don't regenerate a card just because the schedule fired.
 
@@ -60,6 +80,7 @@ Publish the run log and any updated cards to the same Notion location as the par
 ## Standing rules — same as the parent workflow, restated because this runs unattended
 
 - Never state a company or product fact from memory. Verify live on every run, even for a competitor checked last week.
+- Never judge a competitor's proof or capabilities from its homepage alone. Re-check the whole site every run, per Step 1's full category list, including a new-page detection pass — not just a diff of the same pages checked last time. This is a recurring check specifically because competitors add new pages, proof, and features over time; missing any of that defeats the point of running weekly at all.
 - Never auto-retire or auto-replace a competitor on the list (Step 3) — flag it, let a human confirm.
 - Never regenerate a card without a genuine new finding behind it.
 - If a source that worked last run fails this run (blocked, rate-limited, account issue), report that explicitly in the run log — don't silently skip it or fill the gap from memory.
