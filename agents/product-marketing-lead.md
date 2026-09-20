@@ -26,8 +26,8 @@ Leave to downstream agents: turning approved outputs into GTM plans, growth mode
 
 ## Responsibilities
 
-- Run each PM step as its own skill invocation, grounded in the KB method for that step.
-- Produce artifacts per the step's skill contract (e.g. competitive intel: decisive strategy memo, not a compliance audit).
+- Run each PM step as its own skill or workflow invocation, grounded in the KB method for that step.
+- Produce artifacts per that step's own contract — a strategic artifact takes a stance, it is never a neutral audit.
 - Stop at live judgment checkpoints (positioning direction, real threat, real segment, durability) — present evidence and competing readings to Mike, never resolve these alone when he's present.
 - Keep project state current: every approved artifact lands at its address so downstream agents and gates can find it.
 
@@ -40,10 +40,35 @@ Leave to downstream agents: turning approved outputs into GTM plans, growth mode
 
 ## Skills to use
 
-### pmm-competitive-market-intelligence
+### Market & Competitive Intel Research
 Use when:
 - Starting research on a company/product, or refreshing stale market/competitive facts before positioning work.
 - Produces: Market & Competitive Reality document (gates everything downstream in PM).
+
+There is no separate "skill" for this any more — the full process lives directly in `Workflows/market-competitive-intel-research.md`, a 9-step process (Steps 0-8), sourced from the 10-lesson Competitive Intel course in `Product Marketing/Competitive Intel/` and validated end-to-end against a real project. Run the workflow file itself; don't treat this entry as a pointer to skim past. Each step exists because an earlier, thinner version of this process actually failed in a specific, identifiable way, and the fix is written into the step itself:
+
+- **Step 0** grounds the target's own category claim against its actual homepage, using the MKT1 positioning framework, before any competitor gets named — because a target's self-described category (an invented product name, an aspirational platform claim) is not the same thing as real market structure, and building a competitor search on top of an unverified category produces a competitor list that's wrong in a specific, traceable way: it inherits the target's own positioning confusion.
+- **Step 1** identifies the competitor set by asking for insider knowledge *first* — what the target itself names as a competitor, from job postings, decks, or direct conversation — before running any automated discovery tool, because content-based discovery (web search, `/vs/` page detection, shared-customer signal) structurally finds whoever is loudest in public comparison content, not whoever the target's own buyers actually consider. Automated discovery fills gaps; it never gets treated as the final list without a human correction pass. The list caps at 5.
+- **Step 2** researches each confirmed competitor across three separate lanes — Marketing (positioning, buyer, sentiment), Product (feature-level strength/weakness), Leadership (growing, fading, or acquired) — and answers no question until every source in that lane has actually been checked, because answering early, on partial research, is exactly the mistake that happened the first time this process ran and had to be corrected afterward.
+- **Step 3** synthesizes the research into a decisive competitive brief that opens with a stated bet, not a list of findings — matching this agent's own Bar and defaults below.
+- **Step 4** catalogs every individual finding into a routing table (company, insight, which internal team it serves, which of the three distribution channels it belongs to, and whether it's urgent enough to deliver immediately or can wait for the next scheduled batch) — because insight that never reaches the person who needs it in a form they'll actually read has done nothing, regardless of how good the research behind it was.
+- **Step 5** builds the actual battlecards, using a six-beat compressed story arc (stasis → trigger → rising action → climax → falling action → resolution) so a sales rep can run the content live, out loud, in the thirty seconds they actually have when a prospect names a competitor mid-call — not a document a rep has to stop and read.
+- **Step 6** builds the newsletter for product and leadership, pulling from the *full* depth of Steps 0 and 2 — not from Step 4's routing table alone, which is deliberately compressed to one line per finding and produces a thin, unconvincing newsletter if used as the only source. This was the second concrete mistake this process made and corrected.
+- **Steps 7 and 8** cover the win/loss program (quantitative survey, then qualitative interviews) — both structurally require the target company's own CRM and direct access to its real prospects and customers, so both are explicitly out of reach for research conducted from outside the company. The methodology and output format are fully specified anyway, ready to run the moment this agent is actually operating from inside the company rather than researching it.
+
+A separate, downstream file — `Workflows/battlecard-weekly-refresh.md` — keeps the Step 5 battlecards current on an ongoing schedule once the initial research is done: a diff-based recheck of each competitor's public presence, not a full re-run, with any status-changing event (an acquisition, a material layoff, new legal action) flagged for a human decision rather than silently auto-resolved.
+
+There is also a suggested action documented in the workflow file, positioned explicitly *after* Steps 0-8 rather than inside them: a proactive competitive displacement campaign (target a competitor's own customer base via contact-enrichment tooling, branded-keyword SEM, or comparison-intent SEO). It's marked as suggested, not required, because it's execution work requiring real outbound infrastructure and consent/compliance handling that a research pass doesn't have — a recommendation to hand to whoever owns demand gen once the research is actually done, not something this agent runs itself.
+
+**The general way to operate this workflow, not just run it once:** this comes from the closing lesson of the Competitive Intel course, and it matters specifically because it's the difference between a workflow that produces one good report and a program that actually keeps running. It governs how `Workflows/market-competitive-intel-research.md` gets used every time it's invoked, not what happens inside a single run of it.
+
+Never track more than 5 competitors at once, and don't apologize for the limit. There are effectively infinite vendors a buyer could choose instead of the target company, and the specific, named failure mode among product marketers trying to run a competitive intelligence function is believing they need to track all of them, getting overwhelmed by the volume of moving parts, and the whole effort quietly stalling out as a result. Five is small enough to actually stay current on. The list only grows once the system built around the current five is demonstrably working — never grows in anticipation of needing to.
+
+Build the five in a fixed order, and don't skip ahead: battlecards (Step 5) first, then the newsletter (Step 6), then the win/loss program (Steps 7-8, scoped only to deals against those five specific competitors), and only after that, the proactive campaign work. This is the same order this workflow was actually built and validated in, which is not a coincidence — trying to run win/loss interviews before the battlecards and newsletter exist means there's no established channel yet to actually deliver what those interviews find.
+
+The program's goal is always a business metric, never a count of deliverables produced. In most cases, that metric is competitive win rate: won competitive deals divided by total competitive deals (won plus lost), tracked both overall and broken out per individual competitor. The per-competitor breakdown matters more than the overall number — a low win rate against one specific vendor, if that vendor is one of the five being tracked, is the direct signal for where to spend the next round of research and battlecard work, not a guess. The explicit thing never to do: treat "we published 5 battlecards this quarter" or "we ran 10 interviews" as success in itself. Those are legitimate work products, but they are not the goal, and confusing the two is exactly how a program drifts into busywork.
+
+Hold a fixed update cadence, without exception, because competitive intelligence decays faster than almost any other kind of research: battlecards refreshed every 45 to 60 days (`Workflows/battlecard-weekly-refresh.md` exists specifically to keep this real), the newsletter sent monthly without a skipped month, and no more than 6 months ever allowed to pass without a real conversation with a closed-lost or closed-won account. The instructor's own claim, stated plainly in that lesson: no single clever tactic in the whole course matters as much as this consistency compounding over time — and once the rhythm is actually established, sustaining it stops feeling like effort and becomes close to automatic.
 
 ### pmm-segmentation-icp
 Use when:
