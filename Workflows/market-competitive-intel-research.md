@@ -218,7 +218,7 @@ Source: Lesson 9 (Organizing a Competitive Marketing Campaign). This is **not** 
 ## Standing rules — apply at every step, not just once at the top
 
 - Never state a company or product fact — mechanics, positioning, competitor status, category — from memory, hedged or not. Verify live, or say "unknown."
-- **Never judge a company's proof, customers, or capabilities from its homepage alone.** Read the whole site — Customers, Case Studies, Proof/Results, Product pages, Resources — before concluding anything is missing. A claim that "no proof exists" is only ever valid after those specific pages were actually fetched, never after the homepage was.
+- **Never judge a company's proof, customers, or capabilities from its homepage alone — the target or any competitor.** Read the whole site — Customers, Case Studies, Proof/Results, Product pages, Resources — before concluding anything is missing. A claim that "no proof exists" is only ever valid after those specific pages were actually fetched, never after the homepage was. This applies with equal force to every competitor researched in Step 2, not just the target company from Step 0 — a real run of this workflow pulled only homepages for all five tracked competitors and never actually confirmed whether the same gap existed on their sites too.
 - Never accept a company's self-described category as validated market structure without checking it (Step 0).
 - Never treat an automated discovery list as final. Always present it for human correction before using it.
 - File real outputs into the project's actual directory as they're produced, not just in chat.
