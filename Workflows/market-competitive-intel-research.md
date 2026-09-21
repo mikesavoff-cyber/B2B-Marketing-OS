@@ -12,7 +12,17 @@ Run `mkt1_homepage_positioning` on the target's own homepage before anything els
 
 Purpose: establish the real product type (10x Better / New Way / Vertical Solution / Buy vs Build) and the real comparator, from what the homepage actually says — not from the company's own invented category language, and not from assumption.
 
-**Before this step is considered done, crawl the full site, not just the homepage.** Follow every nav and footer link, specifically: Customers, Case Studies, Proof/Results, Product/Platform pages, Pricing, About, Resources. A real, documented failure of this workflow happened by skipping this: a run concluded a target had "no proof of value beyond a few named logos" while its actual Customers/Case Studies page — never fetched — held real proof the whole time. That is not a minor miss; it's a false claim about the target stated with confidence, built entirely on laziness about which pages got read. The homepage is where positioning language lives; it is never where proof lives. Never conclude anything about a company's evidence, customer base, or capabilities from the homepage alone.
+**Before this step is considered done, read a bounded, named set of pages — not the entire site, and never the homepage alone.** "Crawl everything" is expensive and imprecise; a fixed checklist catches the same real gaps at a fraction of the cost. Fetch, in full:
+- Homepage
+- Pricing page
+- Main Product/Platform/Solutions page(s) — the top-level pages only, not every feature sub-page
+- Customers/Case Studies/Proof/Results — this is where proof of value actually lives, essentially never on the homepage
+- Changelog/release notes, if one exists
+- Blog/resources **index page only** — capture each recent post's title, date, and first paragraph, not the full post. That's enough to catch a positioning shift, a named category claim, or a case-study-shaped post without paying to read every post in full.
+
+From what's read above, also determine and state the **GTM model** — sales-led (gated pricing, "Book a Demo" as the primary CTA, no self-serve signup) or product-led (self-serve signup, free trial, visible/instant pricing, or a hybrid) — this costs nothing extra to determine, it's inference from pages already fetched, not a new source.
+
+A real, documented failure of this workflow happened from skipping the proof pages specifically: a run concluded a target had "no proof of value beyond a few named logos" while its actual Customers/Case Studies page — never fetched — held real proof the whole time. That is not a minor miss; it's a false claim about the target stated with confidence, built entirely on laziness about which pages got read. Never conclude anything about a company's evidence, customer base, or capabilities without having actually read that specific page.
 
 Never accept a company's self-described category name (e.g. a made-up product category) as real market structure without this check. If the check finds a category-confusion or positioning-mismatch gap, note it — that gap is itself a finding, and it will bias any later competitor search that isn't corrected for it.
 
@@ -31,10 +41,12 @@ Output: product type, real comparator, positioning gaps.
 
 Source: Lesson 2 (Gathering Competitive & Market Insights: Startups & Mid-Market).
 
+**Tier the competitors before spending any tokens on them.** Not all five deserve the same research depth. Tier 1 = the 1-2 most consequential (highest actual threat, or the current monthly focus competitor once one exists) — full depth below. Tier 2/3 = the rest — the same page checklist, but stop at the bounded set below with no blog/changelog pass unless something specific gets flagged. This is a cost decision, not a corner cut: the pages that catch real gaps (Customers/Case Studies, pricing) stay mandatory for every tier; only the deeper, lower-yield pages (blog archive, changelog) get skipped for Tier 2/3.
+
 For each confirmed competitor, gather ALL of the following before answering any question — never answer a lane's questions from partial research:
 
 **Marketing lane** (positioning, buyer, market sentiment):
-1. **The whole site, not just the homepage** — live fetch, not memory. Homepage first for positioning/hero language, then follow every nav and footer link: Customers, Case Studies, Proof/Results, Product/Platform pages, Pricing, Resources. Proof of value lives on the Customers/Case Studies page, essentially never on the homepage — a competitor's evidence does not get marked "doesn't exist" until those specific pages have actually been fetched and read, not just linked from the nav.
+1. **A bounded, named page set — never the homepage alone, and never an unbounded full-site crawl.** Live fetch, not memory: homepage (positioning/hero), pricing, main Product/Platform/Solutions pages (top-level only), Customers/Case Studies/Proof/Results (mandatory for every competitor regardless of tier — this is where proof of value actually lives), and — Tier 1 only — the changelog/release notes and the blog/resources index (titles, dates, and first paragraph of each recent post, not full posts). Proof of value does not get marked "doesn't exist" until the Customers/Case Studies page specifically has actually been fetched and read. From these pages, also state the competitor's GTM model — sales-led or product-led — as a free inference from what's already been read, not a separate fetch.
 2. G2 / TrustRadius / Trustpilot / Glassdoor — pull via web search when direct site access is blocked; capture both praise and complaints, not just star ratings.
 3. Community check — Reddit, Quora, LinkedIn (posts/discussion, not the company page), Facebook groups, Discord, Slack. Run all of them, not just Reddit. Report an empty result as a real finding ("no public community presence found"), never skip a source silently or fabricate chatter that isn't there.
 
@@ -218,7 +230,7 @@ Source: Lesson 9 (Organizing a Competitive Marketing Campaign). This is **not** 
 ## Standing rules — apply at every step, not just once at the top
 
 - Never state a company or product fact — mechanics, positioning, competitor status, category — from memory, hedged or not. Verify live, or say "unknown."
-- **Never judge a company's proof, customers, or capabilities from its homepage alone — the target or any competitor.** Read the whole site — Customers, Case Studies, Proof/Results, Product pages, Resources — before concluding anything is missing. A claim that "no proof exists" is only ever valid after those specific pages were actually fetched, never after the homepage was. This applies with equal force to every competitor researched in Step 2, not just the target company from Step 0 — a real run of this workflow pulled only homepages for all five tracked competitors and never actually confirmed whether the same gap existed on their sites too.
+- **Never judge a company's proof, customers, or capabilities from its homepage alone — the target or any competitor.** Read the bounded page set from Step 0/Step 2 — Customers/Case Studies is mandatory regardless of tier — before concluding anything is missing. A claim that "no proof exists" is only ever valid after that specific page was actually fetched, never after the homepage was. This applies with equal force to every competitor researched in Step 2, not just the target company from Step 0 — a real run of this workflow pulled only homepages for all five tracked competitors and never actually confirmed whether the same gap existed on their sites too. The fix is a bounded, tiered checklist (Step 0/2), not an unbounded full-site crawl — token cost and thoroughness aren't the same tradeoff once the checklist is scoped correctly.
 - Never accept a company's self-described category as validated market structure without checking it (Step 0).
 - Never treat an automated discovery list as final. Always present it for human correction before using it.
 - File real outputs into the project's actual directory as they're produced, not just in chat.

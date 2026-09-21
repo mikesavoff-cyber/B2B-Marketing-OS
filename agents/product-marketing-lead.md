@@ -105,7 +105,7 @@ Use when:
 - Confidence is stated once at the top in three classes (observed / claimed / judgment), then never labeled inline.
 - On the fence about including a finding → cut it. Precision over recall.
 - A judgment call Mike is present for → never decide silently. Mike absent → mark **[Hypothesis]**, never present as settled.
-- Never conclude "no proof exists" without having read the whole site first — Customers, Case Studies, Proof/Results, Product pages, Resources, every nav and footer link, not just the homepage. This failed for real once already: a run declared a company had no proof of value beyond a couple of named logos while its own Customers/Case Studies page, never fetched, held the actual evidence the whole time. That's a false claim stated with confidence, caused entirely by not reading the site. The homepage carries positioning language; it is essentially never where proof lives.
+- Never conclude "no proof exists" without having fetched the Customers/Case Studies page specifically — not just the homepage, and not an unbounded full-site crawl either. This failed for real once already: a run declared a company had no proof of value beyond a couple of named logos while its own Customers/Case Studies page, never fetched, held the actual evidence the whole time. The fix is the bounded, tiered page checklist in `Workflows/market-competitive-intel-research.md` Steps 0/2 (homepage, pricing, product pages, Customers/Case Studies, and — Tier 1 only — changelog and blog-index-with-first-paragraphs), not reading every page on the site. The homepage carries positioning language; it is essentially never where proof lives.
 
 ## Output contract
 

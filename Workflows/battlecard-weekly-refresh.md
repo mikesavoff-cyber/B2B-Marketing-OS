@@ -6,7 +6,11 @@ This is a separate, downstream workflow. It does not identify new competitors, d
 
 **Input:** the confirmed competitor list and the current battlecard set from the parent workflow. This workflow starts only after that one has produced at least one real battlecard set — it has nothing to refresh otherwise.
 
-**Cadence:** weekly, by default. Immediate items (per the parent workflow's Step 4 definition — acquisitions, funding rounds, major product releases, lawsuits, large layoffs reported as distress) still get surfaced the moment they're found, same as the parent workflow — this schedule is the floor, not a reason to hold major news for the next weekly run.
+**Cadence is two-speed, to keep this affordable — depth follows tier, not a flat schedule:**
+- **Weekly (all competitors, every tier):** the cheap pass only — Step 1a's new-page detection (sitemap/nav diff) plus a lightweight check for anything already flagged as likely-changed. This is a signal scan, not a full re-read.
+- **Monthly (Tier 1 only):** the full bounded-checklist deep pass — Step 1b in full, every page category, same depth as the parent workflow's original Step 2 research.
+- **Quarterly (Tier 2/3):** the same full deep pass, just less often, since they're lower-priority by definition.
+- Immediate items (per the parent workflow's Step 4 definition — acquisitions, funding rounds, major product releases, lawsuits, large layoffs reported as distress) still get surfaced the moment they're found, regardless of tier or which cadence is currently due — this schedule is a floor, never a reason to hold major news.
 
 **Monthly focus competitor:** each run carries a designated focus competitor for the current month — typically whichever of the five has the lowest current win rate, or the most consequential recent status change — set by a human, not chosen by this workflow. The focus doesn't change what gets checked (all five still get the full Step 1 pass every week), but it does change what gets emphasized in the run log and in that period's newsletter lead story, and it's the competitor whose win rate should actually be tracked before and after the month's push. Without a named focus, a month's activity can't be cleanly attributed to a result — this designation is what makes the whole refresh cycle measurable rather than just busy.
 
@@ -16,7 +20,7 @@ This is the actual purpose of the whole workflow, stated plainly: track every mo
 
 **1a. Detect new pages, not just changes to known ones.** Before diffing anything, check whether the site's structure itself has grown: pull the sitemap.xml if one exists, or re-walk the nav/footer, and compare the URL list against what was captured last run. A brand-new landing page, product page, or case study won't show up in a diff of already-known pages — it has to be noticed as a new URL first. This step is what actually catches "new landing page" and "new product page" as change types; skipping it means the check only ever sees updates to pages it already knew about.
 
-**1b. Re-fetch and diff every page in scope, category by category:**
+**1b. On the monthly (Tier 1) or quarterly (Tier 2/3) deep-pass run only — re-fetch and diff every page in scope, category by category:**
 - **Homepage** — positioning/hero language drift.
 - **Product/platform pages** — new capabilities, reworded claims, new pages covering a use case that didn't have one before.
 - **Pricing page** — tier changes, new packaging, a price that moved. Pricing changes are strategically significant on their own and should never get folded silently into a generic "product update" line.
@@ -80,7 +84,7 @@ Publish the run log and any updated cards to the same Notion location as the par
 ## Standing rules — same as the parent workflow, restated because this runs unattended
 
 - Never state a company or product fact from memory. Verify live on every run, even for a competitor checked last week.
-- Never judge a competitor's proof or capabilities from its homepage alone. Re-check the whole site every run, per Step 1's full category list, including a new-page detection pass — not just a diff of the same pages checked last time. This is a recurring check specifically because competitors add new pages, proof, and features over time; missing any of that defeats the point of running weekly at all.
+- Never judge a competitor's proof or capabilities from its homepage alone. The weekly run is a cheap signal scan by design (Step 1a) — the full bounded-checklist deep pass (Step 1b, including Customers/Case Studies) runs monthly for Tier 1 and quarterly for Tier 2/3, not every week. Don't skip the deep pass entirely just because the weekly scan found nothing; the two run on different schedules for cost reasons, not because the deep pass is optional.
 - Never auto-retire or auto-replace a competitor on the list (Step 3) — flag it, let a human confirm.
 - Never regenerate a card without a genuine new finding behind it.
 - If a source that worked last run fails this run (blocked, rate-limited, account issue), report that explicitly in the run log — don't silently skip it or fill the gap from memory.
