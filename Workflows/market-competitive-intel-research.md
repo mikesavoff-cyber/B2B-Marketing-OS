@@ -4,7 +4,7 @@ Purpose: identify and research a company's real competitive set, grounded in ver
 
 Source: the 10-lesson Competitive Intel course in `Product Marketing/Competitive Intel/` (sequence verified via each transcript's own next/previous-lesson references, not inferred from filenames). This file only documents what has actually been executed and validated so far — Steps 0-8, plus one suggested (not required) downstream action after the workflow completes. Nothing past this point is written until we've actually gone through it.
 
-A separate, downstream workflow (`battlecard-weekly-refresh.md`) consumes this workflow's Step 5 output and keeps it current on a schedule. See that file for the automated-refresh process — it is not part of this one-time research workflow.
+Two related files, not inlined here: `battlecard-weekly-refresh.md` (downstream, keeps Step 5's battlecards current on a schedule) and `market-competitive-intel-report-format.md` (the full output contract for Step 3 — the deliverable stack, its five layers, and the voice/rhythm bar every artifact has to meet). Step 2's per-competitor research itself now lives in `skills/product-marketing/competitor-research/SKILL.md`, invoked once per confirmed competitor rather than inlined as a workflow step.
 
 ## Step 0: Ground the target's real category first
 
@@ -37,43 +37,25 @@ Output: product type, real comparator, positioning gaps.
 5. Present the full list back for correction. Never treat it as final until confirmed. State no fact about any candidate unless verified live or given directly.
 6. Cap the confirmed list at 5. Expand later, once the system built around those 5 is running.
 
-## Step 2: Research each competitor across the 3 stakeholder lanes
+## Step 2: Research each confirmed competitor
 
-Source: Lesson 2 (Gathering Competitive & Market Insights: Startups & Mid-Market).
+Source: `skills/product-marketing/competitor-research/SKILL.md` — this step no longer inlines the research methodology; it invokes that skill once per confirmed competitor from Step 1, passing the competitor's name and tier.
 
-**Tier the competitors before spending any tokens on them.** Not all five deserve the same research depth. Tier 1 = the 1-2 most consequential (highest actual threat, or the current monthly focus competitor once one exists) — full depth below. Tier 2/3 = the rest — the same page checklist, but stop at the bounded set below with no blog/changelog pass unless something specific gets flagged. This is a cost decision, not a corner cut: the pages that catch real gaps (Customers/Case Studies, pricing) stay mandatory for every tier; only the deeper, lower-yield pages (blog archive, changelog) get skipped for Tier 2/3.
+For each confirmed competitor, in tier order (Tier 1 first): invoke the `competitor-research` skill, get back a structured profile (positioning, buyer, market read, product strengths/weaknesses, trajectory, marketing activity, sourced). Do this for every competitor before moving to Step 3 — never synthesize from a partial set.
 
-For each confirmed competitor, gather ALL of the following before answering any question — never answer a lane's questions from partial research:
-
-**Marketing lane** (positioning, buyer, market sentiment):
-1. **A bounded, named page set — never the homepage alone, and never an unbounded full-site crawl.** Live fetch, not memory: homepage (positioning/hero), pricing, main Product/Platform/Solutions pages (top-level only), Customers/Case Studies/Proof/Results (mandatory for every competitor regardless of tier — this is where proof of value actually lives), and — Tier 1 only — the changelog/release notes and the blog/resources index (titles, dates, and first paragraph of each recent post, not full posts). Proof of value does not get marked "doesn't exist" until the Customers/Case Studies page specifically has actually been fetched and read. From these pages, also state the competitor's GTM model — sales-led or product-led — as a free inference from what's already been read, not a separate fetch.
-2. G2 / TrustRadius / Trustpilot / Glassdoor — pull via web search when direct site access is blocked; capture both praise and complaints, not just star ratings.
-3. Community check — Reddit, Quora, LinkedIn (posts/discussion, not the company page), Facebook groups, Discord, Slack. Run all of them, not just Reddit. Report an empty result as a real finding ("no public community presence found"), never skip a source silently or fabricate chatter that isn't there.
-
-**Product lane** (how it's used, where it's strong/weak):
-1. Knowledge base / docs / developer portal — feature depth, how it actually works.
-2. G2/TrustRadius filtered to feature-specific feedback, not general sentiment.
-3. Google Alerts substitute — this skill cannot configure a live, ongoing alert. Run a one-time news search as a proxy and say plainly that real ongoing monitoring still needs to be set up by the human running this.
-
-**Leadership lane** (growing, fading, or acquired):
-1. LinkedIn Premium Insights tab substitute — this skill does not have Premium access. Use Crunchbase, PitchBook, Tracxn, and press coverage (funding rounds, layoffs, acquisitions, executive hires) instead, and say plainly it's a substitute, not the named source.
-2. When sources disagree on a hard number (funding total, headcount), report both and flag the discrepancy rather than picking one.
-3. Check specifically for the two outcomes that change a competitor's status entirely: being acquired (no longer an independent buying decision) and material layoffs/funding drought (real distress, not spin) — both are bigger findings than any star rating.
-
-**Answering the 3 marketing questions:** only after all three lanes above are gathered, not before. If new information surfaces later (e.g. a later community-search pass finds something a first pass missed), go back and revise the earlier answer — don't leave it stale. This was gotten wrong once in this process: the marketing questions were answered before the full community pass ran, and had to be corrected afterward.
+The skill covers the Marketing/Product/Leadership lanes in full (including paid ads, social performance, SEO intelligence, jobs page, partnerships, and AI-answer visibility for Tier 1) and enforces the bounded, tiered page checklist on its own — none of that detail is repeated here. Read the skill file directly if the methodology itself needs checking or updating; don't edit a copy of it here.
 
 ## Step 3: Synthesize into the final competitive brief
 
-Source: senior-PMM output quality, per the system's own Output Expectations bar (not itself a numbered lesson).
+Source: `Workflows/market-competitive-intel-report-format.md` — the full output contract for this step. Read that file, don't work from the summary below alone; it specifies five connected layers (executive decision artifact, the core analytical report, reusable intelligence assets, visual models, action handoff), what each one actually contains, and the voice/rhythm bar every section has to meet (observation → interpretation → implication → recommendation → unknown).
 
-Structure, in this order:
-1. **The bet** — one paragraph naming the overall competitive picture and the single highest-leverage move, stated before any per-competitor detail.
-2. **The target's own positioning reality check** — restate the Step 0 finding up top; every recommendation downstream depends on it.
-3. **At-a-glance comparison table** — one row per competitor: trajectory, core wedge against the target, sharpest exposure.
-4. **Per-competitor sections** — positioning, buyer, market read, trajectory, and a concrete sales attack line for each. Every claim traces back to Step 2's research, nothing new introduced here.
-5. **What this means for the target, directly** — named implications, each with a concrete consequence, not generic advice.
-6. **Open questions** — each paired with what would actually resolve it, including any conflicting numbers found in Step 2.
-7. **Handoff note** — what this artifact gates downstream (positioning/messaging work should not start until this is confirmed).
+**What this step produces, at minimum, per cycle:**
+1. The core analytical report (that file's Layer 2: mandate/context, executive verdict, market reality, buyer/ICP reality, company reality, competitive landscape, per-competitor profiles).
+2. The Evidence Ledger (Layer 3) — fact and interpretation kept in separate columns, always.
+3. The Competitive Matrix and Positioning Map (Layers 3-4).
+4. The executive decision artifact (Layer 1) — derived *from* the report above once it exists, the same relationship the newsletter already has to the full research base. Not separately researched.
+
+**The bar this has to clear, stated plainly:** this is not a research dump, a generic SWOT, or a feature spreadsheet. It should read like a senior PMM formed a point of view from messy evidence and made the implications obvious — every claim traceable to Step 2's research, nothing new introduced at synthesis time, but genuinely synthesized rather than just compiled.
 
 Publish to the project's actual Notion directory, inside its Market Research/Competitive Intel folder — not just left in chat.
 
