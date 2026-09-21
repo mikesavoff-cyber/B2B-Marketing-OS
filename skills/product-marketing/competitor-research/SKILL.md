@@ -62,6 +62,8 @@ Fetch live, in this order, never from memory:
 4. When sources disagree on a hard number (funding total, headcount), report both and flag the discrepancy. Never silently pick one.
 5. Check specifically for the two status-changing outcomes: acquired (no longer an independent buying decision) and material distress (large layoff independently reported as business weakness, or a long funding drought) — both outrank any star rating as findings.
 
+**Before writing the profile:** all three lanes (Marketing, Product, Leadership) have to actually be gathered first — never answer the Marketing lane's questions from a partial pass, then backfill Product and Leadership later. If new information surfaces after a section is drafted (e.g. a later community-search pass finds something the first pass missed), go back and revise what was already written — don't leave it stale. This was gotten wrong once already in this project's history: the marketing questions got answered before the full community pass ran, and had to be corrected afterward.
+
 ## Output
 
 One structured profile per competitor:
