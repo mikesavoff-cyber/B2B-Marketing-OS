@@ -1,3 +1,4 @@
+---
 name: competitor-research
 description: >-
   Competitive intelligence — researching competitors, building a competitive
