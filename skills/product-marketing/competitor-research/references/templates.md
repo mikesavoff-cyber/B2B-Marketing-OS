@@ -1,16 +1,193 @@
 # Competitive Intelligence Templates
 
-Ready-to-use templates for every deliverable this skill produces. Every field and structural choice
-below traces to a specific lesson in `Product Marketing/Competitive Intel/`. Pick the template that
-matches what was actually asked for — don't produce more than one deliverable unless asked.
+Ready-to-use templates for every deliverable this skill produces. Six of these (Insight Ledger,
+Battlecard, Newsletter, Win/Loss Survey, Win/Loss Interview Guide, Displacement Campaign Plan) trace to
+a specific lesson in `Product Marketing/Competitive Intel/`. The Competitor Profile and Summary
+Document templates are a deliberate import from the `competitor-profiling` skill — the 10-lesson course
+never describes a single synthesized profile document, only audience-specific deliverables, and a
+one-off "research this company" request needs a profile shape those six don't provide. Marked clearly
+below so provenance stays honest. Pick the template that matches what was actually asked for — don't
+produce more than one deliverable unless asked.
 
 ## Contents
+- Competitor Profile *(imported from `competitor-profiling`)*
+- Summary Document *(imported from `competitor-profiling`)*
 - Insight Ledger
 - Battlecard
 - Newsletter
 - Win/Loss Survey
 - Win/Loss Interview Guide
 - Displacement Campaign Plan
+
+---
+
+## Competitor Profile
+
+*Source: imported from the `competitor-profiling` skill (`~/.agents/skills/competitor-profiling/`),
+not the Competitive Intel course. Use for "research this competitor" / "profile [company]" requests
+that don't map to a specific audience deliverable below.*
+
+```markdown
+# [Competitor Name] — Competitor Profile
+
+**URL**: [website]
+**Generated**: [date]
+**Depth**: [quick scan / deep profile]
+
+---
+
+## At a Glance
+
+| Metric | Value |
+|--------|-------|
+| Tagline | [from homepage] |
+| Founded | [year] |
+| Headquarters | [location] |
+| Team size | [estimate] |
+| Funding | [if known] |
+| Domain rank | [from whatever SEO tool is available this session] |
+| Est. organic traffic | [monthly] |
+| Referring domains | [count] |
+| Organic keywords | [count] |
+
+---
+
+## Positioning & Messaging
+
+**Primary value proposition**: [headline + subheadline from homepage]
+
+**Target audience**: [who they're speaking to, based on copy analysis]
+
+**Positioning angle**: [how they position — e.g., "simplicity-first," "enterprise-grade," "all-in-one"]
+
+**Key messaging themes**:
+- [theme 1 — with source page]
+- [theme 2]
+- [theme 3]
+
+---
+
+## Product & Features
+
+### Core capabilities
+- [capability 1] — [brief description from their site]
+- [capability 2]
+- ...
+
+### Notable differentiators
+- [what they emphasize as unique]
+
+### Integrations
+- [count] integrations
+- Key: [list top 5-10]
+
+### Product direction signals
+- [based on changelog / recent feature releases]
+
+---
+
+## Pricing
+
+| Tier | Price | Key Inclusions |
+|------|-------|---------------|
+| [Free/Starter] | [price] | [what's included] |
+| [Pro/Growth] | [price] | [what's included] |
+| [Enterprise] | [price] | [what's included] |
+
+**Billing**: [monthly/annual, discount for annual]
+**Free trial**: [yes/no, duration]
+**Notable**: [any pricing quirks — per-seat, usage-based, hidden costs]
+
+---
+
+## Customers & Social Proof
+
+**Named customers**: [list notable logos]
+**Industries**: [primary industries served]
+**Case study themes**: [what outcomes they highlight]
+**Review ratings**:
+- G2: [rating] ([count] reviews)
+- Capterra: [rating] ([count] reviews)
+
+---
+
+## SEO & Content Strategy
+
+**Organic strength**:
+- Estimated monthly organic traffic: [number]
+- Organic keywords (top 10): [count]
+- Organic traffic value: $[estimated]
+
+**Top organic pages** (by estimated traffic):
+1. [page URL] — [keyword] — [est. traffic]
+2. [page URL] — [keyword] — [est. traffic]
+3. [page URL] — [keyword] — [est. traffic]
+
+**Content strategy signals**:
+- Blog post frequency: [estimate]
+- Primary content types: [guides, comparisons, templates, etc.]
+- Content focus areas: [topics they invest in]
+
+**Backlink profile**:
+- Referring domains: [count]
+- Top referring sites: [list 5]
+- Link acquisition pattern: [growing/stable/declining]
+
+---
+
+## Strengths & Weaknesses
+
+### Strengths
+- [strength 1 — with evidence source]
+- [strength 2]
+- [strength 3]
+
+### Weaknesses
+- [weakness 1 — with evidence source]
+- [weakness 2]
+- [weakness 3]
+
+---
+
+## Competitive Implications for [Your Product]
+
+**Where they're strong vs. us**: [areas where this competitor has an advantage]
+
+**Where we're strong vs. them**: [areas where you have an advantage]
+
+**Opportunities**: [gaps in their offering or positioning we can exploit]
+
+**Threats**: [areas where they're improving or gaining ground]
+
+---
+
+## Raw Data Sources
+
+- Homepage scraped: [date]
+- Pricing page scraped: [date]
+- SEO data pulled: [date]
+- Review data pulled: [date, sources]
+```
+
+**Depth default:** quick scan (At a Glance + Positioning + Pricing + SEO summary only) unless deep
+profiling is requested or 3 or fewer competitors are in scope — matches this skill's own Tier
+1/Tier 2 depth split. Fields with no data available this session should say so plainly (e.g. "not
+collected — [tool] unavailable this session"), never left as an unfilled placeholder pretending to be
+checked.
+
+---
+
+## Summary Document
+
+*Source: imported from `competitor-profiling`. Use after profiling more than one competitor.*
+
+After profiling all competitors, produce a summary covering:
+
+1. **Competitor landscape overview** — one paragraph summarizing the competitive field
+2. **Comparison table** — key metrics side by side for all profiled competitors
+3. **Positioning map** — where each competitor sits (e.g., simple↔complex, cheap↔premium)
+4. **Key takeaways** — 3-5 strategic observations from the research
+5. **Gaps and opportunities** — where the market is underserved
 
 ---
 
@@ -23,6 +200,7 @@ Source: *Understanding Your Audience*. The always-on running log every other del
 |------|------------------------------------------|----------------------|------|---------|
 | [url] | [summary] | Sales / Marketing / Product / C-suite / Other | [date] | Yes (acquisition/funding/major release) / No (monthly batch) |
 ```
+
 Re-confirm what each team actually wants updated on every few months — this log's shape doesn't
 change, but which rows get surfaced to which team should be re-checked as the company evolves.
 
