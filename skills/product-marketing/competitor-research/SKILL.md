@@ -1,4 +1,4 @@
-name: market-competitive-intelligence
+name: competitor-research
 description: >-
   Competitive intelligence — researching competitors, building a competitive
   intelligence program, cataloging insights for internal teams, and producing
