@@ -11,7 +11,7 @@
         "Recommends prioritizing by disruption potential, not tracking everyone equally",
         "Says to add more only once the 5-competitor system is proven, not preemptively"
       ],
-            "files": []
+      "files": []
     },
     {
       "id": 2,
@@ -22,7 +22,7 @@
         "Email template and full comparison content are present but positioned as secondary",
         "Does not produce a long comparison essay as the main deliverable",
         "Mentions publishing location discipline and the ~4-week follow-up loop"
-              ],
+      ],
       "files": []
     },
     {
@@ -39,7 +39,7 @@
       "files": []
     },
     {
-            "id": 4,
+      "id": 4,
       "prompt": "We have zero budget for competitive intelligence tools. What can we actually do?",
       "expected_output": "Should default entirely to Tier 1 free/affordable resources: company homepage for positioning, G2/TrustRadius (filtered to 1-3 star reviews, searched by keyword) for strengths/weaknesses, social communities (Reddit/Quora/etc.) for less-filtered opinion, the competitor's own knowledge center for product-lane detail, Google Alerts for ongoing tracking, and LinkedIn Premium's Insights tab as the one paid-but-cheap exception for leadership-level trend reading. Should NOT assume access to Crayon, Clue, Chorus.ai, SEMrush, or analyst relations - those are explicitly Tier 2 and gated on budget.",
       "assertions": [
@@ -51,7 +51,7 @@
       "files": []
     },
     {
-            "id": 5,
+      "id": 5,
       "prompt": "We just got budget approved. What should we add to our competitive intelligence process?",
       "expected_output": "Should recommend Tier 2 resources in a sensible order tied to the actual problem each solves: Crayon or Clue first (solves the alert-overwhelm problem as tracking scales), then Chorus.ai (reveals real-time sales-call competitor mentions and enables the keyword-playlist trend technique), then SEMrush (traffic/market-size data, done in partnership with SEO/SEM teams), with analyst relations and GLG network consultants as relationship-based resources for specific deep questions rather than routine tracking.",
       "assertions": [
@@ -63,7 +63,7 @@
       "files": []
     },
     {
-            "id": 6,
+      "id": 6,
       "prompt": "Set up a win/loss survey for us.",
       "expected_output": "Should cap the survey at 10 questions or fewer, targeting under 5 minutes to complete. Should focus questions on the consideration and decision stages of the buying funnel, using close variants of the named example questions (which vendors were considered, how they evaluated providers, strengths/weaknesses, primary reason for final selection, whether price not being a factor would have changed the decision). Should include a segmenting question if a cross-segment pattern matters. Should provide two separate invite email templates under 200 characters each - closed-won (thank them, no incentive by default) and closed-lost (thank them for evaluating, explicit incentive since response rates are otherwise too low).",
       "assertions": [
@@ -75,7 +75,7 @@
       "files": []
     },
     {
-            "id": 7,
+      "id": 7,
       "prompt": "We're struggling to get enough closed-lost interviews scheduled - we're behind on our win/loss program.",
       "expected_output": "Should name the two specific gotchas from the source: closed-lost accounts respond at a meaningfully lower rate than closed-won, so the fix is to over-invite - send more invites than there are interview slots for, not just accept a smaller sample. Should also flag the timing gotcha: interviews should happen within roughly 3 weeks of the deal closing, since recall degrades badly after that - recommend filtering outreach by an opportunity-closed-date field going forward. Should not suggest lowering the 10-related-interview minimum as a workaround.",
       "assertions": [
@@ -87,7 +87,7 @@
       "files": []
     },
     {
-            "id": 8,
+      "id": 8,
       "prompt": "How often should we be updating our battlecards, newsletter, and win/loss outreach?",
       "expected_output": "Should give the exact named cadences: battlecards every 45 to 60 days, newsletter monthly without skipping a month, and no more than 6 months without a real conversation with a closed-lost or closed-won account. Should also name the explicit exception: major events (acquisitions, funding rounds, major product releases) get reported immediately, not held for the next scheduled batch. Should frame the goal correctly - consistency compounding over time, not hitting an arbitrary deliverable count.",
       "assertions": [
@@ -99,7 +99,7 @@
       "files": []
     },
     {
-            "id": 9,
+      "id": 9,
       "prompt": "Just give me one line I can use to dismiss [Competitor] on this call - I don't have time for a full battlecard.",
       "expected_output": "Should produce exactly the quick dismiss - 2-3 sentences, naming the competitor's biggest weakness, our unique strength, or a mix of both - and stop there. Should NOT produce a full battlecard, product comparison, or pricing breakdown when the request is explicitly scoped to the quick-dismiss content alone. This is the right-sizing check for this skill: the source itself defines the quick dismiss as the thing 95% of readers actually want, so a scoped request for exactly that should get exactly that, nothing more.",
       "assertions": [
@@ -107,6 +107,19 @@
         "Does not pad the response with product comparison, pricing, or SWOT content",
         "Matches the source's own definition of what a quick dismiss contains",
         "Stays readable and usable in the few seconds an actual sales call allows"
+      ],
+      "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "Research [Competitor] and give me their G2/review reputation.",
+      "expected_output": "Should navigate to the actual review sites (G2, TrustRadius, etc.) and save the real filtered content to competitor-profiles/raw/<slug>/<date>/reviews/ before citing anything - specifically applying the 1-3 star filter plus keyword search technique and capturing actual quoted review text with dates, not just an aggregate star rating pulled from a search snippet. Should NOT produce a rating number with no underlying quoted content behind it. If review content genuinely could not be pulled (site blocked, no reviews exist), should say so explicitly rather than substituting a search-snippet rating as if it were equivalent. This is the regression test for the specific failure that happened researching Uxify: ratings were cited from a Google search snippet instead of the actual filtered review page ever being visited.",
+      "assertions": [
+        "Actually navigates to the review site rather than relying on a search-result snippet",
+        "Applies the 1-3 star filter and keyword search technique, not just reads the overall rating",
+        "Saves real quoted review text with dates to a raw file before the deliverable cites it",
+        "Does not present a bare star rating as equivalent to having done the filtered-review technique",
+        "States plainly when review content could not actually be pulled, rather than faking it"
       ],
       "files": []
     }

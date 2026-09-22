@@ -77,6 +77,45 @@ more and more insights" (*Understanding Your Audience*).
 - **Re-confirm what each team actually cares about every few months**, not just once at setup —
   "every few months reach back out to them and confirm what they're interested in."
 
+## Saving Raw Data
+
+*Imported from `competitor-profiling`, not the course — the course describes the insight-ledger
+spreadsheet above, but nothing about persisting raw source material. Added after a real failure: a
+research pass cited G2/Trustpilot/Capterra ratings pulled from a search-result snippet instead of
+actually navigating to each review site and reading filtered review content, and the finished profile
+looked equally polished either way — the formatting hid that the research step had been shortcut.
+This section exists specifically so that can't happen invisibly again.*
+
+**The rule: no citation without a corresponding raw file.** Every source actually used in a deliverable
+must be saved to disk before that deliverable is written — not summarized from memory, not typed
+straight into a template field. If a raw file for a source doesn't exist, that source cannot be cited;
+the deliverable must say "not collected this run" instead.
+
+**Directory layout** (relative to project root):
+
+```
+competitor-profiles/
+├── raw/
+│   └── <competitor-slug>/
+│       └── <YYYY-MM-DD>/
+│           ├── scrapes/    # homepage.md, pricing.md, product.md, ...
+│           ├── reviews/    # g2.md, trustradius.md, capterra.md, ... — the actual filtered/quoted
+│           │                 review text, not just a star rating
+│           └── community/  # reddit.md, quora.md, ... — actual quoted threads, or an explicit
+│                              "no results found" note if a platform search came up empty
+├── <competitor-slug>.md    # the finished Competitor Profile / battlecard / newsletter item / etc.
+└── _summary.md             # cross-competitor summary, when more than one is profiled
+```
+
+**Specifically for the G2/TrustRadius technique** (Core Principle territory, *Gathering Insights:
+Startups & Mid-Market*): `reviews/g2.md` must contain the actual review text pulled after filtering to
+1-3 stars and searching by a relevant keyword, with reviewer/date where shown — not an aggregate rating
+copied from a search snippet. A star rating alone does not satisfy this file's purpose.
+
+**Never create the date folder retroactively to make a shortcut look compliant** — if the raw file
+doesn't already exist when the deliverable is being written, the research wasn't actually done yet; go
+do it, or mark the source as not collected.
+
 ## Research Process
 
 ### Tier 1 — Free & affordable resources (default)
@@ -185,6 +224,17 @@ for displacement. **Mark N/A for arm's-length external research** (researching a
 for interview prep or a positioning exercise) and say so plainly — don't attempt a workaround. Full
 methodology is in `references/templates.md` and `references/tool-reference.md`, ready the moment this
 skill runs from inside the company rather than researching it.
+
+## Constraints
+
+- **No citation without a corresponding raw file** (see Saving Raw Data above). This is the primary
+  constraint in this file — everything else assumes it holds.
+- Never state a fact from memory. Verify live or say "unknown."
+- Never treat a missing tool (no Semrush, no LinkedIn Premium, no Chorus.ai) as a reason to guess —
+  state the substitute used and the gap plainly. Some Tier 2 resources are structurally unavailable in
+  a given session (no paid account, no standing relationship) — that's a real ceiling, not something a
+  better prompt fixes; say so rather than faking the data.
+- Never ship the maximal deliverable set when a smaller one was asked for.
 
 ## Task-Specific Questions
 
