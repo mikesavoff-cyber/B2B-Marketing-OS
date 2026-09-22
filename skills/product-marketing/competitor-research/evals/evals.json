@@ -1,0 +1,114 @@
+{
+  "skill_name": "market-competitive-intelligence",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We're tracking 40 competitors and can't keep up with all the alerts and updates.",
+      "expected_output": "Should recommend capping the tracked list to a max of 5, per the source's own explicit rule. Should explain why the current approach is breaking down: Google Alerts-style tracking works for a small number of competitors but becomes a 'recipe for disaster' once it grows into the dozens - the inbox gets bombarded and nothing stays actionable. Should recommend prioritizing which 5 matter most (the 'big fish' with the most potential to disrupt), building the system around those 5 first, and only adding more once that system is demonstrably working - not adding more in anticipation of needing to.",
+      "assertions": [
+        "Recommends capping to a max of 5 tracked competitors",
+        "Explains why the alert-based approach breaks down at scale",
+        "Recommends prioritizing by disruption potential, not tracking everyone equally",
+        "Says to add more only once the 5-competitor system is proven, not preemptively"
+      ],
+            "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Build me a battlecard for [Competitor].",
+      "expected_output": "Should lead with the quick dismiss - 2-3 sentences naming the competitor's biggest weakness, our unique strength, or both - since that's what sales/marketing actually wants 95% of the time on a live call. Should follow with an email template, then everything else (product comparison, strengths/weaknesses, pricing) as secondary content. Should NOT produce a long, essay-style comparison as the primary content. Should mention publishing it where the team's existing collateral lives, not a new location, and treating it as a living document to revisit with the team in ~4 weeks.",
+      "assertions": [
+        "Quick dismiss (2-3 sentences) appears first and is clearly the primary content",
+        "Email template and full comparison content are present but positioned as secondary",
+        "Does not produce a long comparison essay as the main deliverable",
+        "Mentions publishing location discipline and the ~4-week follow-up loop"
+              ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Write this month's competitive newsletter for product and leadership.",
+      "expected_output": "Should apply the three-question filter to every item: how does this relate to our company, is there a bigger story here, what question does it raise (and answer it, not leave it open). Should structure as table-of-contents-first, one item per competitor/topic, each under roughly 1000 characters with a less-than-10-word subheader. Should NOT simply paste or summarize a press release without tying it back to the company. Should include sections beyond headline items if data supports them (who's growing, who's being mentioned by customers/prospects).",
+      "assertions": [
+        "Applies the three-question filter to each item",
+        "Uses table-of-contents-first structure with per-item teaser",
+        "Keeps each item under roughly 1000 characters",
+        "Does not just paste a press release without analysis",
+        "Does not exceed the newsletter's shallow-battlecard depth confusion - this is the deep, analytical document, not a copy of the quick-dismiss content"
+      ],
+      "files": []
+    },
+    {
+            "id": 4,
+      "prompt": "We have zero budget for competitive intelligence tools. What can we actually do?",
+      "expected_output": "Should default entirely to Tier 1 free/affordable resources: company homepage for positioning, G2/TrustRadius (filtered to 1-3 star reviews, searched by keyword) for strengths/weaknesses, social communities (Reddit/Quora/etc.) for less-filtered opinion, the competitor's own knowledge center for product-lane detail, Google Alerts for ongoing tracking, and LinkedIn Premium's Insights tab as the one paid-but-cheap exception for leadership-level trend reading. Should NOT assume access to Crayon, Clue, Chorus.ai, SEMrush, or analyst relations - those are explicitly Tier 2 and gated on budget.",
+      "assertions": [
+        "Recommends only Tier 1 resources by default",
+        "Names the specific free resources (homepage, G2/TrustRadius, communities, Google Alerts)",
+        "Does not assume Tier 2 tool access without being told budget exists",
+        "Mentions the G2 1-3 star + keyword filtering technique specifically"
+      ],
+      "files": []
+    },
+    {
+            "id": 5,
+      "prompt": "We just got budget approved. What should we add to our competitive intelligence process?",
+      "expected_output": "Should recommend Tier 2 resources in a sensible order tied to the actual problem each solves: Crayon or Clue first (solves the alert-overwhelm problem as tracking scales), then Chorus.ai (reveals real-time sales-call competitor mentions and enables the keyword-playlist trend technique), then SEMrush (traffic/market-size data, done in partnership with SEO/SEM teams), with analyst relations and GLG network consultants as relationship-based resources for specific deep questions rather than routine tracking.",
+      "assertions": [
+        "Recommends Crayon/Clue, Chorus.ai, SEMrush, analyst relations, and GLG specifically",
+        "Explains what problem each tool solves rather than listing them with no reasoning",
+        "Distinguishes routine-tracking tools from relationship-based, question-specific resources",
+        "Does not recommend Tier 2 tools without the budget/proven-program context established"
+      ],
+      "files": []
+    },
+    {
+            "id": 6,
+      "prompt": "Set up a win/loss survey for us.",
+      "expected_output": "Should cap the survey at 10 questions or fewer, targeting under 5 minutes to complete. Should focus questions on the consideration and decision stages of the buying funnel, using close variants of the named example questions (which vendors were considered, how they evaluated providers, strengths/weaknesses, primary reason for final selection, whether price not being a factor would have changed the decision). Should include a segmenting question if a cross-segment pattern matters. Should provide two separate invite email templates under 200 characters each - closed-won (thank them, no incentive by default) and closed-lost (thank them for evaluating, explicit incentive since response rates are otherwise too low).",
+      "assertions": [
+        "Caps survey at 10 questions, targets under 5 minutes",
+        "Questions anchor to consideration/decision funnel stages with the named example questions",
+        "Provides both closed-won and closed-lost invite email templates under 200 characters",
+        "States the incentive rule differently for closed-won (none by default) vs closed-lost (explicit incentive)"
+      ],
+      "files": []
+    },
+    {
+            "id": 7,
+      "prompt": "We're struggling to get enough closed-lost interviews scheduled - we're behind on our win/loss program.",
+      "expected_output": "Should name the two specific gotchas from the source: closed-lost accounts respond at a meaningfully lower rate than closed-won, so the fix is to over-invite - send more invites than there are interview slots for, not just accept a smaller sample. Should also flag the timing gotcha: interviews should happen within roughly 3 weeks of the deal closing, since recall degrades badly after that - recommend filtering outreach by an opportunity-closed-date field going forward. Should not suggest lowering the 10-related-interview minimum as a workaround.",
+      "assertions": [
+        "Names the over-invite fix for closed-lost accounts specifically",
+        "Names the 3-week timing window and recall-degradation reasoning",
+        "Recommends filtering by opportunity-closed date as the structural fix",
+        "Does not suggest abandoning the minimum related-interview count as a shortcut"
+      ],
+      "files": []
+    },
+    {
+            "id": 8,
+      "prompt": "How often should we be updating our battlecards, newsletter, and win/loss outreach?",
+      "expected_output": "Should give the exact named cadences: battlecards every 45 to 60 days, newsletter monthly without skipping a month, and no more than 6 months without a real conversation with a closed-lost or closed-won account. Should also name the explicit exception: major events (acquisitions, funding rounds, major product releases) get reported immediately, not held for the next scheduled batch. Should frame the goal correctly - consistency compounding over time, not hitting an arbitrary deliverable count.",
+      "assertions": [
+        "States all three named cadences correctly (45-60 days, monthly, 6-month max gap)",
+        "States the immediate-reporting exception for major events",
+        "Frames consistency as the mechanism, not deliverable count as the goal",
+        "Does not invent a cadence not stated in the source"
+      ],
+      "files": []
+    },
+    {
+            "id": 9,
+      "prompt": "Just give me one line I can use to dismiss [Competitor] on this call - I don't have time for a full battlecard.",
+      "expected_output": "Should produce exactly the quick dismiss - 2-3 sentences, naming the competitor's biggest weakness, our unique strength, or a mix of both - and stop there. Should NOT produce a full battlecard, product comparison, or pricing breakdown when the request is explicitly scoped to the quick-dismiss content alone. This is the right-sizing check for this skill: the source itself defines the quick dismiss as the thing 95% of readers actually want, so a scoped request for exactly that should get exactly that, nothing more.",
+      "assertions": [
+        "Produces only the 2-3 sentence quick dismiss, not a full battlecard",
+        "Does not pad the response with product comparison, pricing, or SWOT content",
+        "Matches the source's own definition of what a quick dismiss contains",
+        "Stays readable and usable in the few seconds an actual sales call allows"
+      ],
+      "files": []
+    }
+  ]
+}
