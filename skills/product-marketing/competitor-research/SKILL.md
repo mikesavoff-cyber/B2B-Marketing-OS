@@ -1,90 +1,200 @@
----
-name: competitor-research
+name: market-competitive-intelligence
 description: >-
-  Research one named competitor in depth — positioning, product strengths/weaknesses,
-  market sentiment, growth trajectory, paid/organic marketing activity, and AI-answer
-  visibility. Use when the task is "research [competitor name]," refreshing stale
-  intel on one already-tracked competitor, or adding a competitor to a tracked set
-  mid-cycle. Produces a structured per-competitor profile. Does not identify which
-  competitors to track (that's `market-competitive-intel-research.md` Step 1) and
-  does not write the comparative brief or battlecard (that's the same workflow's
-  Steps 3 and 5) — this skill's job is the research on one company, nothing else.
+  Competitive intelligence — researching competitors, building a competitive
+  intelligence program, cataloging insights for internal teams, and producing
+  battlecards, competitive newsletters, and win/loss programs. Use whenever
+  the task involves "competitive intelligence," "competitor research,"
+  "gathering competitive insights," "who are our competitors," "competitive
+  landscape," "battlecard," "competitive newsletter," "win/loss program," or
+  "track our competitors." Built entirely from the 10-lesson Competitive
+  Intel course in `Product Marketing/Competitive Intel/` — every rule in this
+  file traces to a specific lesson quote. Nothing here comes from outside
+  that source.
+metadata:
+  version: 1.0.0
 ---
 
-# Competitor Research
+# Competitive Intelligence
 
-## When to use this skill
+Competitive intelligence is "researching and discovering insights relating to competitors in your
+industry" — the more of it you have, "the more clearly you'll be able to differentiate from those
+competitors to your ideal customers" (*What is Competitive Intelligence...*).
 
-- "Research [company]" as a competitor
-- Refreshing research on a competitor already being tracked, outside the weekly-refresh cadence
-- A new competitor needs adding mid-cycle (per the expansion trigger: it started appearing in lost-deal data or AI-answer citations)
-- Called once per competitor by `market-competitive-intel-research.md` Step 2 — this skill is the thing that step invokes, not a duplicate of it
+## Initial Assessment
 
-This skill does **not** decide who to research (Step 1's job), does not compare competitors against each other or against the target (Step 3's job), and does not build a battlecard (Step 5's job). It produces one input those steps consume.
+Different internal audiences ask fundamentally different competitive questions — "each of these
+departments will ask different competitive questions" (*Gathering Insights: Startups & Mid-Market*).
+Before researching, confirm:
 
-## Required input
+1. **Which audience is this for?** Sales/marketing (how competitors are *perceived*), product (how
+   competitors are *used*), or leadership (how competitors are *trending*)? Each has a different
+   question and a different resource set (Research Process below).
+2. **How many competitors are being tracked, and is the list capped?** "Only start by tracking and
+   informing your sales, product and leadership teams on the most vital few competitors... if you
+   reduce that number down to a max of five competitors, you'll find that you can keep up very well"
+   (*Pushing "Go"...*). Don't proceed against an uncapped list without flagging this.
+3. **What's the budget tier?** Free/affordable resources only (Tier 1), or is there budget for paid
+   tools — Crayon/Clue, Chorus.ai, SEMrush, analyst relations, GLG (Tier 2)? "If you've proven out
+   your competitive program... or if you work for an organization with a decent budget" is when Tier 2
+   applies (*Gathering Insights: Enterprise*).
+4. **One-off research, or an ongoing program?** An ongoing program needs the insight-cataloging system
+   below; a one-off doesn't.
 
-Company name, and its confirmed tier (1, 2, or 3) from `market-competitive-intel-research.md` Step 1 — tier controls how much of this skill actually runs. If no tier was given, ask rather than assume Tier 1 depth.
+## Core Principles
 
-## Step 1 — Tier check
+1. **Treat internal teams as an audience.** "Thinking of your internal teams as an audience, as your
+   customers... If you're going to interrupt their day with competitive insights, it needs to be
+   relevant for them as well as written and delivered thoughtfully. Otherwise, your messages will go
+   unread or unresponded to" (*Understanding Your Audience*).
+2. **Outsider perspective beats internal bias.** "So often we get wrapped into our own bias narrative
+   of what our products do and how our company looks. Win loss programs help us experience an
+   outsider's perspective while revealing unique competitor value props" (*Win/Loss, part 1*).
+3. **Every insight earns its place by relating back to the company.** Before including any finding,
+   apply the three-question filter: "How does this relate to my company? Is there a bigger story to
+   this? What questions do I have after learning about this?" (*Competitive Newsletters*).
+4. **Consistency compounds.** "These are all practices that, when compounded over time, will
+   dramatically help your company crush your competitors" (*Pushing "Go"...*).
+5. **Cap scope to stay sustainable.** Max 5 tracked competitors — "you'll find that you can keep up
+   very well for that small group of competitors... Once you establish a system for those five
+   competitors, you can slowly add more" (*Pushing "Go"...*). The list only grows once the system for
+   five is demonstrably working, never in anticipation of needing to.
 
-- **Tier 1:** run everything below.
-- **Tier 2/3:** run the Marketing lane's mandatory items only (homepage, pricing, Customers/Case Studies) plus the Leadership lane's core items (funding/headcount/status). Skip paid ads, social performance, SEO intelligence, AI-answer visibility, and the blog/changelog pass unless something specific about this competitor gets flagged as worth the extra depth.
+## Insight Cataloging (the persistence layer)
 
-## Step 2 — Marketing lane
+Every finding gets logged, not just used once and discarded — "the idea is moving forward, you'll add
+more and more insights" (*Understanding Your Audience*).
 
-Fetch live, in this order, never from memory:
+- **Tool:** a shared spreadsheet — "we're going to keep things really kindergarten... I'm going to use
+  Google Sheets. The reason we're using Google Sheets is because everyone has access to it," and the
+  format ports to "essentially any other note taking tool."
+- **Columns:** link to the insight; "in your own words, write a 1 to 2 sentence summary"; the team(s)
+  it benefits — "sales, marketing, product, C-suite, or another team."
+- **Cadence:** monthly by default — "that's the sweet spot because it's enough time for a decent
+  number of changes to occur, but not so long that you appear to be MIA." Explicit exception:
+  "large competitive updates like acquisitions, funding rounds, new major product releases... try to
+  report on them as they occur," not held for the monthly batch.
+- **Re-confirm what each team actually cares about every few months**, not just once at setup —
+  "every few months reach back out to them and confirm what they're interested in."
 
-1. **Homepage** — positioning/hero language. State the lead positioning angle in exactly one sentence before moving on; if it takes more than one sentence, the positioning hasn't actually been distilled yet.
-2. **Pricing page** — tiers, packaging, GTM model inference (sales-led: gated pricing, "Book a Demo" as primary CTA, no self-serve / product-led: visible pricing, self-serve signup, free trial — state which, or hybrid).
-3. **Main Product/Platform/Solutions pages** — top-level only, not every feature sub-page.
-4. **Customers / Case Studies / Proof / Results — mandatory regardless of tier.** This is where proof of value actually lives, essentially never on the homepage. A competitor's evidence does not get marked "doesn't exist" until this page specifically has been fetched and read. (This requirement exists because an earlier run of this research skipped it and produced a false "no proof" claim — see the parent workflow's standing rules for the full incident.)
-5. **Tier 1 only — blog/resources index page.** Title, date, and first paragraph of each recent post — not the full post. Enough to catch a positioning shift or a case-study-shaped post without paying to read every entry in full.
-6. **Tier 1 only — changelog/release notes**, if one exists. A shipped feature can directly age out a claim already sitting in this competitor's battlecard.
-7. **Tier 1 only — paid search/ad activity and ad copy**, if a tool with this data is available (e.g. Semrush Advertising Research). Note plainly when this isn't reachable rather than guessing at ad spend or messaging.
-8. **Tier 1 only — the competitor's own social media presence.** Follower counts, engagement rate, and top-performing content topics/formats, via a tool if available or a direct check of their profiles if not.
-9. **Tier 1 only — keyword/SEO/topic intelligence.** What terms they're targeting, ranking-change direction if visible, content-gap signal.
-10. **AI-answer visibility** (all tiers, cheap to check): does this competitor show up when an LLM is asked a relevant category question? Note presence/absence and, if present, how they're framed.
-11. **G2 / TrustRadius / Trustpilot / Glassdoor** — pull via web search when direct site access is blocked. Sort by recency where the source allows it; a two-year-old review carries less weight than last month's. Capture both praise and complaints, not just the star rating.
-12. **Community check** — Reddit, Quora, LinkedIn (posts/discussion, not the company page), Facebook groups, Discord, Slack. Run all of them. An empty result across all of them is itself a real, reportable finding — never skip a source silently or invent chatter that isn't there.
+## Research Process
 
-## Step 3 — Product lane
+### Tier 1 — Free & affordable resources (default)
 
-1. Knowledge base / docs / developer portal — feature depth, how it actually works.
-2. G2/TrustRadius filtered specifically to feature-level feedback, not general sentiment.
-3. A one-time news search as a Google-Alerts substitute (this skill can't configure a live ongoing alert) — say so plainly if the output is later treated as if it were live monitoring.
+**Marketing/Sales question — how is this competitor *perceived*?**
+- **Homepage** — read positioning directly from the copy (worked example: HubSpot's "learn and grow"
+  copy reads as "a growth tool primarily for startups or small businesses").
+- **G2 / TrustRadius** — "like Yelp for B2B software." Technique: "filter down to only 1 to 3 star
+  reviews... The search bar can also be used to find reviews that include specific keywords," sorted
+  by most recent. Named caveat: review incentives ("$10 Amazon gift cards") produce a share of
+  minimalist, low-signal reviews — still worth using, just don't treat every review as equally honest.
+- **Social communities** — Reddit, Quora, Facebook groups, Discord, Slack: "just Google your
+  competitor's name and add Reddit." Higher signal than review sites because "these are channels
+  where folks are just hanging out. They had zero obligation to be there."
 
-## Step 4 — Leadership lane
+**Product question — how is this competitor *used*?**
+- **The competitor's own customer knowledge center** (not the homepage) — FAQs, UI screenshots,
+  walkthroughs.
+- **G2/TrustRadius, filtered to feature-specific feedback** rather than general sentiment.
+- **Google Alerts** — free, keyword-based: "type in a few keywords... Google will automatically
+  populate a preview." Customizable by frequency, source, language, region, and delivery email.
 
-1. Funding, headcount, and status via Crunchbase/PitchBook/Tracxn/press — explicitly a substitute for LinkedIn Premium's Insights tab, which this skill doesn't have access to. Say so.
-2. **Jobs page** — what roles they're actively hiring for. Reveals strategic priorities and expansion areas, and postings sometimes name competitors directly ("experience competing against X").
-3. Funding rounds, layoffs, acquisitions, executive hires, lawsuits, and **partnership announcements** — check for all of these as distinct event types, not just funding/layoffs.
-4. When sources disagree on a hard number (funding total, headcount), report both and flag the discrepancy. Never silently pick one.
-5. Check specifically for the two status-changing outcomes: acquired (no longer an independent buying decision) and material distress (large layoff independently reported as business weakness, or a long funding drought) — both outrank any star rating as findings.
+**Leadership question — how is this competitor *trending*?**
+- **LinkedIn Premium's Insights tab** — "employee headcount trends over the past year and a half...
+  a pretty good proxy for when a company is on a hiring spree" (or, if declining, business weakness).
+  Named reason it matters: most competitors are "privately held companies that don't share their
+  annual revenue."
 
-**Before writing the profile:** all three lanes (Marketing, Product, Leadership) have to actually be gathered first — never answer the Marketing lane's questions from a partial pass, then backfill Product and Leadership later. If new information surfaces after a section is drafted (e.g. a later community-search pass finds something the first pass missed), go back and revise what was already written — don't leave it stale. This was gotten wrong once already in this project's history: the marketing questions got answered before the full community pass ran, and had to be corrected afterward.
+### Tier 2 — Paid & enterprise resources (once Tier 1 is proven out, or budget allows)
 
-## Output
+Why upgrade: Google Alerts breaks down once tracking grows — "tracking 9 or 10 vendors... becomes
+25, 35, 40... a recipe for disaster... your inbox is going to be bombarded" (*Gathering Insights:
+Enterprise*).
 
-One structured profile per competitor:
+- **Crayon / Clue** — aggregate a competitor's entire digital footprint (Reddit/Quora, social, site
+  changes, content, news/PR, reviews) into one filterable, alertable feed; both also have native
+  battlecard filters synced to the feed.
+- **Chorus.ai** — conversation intelligence: tracks and flags competitor mentions in real sales calls
+  and emails, with keyword playlists across calls (worked example: a playlist on "expensive" pulling
+  15 of 20 closed-lost calls surfaces a trend fast). This is the resource that reveals how *often* a
+  competitor actually comes up in real deals and how sellers currently talk about them. Worked story:
+  rising Chorus mention frequency for a small competitor led to discovering they were bidding on
+  branded keywords via SEM, which led to new seller talk tracks.
+- **SEMrush** — competitor website traffic, traffic source, estimated market size. "Partner with your
+  SEO and SEM teams for competitive Intel. They have access to a lot of great under the radar
+  information."
+- **Analyst relations (Forrester, Gartner)** — paid access to industry reports and 1:1 analyst
+  inquiries; "industry experts['] non-biased opinion" on where the company differentiates.
+- **Network consultants (GLG)** — anonymous consultations with former executives of a target
+  competitor; best source for real GTM strategy, pricing, and product detail a public site won't show.
 
-- **Positioning** (one-sentence lead angle) + GTM model
-- **Buyer** (who they sell to)
-- **Market read** (review sentiment, community presence, AI-answer visibility)
-- **Product strengths/weaknesses** (feature-level, sourced)
-- **Trajectory** (growing / fading / acquired, with the evidence)
-- **Marketing activity** (paid, social, SEO — Tier 1 only)
-- **Source list** for every claim above
+### Synthesis
 
-This profile is the input to the parent workflow's Step 3 (comparative synthesis) — it does not itself take a stance on how this competitor compares to the target or to others; that judgment happens one level up, once every tracked competitor's profile exists.
+Route every finding through the Insight Cataloging log above, filtered by the three-question test
+(Core Principle 3) before it earns a place in any downstream deliverable.
 
-## Constraints
+## Output Formats
 
-- Never state a fact about this company from memory. Verify live or say "unknown."
-- Never conclude "no proof exists" without having actually fetched the Customers/Case Studies page.
-- Never treat a tool's absence (no Semrush access, no LinkedIn Premium) as a reason to guess — state the substitute used and the gap plainly instead.
+Different deliverables for different audiences and different moments — not one template. Full
+ready-to-use versions of each are in `references/templates.md`; tool-by-tool execution detail is in
+`references/tool-reference.md`.
 
-## Related skills
+- **Insight ledger** — the always-on running log (columns above).
+- **Battlecard** (sales/marketing) — quick dismiss first, then email template, then everything else.
+- **Newsletter** (product/C-suite) — table-of-contents first, per-item structure, three-question filter.
+- **Win/loss survey** (quantitative) — ≤10 questions, under 5 minutes.
+- **Win/loss interview guide** (qualitative) — reused from the survey, opened up for follow-up.
+- **Displacement campaign plan** — audience selection, contact list build, SEM/SEO plays.
 
-- `market-competitive-intel-research` (workflow) — the orchestrator that invokes this skill once per confirmed competitor, then synthesizes the resulting profiles into a comparative brief. Run that first if the competitor set isn't confirmed yet.
-- `pmm-segmentation-icp` — for researching the target's own buyers/customers in depth. This skill's Product/Marketing lanes touch on a competitor's buyer at a surface level only; deep buyer research belongs to that skill, not here.
+**Never generate all of these preemptively for a single research request.** Build them in the order
+given below, only when actually asked for.
+
+## Build Order (standing up a program, not a one-off)
+
+"Start building out battlecards and newsletters that focus on their strategic updates... Then start
+your win loss program and focus only on competitive deals where you've won or lost against one of
+those five vendors. And lastly, start collaborating with your marketing team on proactive, competitive
+email campaigns and SEM SEO" (*Pushing "Go"...*). In order: insight cataloging → battlecards +
+newsletter → win/loss program → displacement campaigns.
+
+## Cadence
+
+"Update your Battlecards every 45 to 60 days. Don't skip a month with your newsletter. Don't let six
+months go by without speaking to a closed loss or closed won account" (*Pushing "Go"...*). Immediate
+exception, not held for a batch: acquisitions, funding rounds, major product releases (Insight
+Cataloging above).
+
+## The Goal (not the deliverable count)
+
+"Your goal should never be to just create an arbitrary number of battlecards or newsletters, or to
+interview a certain number of people... the goal should drive back to a business critical metric like
+revenue or win rate" (*Pushing "Go"...*). Competitive win rate = won competitive deals ÷ (won + lost)
+within a time frame, tracked overall **and per competitor** — a low per-competitor rate on one of the
+tracked five is the direct signal for where to focus next, not a guess.
+
+## Win/Loss and Displacement Campaigns — a structural limit
+
+Both require the target company's own CRM and direct access to its real prospects/customers — "the
+main point of contact at the account" for interviews, or "your CRM data" and outbound infrastructure
+for displacement. **Mark N/A for arm's-length external research** (researching a company from outside,
+for interview prep or a positioning exercise) and say so plainly — don't attempt a workaround. Full
+methodology is in `references/templates.md` and `references/tool-reference.md`, ready the moment this
+skill runs from inside the company rather than researching it.
+
+## Task-Specific Questions
+
+Only ask if not already answered:
+
+1. Which competitor(s) or market are we researching, and is the list capped at 5?
+2. Which internal audience is this for — sales/marketing, product, or leadership?
+3. Tier 1 (free) only, or is Tier 2 (paid/enterprise) available?
+4. Is this a one-off profile, or does it need to enter the ongoing insight ledger?
+
+## Related
+
+- `references/templates.md` and `references/tool-reference.md` in this same skill carry the
+  deliverable-specific and tool-specific depth — read them when the task calls for that specific
+  artifact, not by default on every run.
+- `Workflows/market-intelligence-scan.md` — a genuinely separate, ongoing category-level watchlist job
+  (regulation, funding climate, category narrative), not a substitute for this skill or vice versa.
+- `Workflows/battlecard-weekly-refresh.md` — keeps this skill's battlecards current between full
+  research passes.
