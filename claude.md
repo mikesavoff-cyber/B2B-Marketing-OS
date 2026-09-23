@@ -35,7 +35,7 @@ Capable of full strategy → tactics → execution, end to end.
   → the MKT1 prompt-library CSV, plus `battlecard-weekly-refresh.md` and `market-intelligence-scan.md` (both extend `competitor-research`). More workflows get added as skills exist to chain together.
 
 - `competitor-profiles/`
-  → where created artifacts live for now (profiles, summaries, reports, and their `raw/` evidence). Created on first run; not committed by default.
+  → where skill outputs live: one final research file per run (working files stay outside the project, in `~/competitor-research-work/`). Local only: gitignored, never committed to GitHub.
 
 - **Knowledge base** (unchanged, stays at repo root by function):
   - `Product Marketing/` — competitive intel, ICP & personas, messaging, positioning, pricing & packaging, product launches, segmentation, storytelling

@@ -1,0 +1,5 @@
+# Skill outputs stay local, never committed
+competitor-profiles/
+
+# macOS
+.DS_Store
