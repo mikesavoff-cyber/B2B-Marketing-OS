@@ -10,11 +10,9 @@ below so provenance stays honest. Pick the template that matches what was actual
 produce more than one deliverable unless asked.
 
 ## Contents
-- Competitor Profile *(imported from `competitor-profiling`)*, with its page-by-page extraction table
-- Quick Scan *(imported from `competitor-profiling`)*
-- Summary Document *(imported from `competitor-profiling`)*, with side-by-side comparison and positioning map
-- Competitive SWOT *(imported from `competitor-profiling`)*
-- Change Log *(imported from `competitor-profiling`)*
+- Competitor Profile *(imported from `competitor-profiling`)*
+- Baseline Profile *(imported from `competitor-profiling`)*
+- Summary Document *(imported from `competitor-profiling`)*
 - Insight Ledger
 - Battlecard
 - Newsletter
@@ -29,19 +27,6 @@ produce more than one deliverable unless asked.
 *Source: imported from the `competitor-profiling` skill (`~/.agents/skills/competitor-profiling/`),
 not the Competitive Intel course. Use for "research this competitor" / "profile [company]" requests
 that don't map to a specific audience deliverable below.*
-
-**Where each section's data comes from.** Scrape each of these pages (save to `raw/.../scrapes/`
-first) and extract:
-
-| Page | What to Extract |
-|------|----------------|
-| **Homepage** | Headline, subheadline, value proposition, primary CTA, social proof claims, target audience signals |
-| **Pricing** | Tiers, prices, feature breakdown per tier, billing options, free tier/trial details, enterprise pricing signals |
-| **Features** | Feature categories, key capabilities, how they describe each feature, screenshots/demo signals |
-| **About** | Founding story, team size, funding, mission statement, headquarters |
-| **Customers** | Named customers, logos, industries served, case study themes |
-| **Integrations** | Integration count, key integrations, categories |
-| **Changelog** | Release velocity, recent focus areas, product direction signals |
 
 ```markdown
 # [Competitor Name] — Competitor Profile
@@ -121,15 +106,21 @@ first) and extract:
 **Named customers**: [list notable logos]
 **Industries**: [primary industries served]
 **Case study themes**: [what outcomes they highlight]
-**Review ratings**:
-- G2: [rating] ([count] reviews)
-- Capterra: [rating] ([count] reviews)
+**Review ratings** (each with the site's category and the newest review's date; flag as stale if more than 12 months old):
+- G2: [rating] ([count] reviews), category: [category], newest review: [date]
+- TrustRadius: [score] ([count]), category: [category], newest review: [date]
+- Capterra: [rating] ([count] reviews), newest review: [date], or "not listed"
+**Name collisions**: [similarly named products that show up when searching this name on review sites, or "none"]
 
 ---
 
 ## SEO & Content Strategy
 
-**Organic strength**:
+**Tier 1 stand-in (sitemap)**:
+- Total URLs: [count]; by section: [blog / resources / customers / "vs" pages ...]
+- Comparison ("vs") pages: [count, and which competitors they target]
+
+**Organic strength** (Tier 2: SEMrush or equivalent; otherwise "not collected: Tier 2"):
 - Estimated monthly organic traffic: [number]
 - Organic keywords (top 10): [count]
 - Organic traffic value: $[estimated]
@@ -179,10 +170,13 @@ first) and extract:
 
 ## Raw Data Sources
 
-- Homepage scraped: [date]
-- Pricing page scraped: [date]
-- SEO data pulled: [date]
-- Review data pulled: [date, sources]
+- Raw folder: `competitor-profiles/raw/[slug]/[YYYY-MM-DD]/`
+- Pages checked (from `tool-reference.md` → Page Checklist): homepage [✓/not found], pricing [ ],
+  product/solutions [ ], integrations [ ], customers [ ], help center [ ], about [ ], press [ ],
+  blog/changelog [ ]
+- Reviews pulled: [sites, date; any "blocked" sources named]
+- Communities: [threads read, or "snippets only: [reason]"]
+- SEO data: [Tier 2 source + date, or "not collected: Tier 2"]
 ```
 
 **Depth default:** quick scan (At a Glance + Positioning + Pricing + SEO summary only) unless deep
@@ -193,47 +187,15 @@ checked.
 
 ---
 
-## Quick Scan
+## Baseline Profile
 
-*Source: imported from `competitor-profiling`. Abbreviated profile for when speed matters more than
-depth.*
+*Source: imported from `competitor-profiling`; added after the Skillvue run, 2026-09-23. Use when the
+research is for a named company (SKILL.md → Initial Assessment Q5).*
 
-```markdown
-# [Competitor Name] — Quick Profile
-
-**URL**: [website]
-**Generated**: [date]
-
-## At a Glance
-
-| Metric | Value |
-|--------|-------|
-| Tagline | [from homepage] |
-| Target audience | [inferred from copy] |
-| Pricing starts at | [lowest paid tier] |
-| Free tier/trial | [yes/no + details] |
-| Domain rank | [from whatever SEO tool is available this session] |
-| Est. organic traffic | [monthly] |
-| Organic keywords (top 10) | [count] |
-| Referring domains | [count] |
-
-## Positioning
-
-**Headline**: "[exact homepage headline]"
-**Subheadline**: "[exact subheadline]"
-**Positioning angle**: [1-2 sentence summary of how they position]
-
-## Pricing Summary
-
-| Tier | Price | Notable Inclusions |
-|------|-------|-------------------|
-| [tier] | [price] | [key items] |
-| [tier] | [price] | [key items] |
-
-## Key Takeaway
-
-[2-3 sentences: what makes this competitor notable, where they're strong, where they're weak]
-```
+Same template and page checklist as the Competitor Profile, run on the named company itself, with one
+change: replace **Competitive Implications for [Your Product]** with **How competitors would read
+us**: where we look weak or invisible from the outside (review-site presence and category, unsourced
+claims, inconsistent numbers, missing pages), and what a rival's sales team would say about us.
 
 ---
 
@@ -248,108 +210,9 @@ After profiling all competitors, produce a summary covering:
 3. **Positioning map** — where each competitor sits (e.g., simple↔complex, cheap↔premium)
 4. **Key takeaways** — 3-5 strategic observations from the research
 5. **Gaps and opportunities** — where the market is underserved
-
-**Comparison table format:**
-
-```markdown
-# Competitive Landscape Summary
-
-**Generated**: [date]
-**Your product**: [name]
-**Competitors profiled**: [count]
-
-## Side-by-Side Comparison
-
-| Dimension | [Your Product] | [Competitor 1] | [Competitor 2] | [Competitor 3] |
-|-----------|---------------|----------------|----------------|----------------|
-| **Tagline** | [yours] | [theirs] | [theirs] | [theirs] |
-| **Target audience** | [yours] | [theirs] | [theirs] | [theirs] |
-| **Positioning** | [angle] | [angle] | [angle] | [angle] |
-| **Starting price** | $[X]/mo | $[X]/mo | $[X]/mo | $[X]/mo |
-| **Free tier** | [yes/no] | [yes/no] | [yes/no] | [yes/no] |
-| **Domain rank** | [score] | [score] | [score] | [score] |
-| **Est. organic traffic** | [number] | [number] | [number] | [number] |
-| **Referring domains** | [count] | [count] | [count] | [count] |
-| **G2 rating** | [score] | [score] | [score] | [score] |
-| **Key strength** | [one-liner] | [one-liner] | [one-liner] | [one-liner] |
-| **Key weakness** | [one-liner] | [one-liner] | [one-liner] | [one-liner] |
-```
-
-**Positioning map format.** Choose the two axes most relevant to the market:
-
-| Market Type | X-Axis | Y-Axis |
-|-------------|--------|--------|
-| SaaS tools | Simple → Complex | Cheap → Expensive |
-| Developer tools | Low-code → Code-first | Individual → Team |
-| B2B platforms | SMB-focused → Enterprise-focused | Point solution → Platform |
-| Content tools | Template-driven → Custom | Self-serve → Managed |
-
-```markdown
-## Positioning Map
-
-**Axes**: [X-axis label] vs. [Y-axis label]
-
-                    [Y-axis high label]
-                           │
-                           │
-          [Competitor A]   │    [Competitor B]
-                           │
-    ───────────────────────┼───────────────────────
-    [X-axis low]           │           [X-axis high]
-                           │
-          [Your Product]   │    [Competitor C]
-                           │
-                    [Y-axis low label]
-
-### Interpretation
-- [1-2 sentences about what the map reveals]
-- [where the whitespace / opportunity is]
-```
-
----
-
-## Competitive SWOT
-
-*Source: imported from `competitor-profiling`. Per-competitor SWOT relative to your product.*
-
-```markdown
-## SWOT: [Competitor] vs. [Your Product]
-
-### Strengths (theirs vs. ours)
-- [Where they genuinely outperform us — be honest]
-
-### Weaknesses (theirs vs. ours)
-- [Where they fall short compared to us — with evidence]
-
-### Opportunities (for us)
-- [Gaps in their offering we can exploit]
-- [Segments they're ignoring]
-- [Messaging angles they're missing]
-
-### Threats (from them)
-- [Areas where they're improving fast]
-- [Features they're building that overlap with us]
-- [Market moves that could shift perception]
-```
-
----
-
-## Change Log
-
-*Source: imported from `competitor-profiling`. Append to the bottom of any profile when updating it.*
-
-```markdown
----
-
-## Change Log
-
-| Date | What Changed | Source |
-|------|-------------|--------|
-| [date] | Pricing increased from $X to $Y | Pricing page re-scrape |
-| [date] | Launched [feature] | Changelog scrape |
-| [date] | Domain rank changed from X to Y | SEO tool re-pull |
-| [date] | Added [integration] | Integrations page re-scrape |
-```
+6. **Findability comparison** — one table, baseline company included: sitemap URLs, "vs" pages, and G2 /
+   TrustRadius / Capterra presence with category and newest review date. *(Added after the Skillvue
+   run, 2026-09-23.)*
 
 ---
 
