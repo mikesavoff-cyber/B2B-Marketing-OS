@@ -1,6 +1,6 @@
 # Market Intelligence Scan
 
-Purpose: track the industry/category level, not any named competitor. This is a different job from `market-competitive-intel-research.md` — that file answers "what are these five companies doing," this one answers "what's happening in the category itself" (regulation, funding climate, category-wide narrative shifts). Genuinely separate, feeds the same brief, doesn't replace or duplicate the competitor-specific work.
+Purpose: track the industry/category level, not any named competitor. This is a different job from `skills/product-marketing/competitor-research/SKILL.md` — that skill answers "what are these companies doing" or "what does this market look like right now," this one answers "what's changed in the category since last time" (regulation, funding climate, category-wide narrative shifts) on an ongoing watchlist cadence. Genuinely separate, feeds the same brief, doesn't replace or duplicate the research skill.
 
 **Why this exists as its own file rather than a step inside the competitor workflow:** a question like "what's happening in the AI-hiring-assessment category broadly" is a valid, standalone thing to ask, independent of any specific competitor list — bolting it onto a competitor-named file would blur two different jobs.
 
@@ -27,7 +27,7 @@ For each watchlisted source: check its latest content (archive/latest-articles p
 
 ## Step 4 — Output
 
-A short market-intelligence note: watchlist sources actually checked this cycle, what's new, why it matters to the target's category, and — if anything found here changes how a specific tracked competitor should be read — a flag back to that competitor's profile (produced by the `competitor-research` skill) rather than duplicating the finding in two places.
+A short market-intelligence note: watchlist sources actually checked this cycle, what's new, why it matters to the target's category, and — if anything found here changes how a specific tracked competitor should be read — a flag back to that competitor's profile (produced by `skills/product-marketing/competitor-research/SKILL.md`) rather than duplicating the finding in two places.
 
 ## Cadence
 
@@ -41,5 +41,4 @@ Monthly by default — same rhythm as the competitor-specific newsletter, but ru
 
 ## Related
 
-- `market-competitive-intel-research.md` — the competitor-specific workflow this feeds. Findings here that bear on a specific tracked competitor get flagged there, not duplicated.
-- `skills/product-marketing/competitor-research/SKILL.md` — the per-company research unit this file is explicitly *not* a substitute for.
+- `skills/product-marketing/competitor-research/SKILL.md` — the market/competitor research skill this feeds and is explicitly *not* a substitute for. Findings here that bear on a specific tracked competitor get flagged there, not duplicated.

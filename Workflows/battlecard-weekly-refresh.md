@@ -1,8 +1,8 @@
 # Battlecard Weekly Refresh (automated)
 
-Purpose: keep the battlecards produced by `market-competitive-intel-research.md` (Step 5) current, on a recurring schedule, without a human re-running the whole research workflow from scratch each time.
+Purpose: keep battlecards for the tracked competitor set current, on a recurring schedule, without a human re-running the full research skill (`skills/product-marketing/competitor-research/SKILL.md`) from scratch each time.
 
-This is a separate, downstream workflow. It does not identify new competitors, does not replace Step 1's human-confirmed competitor list, and does not run unattended without ever surfacing findings to a human — it's a diff-and-alert process, not a silent auto-editor.
+This is a separate, downstream workflow. It does not identify new competitors, does not replace the human-confirmed tracked list, and does not run unattended without ever surfacing findings to a human — it's a diff-and-alert process, not a silent auto-editor.
 
 **Input:** the confirmed competitor list and the current battlecard set from the parent workflow. This workflow starts only after that one has produced at least one real battlecard set — it has nothing to refresh otherwise.
 
