@@ -182,7 +182,7 @@ ready-to-use versions of each are in `references/templates.md`; tool-by-tool exe
   `references/templates.md`)* — the default for a plain "research/profile [company]" request that
   isn't scoped to one of the audience-specific deliverables below. Quick scan by default; deep profile
   only if requested or 3 or fewer competitors are in scope.
-- **Summary document** *(same import)* — after profiling more than one competitor.
+- **Summary document** *(same import)* — after profiling more than one competitor. `references/templates.md` also carries the rest of that skill's output format: the page-by-page extraction table, Quick Scan, side-by-side comparison, positioning map, Competitive SWOT, and Change Log.
 - **Insight ledger** — the always-on running log (columns above).
 - **Battlecard** (sales/marketing) — quick dismiss first, then email template, then everything else.
 - **Newsletter** (product/C-suite) — table-of-contents first, per-item structure, three-question filter.
