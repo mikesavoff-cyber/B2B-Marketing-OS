@@ -11,7 +11,6 @@ produce more than one deliverable unless asked.
 
 ## Contents
 - Competitor Profile *(imported from `competitor-profiling`)*
-- Baseline Profile *(imported from `competitor-profiling`)*
 - Summary Document *(imported from `competitor-profiling`)*
 - Insight Ledger
 - Battlecard
@@ -106,21 +105,15 @@ that don't map to a specific audience deliverable below.*
 **Named customers**: [list notable logos]
 **Industries**: [primary industries served]
 **Case study themes**: [what outcomes they highlight]
-**Review ratings** (each with the site's category and the newest review's date; flag as stale if more than 12 months old):
-- G2: [rating] ([count] reviews), category: [category], newest review: [date]
-- TrustRadius: [score] ([count]), category: [category], newest review: [date]
-- Capterra: [rating] ([count] reviews), newest review: [date], or "not listed"
-**Name collisions**: [similarly named products that show up when searching this name on review sites, or "none"]
+**Review ratings**:
+- G2: [rating] ([count] reviews)
+- Capterra: [rating] ([count] reviews)
 
 ---
 
 ## SEO & Content Strategy
 
-**Tier 1 stand-in (sitemap)**:
-- Total URLs: [count]; by section: [blog / resources / customers / "vs" pages ...]
-- Comparison ("vs") pages: [count, and which competitors they target]
-
-**Organic strength** (Tier 2: SEMrush or equivalent; otherwise "not collected: Tier 2"):
+**Organic strength**:
 - Estimated monthly organic traffic: [number]
 - Organic keywords (top 10): [count]
 - Organic traffic value: $[estimated]
@@ -170,13 +163,10 @@ that don't map to a specific audience deliverable below.*
 
 ## Raw Data Sources
 
-- Raw folder: `competitor-profiles/raw/[slug]/[YYYY-MM-DD]/`
-- Pages checked (from `tool-reference.md` → Page Checklist): homepage [✓/not found], pricing [ ],
-  product/solutions [ ], integrations [ ], customers [ ], help center [ ], about [ ], press [ ],
-  blog/changelog [ ]
-- Reviews pulled: [sites, date; any "blocked" sources named]
-- Communities: [threads read, or "snippets only: [reason]"]
-- SEO data: [Tier 2 source + date, or "not collected: Tier 2"]
+- Homepage scraped: [date]
+- Pricing page scraped: [date]
+- SEO data pulled: [date]
+- Review data pulled: [date, sources]
 ```
 
 **Depth default:** quick scan (At a Glance + Positioning + Pricing + SEO summary only) unless deep
@@ -184,18 +174,6 @@ profiling is requested or 3 or fewer competitors are in scope — matches this s
 1/Tier 2 depth split. Fields with no data available this session should say so plainly (e.g. "not
 collected — [tool] unavailable this session"), never left as an unfilled placeholder pretending to be
 checked.
-
----
-
-## Baseline Profile
-
-*Source: imported from `competitor-profiling`; added after the Skillvue run, 2026-09-23. Use when the
-research is for a named company (SKILL.md → Initial Assessment Q5).*
-
-Same template and page checklist as the Competitor Profile, run on the named company itself, with one
-change: replace **Competitive Implications for [Your Product]** with **How competitors would read
-us**: where we look weak or invisible from the outside (review-site presence and category, unsourced
-claims, inconsistent numbers, missing pages), and what a rival's sales team would say about us.
 
 ---
 
@@ -210,9 +188,6 @@ After profiling all competitors, produce a summary covering:
 3. **Positioning map** — where each competitor sits (e.g., simple↔complex, cheap↔premium)
 4. **Key takeaways** — 3-5 strategic observations from the research
 5. **Gaps and opportunities** — where the market is underserved
-6. **Findability comparison** — one table, baseline company included: sitemap URLs, "vs" pages, and G2 /
-   TrustRadius / Capterra presence with category and newest review date. *(Added after the Skillvue
-   run, 2026-09-23.)*
 
 ---
 
