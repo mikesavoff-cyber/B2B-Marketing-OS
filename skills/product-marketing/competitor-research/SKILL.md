@@ -7,12 +7,14 @@ description: >-
   the task involves "competitive intelligence," "competitor research,"
   "gathering competitive insights," "who are our competitors," "competitive
   landscape," "battlecard," "competitive newsletter," "win/loss program," or
-  "track our competitors." Built entirely from the 10-lesson Competitive
-  Intel course in `Product Marketing/Competitive Intel/` — every rule in this
-  file traces to a specific lesson quote. Nothing here comes from outside
-  that source.
+  "track our competitors," "research competitors for [company]," or "profile
+  our own company against competitors." Built from the 10-lesson Competitive
+  Intel course in `Product Marketing/Competitive Intel/` — every course rule
+  traces to a lesson quote. Rules from outside the course are marked inline
+  with their provenance (imported from `competitor-profiling`, or added after
+  a real failed run).
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Competitive Intelligence
@@ -40,6 +42,10 @@ Before researching, confirm:
    applies (*Gathering Insights: Enterprise*).
 4. **One-off research, or an ongoing program?** An ongoing program needs the insight-cataloging system
    below; a one-off doesn't.
+5. **Is this research for a named company?** If yes, profile that company first as the baseline, with
+   the same template and checklist, so every competitor finding has something to compare against.
+   *(Imported from `competitor-profiling`; added after the Skillvue run, 2026-09-23, where the
+   baseline surfaced the strongest findings: 0 G2 reviews, wrong category, a Capterra name collision.)*
 
 ## Core Principles
 
@@ -96,9 +102,10 @@ the deliverable must say "not collected this run" instead.
 ```
 competitor-profiles/
 ├── raw/
-│   └── <competitor-slug>/
+│   └── <competitor-slug>/      # also one for the baseline company, if Initial Assessment Q5 applies
 │       └── <YYYY-MM-DD>/
-│           ├── scrapes/    # homepage.md, pricing.md, product.md, ...
+│           ├── scrapes/    # _sitemap-urls.txt, homepage.md, pricing.md, product.md, ...
+│           ├── news/       # funding, M&A, launches: the leadership lane's raw material
 │           ├── reviews/    # g2.md, trustradius.md, capterra.md, ... — the actual filtered/quoted
 │           │                 review text, not just a star rating
 │           └── community/  # reddit.md, quora.md, ... — actual quoted threads, or an explicit
@@ -112,6 +119,12 @@ Startups & Mid-Market*): `reviews/g2.md` must contain the actual review text pul
 1-3 stars and searching by a relevant keyword, with reviewer/date where shown — not an aggregate rating
 copied from a search snippet. A star rating alone does not satisfy this file's purpose.
 
+**When a source blocks the agent** (CAPTCHA, 403, "verification required"): never solve the
+CAPTCHA. Save a raw note saying the source was blocked, mark it "not collected" in the deliverable,
+fall back in order G2 → TrustRadius → Capterra, and ask the user to pass the check themselves if that
+source is critical. *(Added after the Skillvue run, 2026-09-23: G2 blocked 3 of 5 review pulls
+mid-run and the skill had no fallback.)*
+
 **Never create the date folder retroactively to make a shortcut look compliant** — if the raw file
 doesn't already exist when the deliverable is being written, the research wasn't actually done yet; go
 do it, or mark the source as not collected.
@@ -120,9 +133,20 @@ do it, or mark the source as not collected.
 
 ### Tier 1 — Free & affordable resources (default)
 
+**Step 0 — map the site, then read the page checklist.** Pull the sitemap before reading any page, then
+read the checklist pages for each audience question below. Procedure and checklist:
+`references/tool-reference.md` → *Page Checklist*. *(Imported from `competitor-profiling`; added
+after the Skillvue run, 2026-09-23, where reading only homepage + pricing missed HireVue's
+internal-mobility page and every competitor's integrations.)*
+
 **Marketing/Sales question — how is this competitor *perceived*?**
 - **Homepage** — read positioning directly from the copy (worked example: HubSpot's "learn and grow"
   copy reads as "a growth tool primarily for startups or small businesses").
+- **Customers / case studies page** — where proof lives; the homepage almost never carries it.
+- **Findability check** — review-site presence and the category each site files them under
+  (G2, TrustRadius, Capterra), name collisions in review-site search, and sitemap page counts
+  (including "vs"/comparison pages). A free Tier 1 stand-in for search footprint, not a replacement
+  for SEMrush. *(Imported from `competitor-profiling`; added after the Skillvue run, 2026-09-23.)*
 - **G2 / TrustRadius** — "like Yelp for B2B software." Technique: "filter down to only 1 to 3 star
   reviews... The search bar can also be used to find reviews that include specific keywords," sorted
   by most recent. Named caveat: review incentives ("$10 Amazon gift cards") produce a share of
@@ -134,6 +158,8 @@ do it, or mark the source as not collected.
 **Product question — how is this competitor *used*?**
 - **The competitor's own customer knowledge center** (not the homepage) — FAQs, UI screenshots,
   walkthroughs.
+- **Solutions / product pages and the integrations page** — what they actually cover and plug into.
+  *(Added after the Skillvue run, 2026-09-23.)*
 - **G2/TrustRadius, filtered to feature-specific feedback** rather than general sentiment.
 - **Google Alerts** — free, keyword-based: "type in a few keywords... Google will automatically
   populate a preview." Customizable by frequency, source, language, region, and delivery email.
@@ -183,6 +209,8 @@ ready-to-use versions of each are in `references/templates.md`; tool-by-tool exe
   isn't scoped to one of the audience-specific deliverables below. Quick scan by default; deep profile
   only if requested or 3 or fewer competitors are in scope.
 - **Summary document** *(same import)* — after profiling more than one competitor.
+- **Baseline profile** *(same import)* — the named company's own profile when Initial Assessment Q5
+  applies. Same template; see `references/templates.md` → *Baseline Profile*.
 - **Insight ledger** — the always-on running log (columns above).
 - **Battlecard** (sales/marketing) — quick dismiss first, then email template, then everything else.
 - **Newsletter** (product/C-suite) — table-of-contents first, per-item structure, three-question filter.
@@ -235,6 +263,12 @@ skill runs from inside the company rather than researching it.
   a given session (no paid account, no standing relationship) — that's a real ceiling, not something a
   better prompt fixes; say so rather than faking the data.
 - Never ship the maximal deliverable set when a smaller one was asked for.
+- Never say a competitor lacks a capability unless its solutions/product pages from the page
+  checklist were read. Otherwise write "not yet checked." *(Added after the Skillvue run, 2026-09-23:
+  HireVue was called hiring-only while its site had an internal-mobility page.)*
+- Every review rating cites the date of the newest review behind it, and is flagged as stale if that
+  review is more than 12 months old. *(Added after the Skillvue run, 2026-09-23: a TrustRadius score
+  whose newest review was from Dec 2023 was reported as current sentiment.)*
 
 ## Task-Specific Questions
 

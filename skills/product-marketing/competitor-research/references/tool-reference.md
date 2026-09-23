@@ -6,6 +6,7 @@ next-best resource in the same tier; don't guess at data a missing tool would ha
 
 ## Contents
 - Tier 1: Free & Affordable Tools
+- Page Checklist
 - Tier 2: Paid & Enterprise Tools
 - Win/Loss Tools
 - Content & Distribution Tools
@@ -31,6 +32,37 @@ Source: *Gathering Insights: Startups & Mid-Market*.
   "Show Options."
 - **LinkedIn Premium — Insights tab** — employee headcount trend over ~18 months, as a revenue-health
   proxy for privately held competitors.
+
+*Not from the course. Imported from `competitor-profiling` or added after the Skillvue run, 2026-09-23:*
+- **Sitemap + robots.txt** — free site map. Read `/robots.txt` for `Sitemap:` lines, else try
+  `/sitemap.xml` and `/sitemap_index.xml`; follow nested sitemaps. Save the URL list to
+  `scrapes/_sitemap-urls.txt`. Page counts per section (blog, resources, "vs" pages) are the Tier 1
+  stand-in for search footprint.
+- **Capterra** — third review source after G2 and TrustRadius. Also used in the findability check:
+  search the company name and note name collisions.
+- **Company help centers** — the public help center or support site (often `help.`, `support.`, or a
+  Zendesk domain). Some are candidate-only; say so rather than treating that as the customer knowledge
+  base.
+
+---
+
+## Page Checklist
+
+*Imported from `competitor-profiling` Phase 1; added after the Skillvue run, 2026-09-23.* Map the site
+first (sitemap above), then read these pages. Mark each "checked" or "not found" in the profile's Raw
+Data Sources.
+
+| Page | Answers which audience question | Why |
+|---|---|---|
+| Homepage | Perceived | Positioning, headline claims |
+| Pricing | Perceived + used | Tiers, packaging, billing model |
+| Product / solutions pages | Used | What it actually covers; required before claiming a competitor lacks X |
+| Integrations page | Used | What it plugs into |
+| Customers / case studies | Perceived | Where proof lives; homepages rarely carry it |
+| Help center / knowledge base | Used | How it really works: billing, setup, validation, limits |
+| About / company | Trending | Founding, team, offices, funding |
+| Press / news page | Trending | Launches, partnerships, rounds |
+| Blog index + changelog | Trending | Content cadence and product direction |
 
 ## Tier 2: Paid & Enterprise Tools
 
@@ -95,12 +127,16 @@ Source: *Organizing a Competitive Marketing Campaign*.
 
 ### Standing up Tier 1 research (default, per competitor)
 ```
-1. Homepage → positioning read
-2. G2/TrustRadius → filter 1-3 star, keyword search, sort recent
-3. Social communities → search "[competitor] reddit" or equivalent
-4. Competitor's own knowledge center → product-lane detail
-5. Subscribe: Google Alerts on 2-3 keyword combinations
-6. LinkedIn Premium Insights (if available) → headcount trend
+0. Baseline → if researching for a named company, run steps 1-8 on it first
+1. Sitemap → map the site, save _sitemap-urls.txt, note page counts per section
+2. Page checklist → read the pages for each audience question (Page Checklist above)
+3. G2/TrustRadius → filter 1-3 star, keyword search, sort recent; record the newest review's date
+   (if blocked: TrustRadius → Capterra; never solve a CAPTCHA; ask the user if critical)
+4. Findability → review-site presence + category per site, name collisions, "vs" page count
+5. Social communities → search "[competitor] reddit" or equivalent
+6. Competitor's own knowledge center → product-lane detail
+7. News → funding, M&A, launches; subscribe: Google Alerts on 2-3 keyword combinations
+8. LinkedIn Premium Insights (if available) → headcount trend
 ```
 
 ### Upgrading to Tier 2 (once proven out / budget allows)
@@ -132,3 +168,13 @@ Source: *Organizing a Competitive Marketing Campaign*.
 | Interview timing too far past deal close | Reach out within ~3 weeks; beyond that, recall degrades — filter by opportunity-closed date |
 | Newsletter item runs long | Cap at under 1000 characters — length intimidates the reader and hides the "so what" |
 | Battlecard overloaded with detail | Quick dismiss (2-3 sentences) goes first — that's what 95% of readers actually want |
+
+*Added after the Skillvue run, 2026-09-23 (not from the course):*
+
+| Issue | What to do |
+|---|---|
+| Review site shows a CAPTCHA / "verification required" mid-run | Don't solve it. Save a "blocked" note, fall back G2 → TrustRadius → Capterra, ask the user to pass the check if the source is critical |
+| Reddit blocks scrapers and API calls | Save search-result snippets labeled as leads, not read threads; say the threads weren't opened |
+| Review base is stale (e.g. HireVue on TrustRadius: newest review Dec 2023) | Cite the newest review's date next to every rating; flag it as stale if more than 12 months old |
+| Sitemap `lastmod` dates look uniform (e.g. TestGorilla regenerates daily) | Don't read them as publishing cadence; use page counts instead |
+| Obvious domain is parked or wrong (e.g. talentware.com vs talentware.ai) | Confirm the real domain via search before scraping; record the wrong one as a finding |
