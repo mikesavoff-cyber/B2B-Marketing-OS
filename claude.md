@@ -28,11 +28,14 @@ Capable of full strategy → tactics → execution, end to end.
 - `agents/`
   → built. Six function agents: `b2b-marketing-director` (orchestrator — receives every request first, routes, sequences, and gates every step on approval) plus five leads (`product-marketing-lead`, `gtm-lead`, `growth-lead`, `content-lead`, `demand-gen-lead`). Each agent file carries its own lane, grounding pointers, skill list, and output contract. `agents.md` is the operating-model summary these implement.
 
-- `Skills/`
-  → placeholder only — currently an empty file, no skills built yet. This is the next thing to build, one skill per function, grouped by agent. Some agent files (e.g. `product-marketing-lead.md`) already name skills they intend to use (competitive-market-intelligence, segmentation-icp, positioning) — those are designed-but-not-yet-present, not available to run.
+- `skills/`
+  → one skill per function, grouped by agent: `skills/<function>/<skill>/` holding `SKILL.md` + `references/` + `evals/`. **Built:** `product-marketing/competitor-research`. Every other skill named in agent files (e.g. segmentation-icp, positioning) is designed-but-not-yet-present, not available to run.
 
 - `Workflows/`
-  → currently holds only the MKT1 prompt-library CSV. No workflow files exist yet — workflows get added here once skills exist to chain together.
+  → the MKT1 prompt-library CSV, plus `battlecard-weekly-refresh.md` and `market-intelligence-scan.md` (both extend `competitor-research`). More workflows get added as skills exist to chain together.
+
+- `competitor-profiles/`
+  → where created artifacts live for now (profiles, summaries, reports, and their `raw/` evidence). Created on first run; not committed by default.
 
 - **Knowledge base** (unchanged, stays at repo root by function):
   - `Product Marketing/` — competitive intel, ICP & personas, messaging, positioning, pricing & packaging, product launches, segmentation, storytelling
@@ -104,7 +107,7 @@ Owns demand generation strategy and execution. No dedicated knowledge base yet (
 ---
 # Skill Usage
 
-Skills are not yet built — each agent (`product-marketing`, `gtm`, `growth`, `content`, `demand-gen`) will have multiple skills of its own, and the top-level B2B Marketing Agent orchestrator will have its own skills too.
+One skill is built (`competitor-research`); the rest are planned — each agent (`product-marketing`, `gtm`, `growth`, `content`, `demand-gen`) will have multiple skills of its own, and the top-level B2B Marketing Agent orchestrator will have its own skills too.
 
 Agents do not silently decide when to use a skill. For every task or prompt:
 1. Analyze and understand the task at hand.
@@ -115,10 +118,10 @@ Agents do not silently decide when to use a skill. For every task or prompt:
 ---
 # Skills
 
-`Skills/` is an empty placeholder — nothing is built yet. Building these out is the next step. List below is planned, inferred from the knowledge base and from what each agent file already names as skills it intends to use.
+`skills/` holds built skills. Each entry below is marked **built** or planned; planned ones are inferred from the knowledge base and from what each agent file already names as skills it intends to use.
 
 ## product-marketing
-- `pmm-competitive-market-intelligence` — market & competitive research; produces the Market & Competitive Reality artifact that gates all downstream PM work
+- `competitor-research` **(built)** — competitor research by audience (perceived / used / trending), Tier 1/Tier 2 resources, competitor profiles, battlecards, newsletters; `skills/product-marketing/competitor-research/`
 - `pmm-segmentation-icp` — segmentation & ICP definition; produces the ICP Profile
 - `pmm-positioning` — positioning statement; who it's for, what it beats, why it's different
 - `messaging` — message architecture and canvas
@@ -150,7 +153,7 @@ Agents do not silently decide when to use a skill. For every task or prompt:
 # Workflow Usage
 
 For any task:
-1. Check whether a relevant workflow already exists in `/workflows` for it.
+1. Check whether a relevant workflow already exists in `Workflows/` for it.
 2. If none exists, check whether the available skills could be chained into a workflow worth suggesting — and suggest it.
 3. If neither applies, optionally suggest a new workflow idea for Mike to consider building.
 
@@ -216,7 +219,7 @@ Each skill's `## Grounding` section hardcodes the paths it always needs. For any
 
 ## Project state vs. knowledge
 - **Knowledge** = methodology in the KB folders. Static, shared across projects.
-- **Project state** = approved outputs of prior steps, one addressable location per project (`Artifacts/<company>/` or the project's Notion tree).
+- **Project state** = approved outputs of prior steps, one addressable location per project. For now that's `competitor-profiles/` in this repo (or the project's Notion tree).
 - Every skill names the prior artifacts it requires at their addresses. A missing required artifact is the gate: it means the prior step hasn't run or been approved — surface that to Mike, don't work around it.
 
 ## Index maintenance
