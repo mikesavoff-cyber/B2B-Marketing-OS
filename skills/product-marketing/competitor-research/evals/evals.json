@@ -1,5 +1,5 @@
 {
-  "skill_name": "market-competitive-intelligence",
+  "skill_name": "competitor-research",
   "evals": [
     {
       "id": 1,
@@ -120,6 +120,55 @@
         "Saves real quoted review text with dates to a raw file before the deliverable cites it",
         "Does not present a bare star rating as equivalent to having done the filtered-review technique",
         "States plainly when review content could not actually be pulled, rather than faking it"
+      ],
+      "files": []
+    },
+    {
+      "id": 11,
+      "prompt": "Research HireVue as a competitor to [our company]. Does it support internal mobility, or is it hiring-only?",
+      "expected_output": "Should map the site and read HireVue's product/solutions pages (from the Page Checklist in references/tool-reference.md) before answering. If a solutions page covers internal mobility, should say so and cite it. Should NOT call HireVue 'hiring-only' based on the homepage alone. If the solutions pages could not be read, should say 'not yet checked' rather than asserting absence. Regression test for the Skillvue run (2026-09-23), where HireVue was called hiring-only while its site had an internal-mobility page.",
+      "assertions": [
+        "Reads product/solutions pages before making any 'lacks X' claim",
+        "Cites the specific page when a capability is found",
+        "Says 'not yet checked' instead of asserting absence when pages weren't read",
+        "Does not infer capability scope from the homepage alone"
+      ],
+      "files": []
+    },
+    {
+      "id": 12,
+      "prompt": "What's HireVue's reputation on TrustRadius and G2?",
+      "expected_output": "Should report each rating with its review count, the category the site files HireVue under, and the date of the newest review behind it. Should flag any rating whose newest review is more than 12 months old as stale and avoid presenting it as current sentiment. Should not rank competitors by a stale score. Regression test for the Skillvue run (2026-09-23), where a TrustRadius score whose newest review was from Dec 2023 was reported as 'the weakest in the set'.",
+      "assertions": [
+        "Every rating includes review count, site category, and newest-review date",
+        "Ratings with a newest review older than 12 months are flagged as stale",
+        "Does not rank or compare competitors on stale scores without the caveat",
+        "Ratings come from the review page itself, not a search snippet"
+      ],
+      "files": []
+    },
+    {
+      "id": 13,
+      "prompt": "Run competitor research for [our company] against its top competitors.",
+      "expected_output": "Should recognize the research is for a named company (Initial Assessment Q5) and produce a Baseline Profile of that company first, using the same template and page checklist, with 'How competitors would read us' in place of Competitive Implications. Should include the findability check for the baseline and each competitor: review-site presence and category on G2, TrustRadius and Capterra, name collisions, and sitemap page counts including 'vs' pages. The summary should include the findability comparison table with the baseline included.",
+      "assertions": [
+        "Produces a Baseline Profile of the named company before or alongside competitor profiles",
+        "Runs the findability check (review-site presence + category, name collisions, page counts)",
+        "Summary includes a findability comparison table that contains the baseline",
+        "Labels sitemap page counts as a Tier 1 stand-in, not as SEO traffic data"
+      ],
+      "files": []
+    },
+    {
+      "id": 14,
+      "prompt": "Pull the G2 reviews for [Competitor]. (During the run, G2 shows a CAPTCHA / 'verification required' page.)",
+      "expected_output": "Should not attempt to solve or bypass the CAPTCHA. Should save a raw note that G2 was blocked, mark G2 as 'not collected' in the deliverable, and fall back to TrustRadius, then Capterra, applying the same 1-3 star + keyword technique where the site allows. If G2 is critical to the task, should ask the user to pass the verification themselves and offer to resume. Should not substitute a search-snippet rating for the blocked page. Regression test for the Skillvue run (2026-09-23), where G2 blocked 3 of 5 review pulls mid-run.",
+      "assertions": [
+        "Does not solve or try to bypass the CAPTCHA",
+        "Saves a raw 'blocked' note and marks the source 'not collected'",
+        "Falls back to TrustRadius, then Capterra",
+        "Asks the user to pass the check if the source is critical",
+        "Does not substitute a search-snippet rating"
       ],
       "files": []
     }
