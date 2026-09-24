@@ -1,0 +1,67 @@
+{
+  "skill_name": "market-segmentation",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Segment the market for Skillvue (skillvue.ai). We'll use this to pick an ICP.",
+      "expected_output": "Answers the four influencing factors (B2B vs B2C, top-down vs bottoms-up, company stage, corporate strategy) before choosing types. Picks segmentation types with a stated reason, defaulting to firmographic plus technographic for B2B. Produces 4 or fewer segments, each with defining attributes, source, competitors in the segment (from competitor-research output if present), and a MASA check. Since there is no customer access, labels the map a hypothesis built from public sources and names the survey that would validate it. Opens with one sentence naming the lead segment. Hands off to icp-definition.",
+      "assertions": [
+        "Answers all four influencing factors before choosing types",
+        "Produces 4 or fewer segments",
+        "Each segment has a MASA check",
+        "Labels the map a hypothesis because no survey or usage data exists",
+        "Uses competitor-research output for per-segment competitors if it exists",
+        "Opens with a one-sentence call",
+        "Hands off to icp-definition"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "We've got 9 customer segments right now and marketing is spread thin. Help.",
+      "expected_output": "Applies the 4-or-fewer rule and states it explicitly. Collapses or deprioritizes segments using MASA and size, and flags that anything beyond 4 is a separate segmentation effort. Warns about segments that are too small or specialized. Does not simply reformat all 9.",
+      "assertions": [
+        "States the limit of 4 segments or fewer",
+        "Uses MASA or size to collapse or cut segments",
+        "Does not return all 9 segments reformatted",
+        "Warns about segments that are too small"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Write me a segmentation survey for our customers.",
+      "expected_output": "Uses the survey template. Opens with structured filter questions (firmographic or demographic), then questions for the chosen segmentation types with structured answers, then a small number of open-ended questions. Answer options are mutually exclusive and collectively exhaustive. Around 15 questions. Asks which segmentation types matter if not stated.",
+      "assertions": [
+        "Opens with structured filter questions",
+        "Most answers are structured, not free-form",
+        "Answer options are mutually exclusive and collectively exhaustive",
+        "Around 15 questions"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "What's technographic segmentation and should a B2B SaaS use it?",
+      "expected_output": "Defines technographic segmentation as grouping by technologies used. Explains it is often overlooked and valuable when the product only works with specific tools. Names data sources (DataFox, BuiltWith, enrichment tools). Gives the Dooly Salesforce-login example. Short answer, no full segment map.",
+      "assertions": [
+        "Defines it as technologies used",
+        "Names at least one data source from the course",
+        "Gives a concrete example",
+        "Does not produce a full segment map for a definitional question"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Build our buyer personas and segment the market for us.",
+      "expected_output": "Does the segmentation and stops at segments. States that people-level persona work belongs to buyer-personas and hands off, instead of producing personas inside the segment map.",
+      "assertions": [
+        "Produces the segment map",
+        "Does not produce full buyer personas inside this skill",
+        "Explicitly hands off persona work to buyer-personas"
+      ],
+      "files": []
+    }
+  ]
+}
