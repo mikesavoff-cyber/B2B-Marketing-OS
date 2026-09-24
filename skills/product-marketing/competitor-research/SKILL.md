@@ -290,6 +290,9 @@ Only ask if not already answered:
   (regulation, funding climate, category narrative), not a substitute for this skill or vice versa.
 - `Workflows/battlecard-weekly-refresh.md` — keeps this skill's battlecards current between full
   research passes.
+- **Feeds** `market-segmentation` (competitors per segment), `icp-definition` (M3 competitors and
+  competitive framing), `buyer-personas` (alternatives buyers compare), and `account-scoring`
+  (competitor tech-installed signals). Its Final Research Output is their input.
 
 ## Final Research Output (always the last step)
 

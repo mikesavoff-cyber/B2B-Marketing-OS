@@ -29,7 +29,7 @@ Capable of full strategy → tactics → execution, end to end.
   → built. Six function agents: `b2b-marketing-director` (orchestrator — receives every request first, routes, sequences, and gates every step on approval) plus five leads (`product-marketing-lead`, `gtm-lead`, `growth-lead`, `content-lead`, `demand-gen-lead`). Each agent file carries its own lane, grounding pointers, skill list, and output contract. `agents.md` is the operating-model summary these implement.
 
 - `skills/`
-  → one skill per function, grouped by agent: `skills/<function>/<skill>/` holding `SKILL.md` + `references/` + `evals/`. **Built:** `product-marketing/competitor-research`. Every other skill named in agent files (e.g. segmentation-icp, positioning) is designed-but-not-yet-present, not available to run.
+  → one skill per function, grouped by agent: `skills/<function>/<skill>/` holding `SKILL.md` + `references/` + `evals/`. **Built:** `product-marketing/competitor-research`, `market-segmentation`, `icp-definition`, `buyer-personas`, `account-scoring`. Every other skill named in agent files (e.g. positioning) is designed-but-not-yet-present, not available to run.
 
 - `Workflows/`
   → the MKT1 prompt-library CSV, plus `battlecard-weekly-refresh.md` and `market-intelligence-scan.md` (both extend `competitor-research`). More workflows get added as skills exist to chain together.
@@ -107,7 +107,7 @@ Owns demand generation strategy and execution. No dedicated knowledge base yet (
 ---
 # Skill Usage
 
-One skill is built (`competitor-research`); the rest are planned — each agent (`product-marketing`, `gtm`, `growth`, `content`, `demand-gen`) will have multiple skills of its own, and the top-level B2B Marketing Agent orchestrator will have its own skills too.
+Five product-marketing skills are built (`competitor-research`, `market-segmentation`, `icp-definition`, `buyer-personas`, `account-scoring`); the rest are planned — each agent (`product-marketing`, `gtm`, `growth`, `content`, `demand-gen`) will have multiple skills of its own, and the top-level B2B Marketing Agent orchestrator will have its own skills too.
 
 Agents do not silently decide when to use a skill. For every task or prompt:
 1. Analyze and understand the task at hand.
@@ -122,7 +122,10 @@ Agents do not silently decide when to use a skill. For every task or prompt:
 
 ## product-marketing
 - `competitor-research` **(built)** — competitor research by audience (perceived / used / trending), Tier 1/Tier 2 resources, competitor profiles, battlecards, newsletters; `skills/product-marketing/competitor-research/`
-- `pmm-segmentation-icp` — segmentation & ICP definition; produces the ICP Profile
+- `market-segmentation` **(built)** — split the market into ≤4 segments tested for MASA; `skills/product-marketing/market-segmentation/`
+- `icp-definition` **(built)** — data validation, MKT1 maturity, M1/M2/M3 energy, MOAT PLG fit, buyer architecture; produces the ICP profile; `skills/product-marketing/icp-definition/`
+- `buyer-personas` **(built)** — five rings of buying insights, buying committee, interview guide, buyer profiles; `skills/product-marketing/buyer-personas/`
+- `account-scoring` **(built)** — 0-100 fit model, A/B/C/D tiers, 1/1/1 plays, Pipeline Weather Report; `skills/product-marketing/account-scoring/`
 - `pmm-positioning` — positioning statement; who it's for, what it beats, why it's different
 - `messaging` — message architecture and canvas
 - `storytelling-sales-narratives` — story structure, promised land, villain framing
