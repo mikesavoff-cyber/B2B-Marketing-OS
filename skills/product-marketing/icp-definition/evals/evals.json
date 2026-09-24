@@ -1,0 +1,68 @@
+{
+  "skill_name": "icp-definition",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Define the ICP for Skillvue (skillvue.ai).",
+      "expected_output": "Checks for and uses the competitor-research output for Skillvue (M3 competitors, competitive framing), or states it is missing. Runs all five steps in order. Since there is no customer data, marks every segment Hypothesis and writes 'not available, external research' in Data Validation instead of guessing. Produces the ICP definition sentence, a priority map with at least one Future segment, a signal table, and one profile per prioritized segment. MOAT flags follow Wes Bush (mid-market alone is Green). Opens with a one-sentence call including who NOT to target. Hands off to buyer-personas and account-scoring.",
+      "assertions": [
+        "Uses or explicitly checks for competitor-research output",
+        "Every segment is marked Hypothesis because there is no customer data",
+        "Data Validation fields say 'not available' rather than inventing numbers",
+        "Includes at least one Future segment",
+        "Includes the four-part ICP definition sentence",
+        "MOAT flags follow Wes Bush's book, not the older summary",
+        "Opens with a one-sentence call naming who not to target",
+        "Hands off to buyer-personas and account-scoring"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Our ICP is B2B SaaS companies with 50-500 employees. Is that good?",
+      "expected_output": "Says no, directly. It is an industry label, not an ICP: it can't be tested or falsified. Explains the Role + Company Type rule, the start-with-energy point (M1/M2/M3 before firmographics), and the ICP definition sentence. Asks for, or proposes, how to narrow it using best-customer vs DQ-lead signals.",
+      "assertions": [
+        "States directly that the definition is too broad",
+        "Cites the 'industry label, not an ICP' or falsifiability rule",
+        "Recommends starting with energy (M1/M2/M3) rather than firmographics",
+        "Proposes the best-customer vs DQ-lead signal comparison to narrow it"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "We're mid-market, customers already use spreadsheets for this, and onboarding takes a 2-week implementation. Should we go PLG?",
+      "expected_output": "Runs MOAT per Wes Bush. Market: mid-market = Green (not Yellow). Ocean: they already do the activity, so likely red ocean = Green. Adoption: needs assessment. Touch-to-value: 2-week implementation = high-touch; Red if value requires it, with the point that it is fixable. Also names this as M2 (kinetic energy, spreadsheets as the workaround). Gives a when-and-how answer, not a yes/no.",
+      "assertions": [
+        "Flags mid-market as Green, per Wes Bush",
+        "Flags the 2-week implementation as high-touch and says it is fixable",
+        "Identifies the spreadsheet workaround as M2",
+        "Answers when and how, not a bare yes or no"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "We have 3 customers in healthcare who love us. Make healthcare our Core segment.",
+      "expected_output": "Pushes back: 3 customers is Hypothesis (0-4), not enough to promote. Cites the rule that 5 similar paying customers is a real signal and 10+ is strong. Asks about the other confirmation signals (retention, usage, NPS, cycle length) and whether the enthusiasm is real or polite. Keeps healthcare at Testing until the checklist passes.",
+      "assertions": [
+        "Refuses to promote to Core on 3 customers",
+        "Cites the 5 / 10+ customer thresholds",
+        "Asks for retention, usage, NPS, or cycle-length evidence",
+        "Keeps the segment at Testing"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Give me detailed buyer personas with interview quotes for our ICP.",
+      "expected_output": "Maps the buying roles (economic, user, technical, champion) at the ICP level and stops. States that detailed personas and interview quotes belong to buyer-personas and hands off, instead of inventing persona quotes.",
+      "assertions": [
+        "Maps the four buying-committee roles",
+        "Does not invent persona interview quotes",
+        "Hands off to buyer-personas"
+      ],
+      "files": []
+    }
+  ]
+}

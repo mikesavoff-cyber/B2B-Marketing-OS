@@ -1,0 +1,67 @@
+{
+  "skill_name": "buyer-personas",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Build buyer personas for Skillvue's ICP.",
+      "expected_output": "Reads the icp-definition output to get the segment and buying roles, or states it is missing. Recognizes there is no buyer access and runs Preliminary mode: five rings built from public buyer voice (reviews, community, case studies, job posts), each point sourced, the whole profile labeled Hypothesis. No invented quotes. Includes the buying committee map, one profile per role, and an interview plan plus guide to validate. Opens with a one-sentence call naming the persona that matters most. Hands off to messaging with the messaging input table.",
+      "assertions": [
+        "Uses or checks for icp-definition output",
+        "Runs Preliminary mode and labels profiles Hypothesis",
+        "Every ring point cites a public source",
+        "Contains no invented buyer quotes",
+        "Includes an interview plan and guide",
+        "Covers all five rings per profile",
+        "Opens with a one-sentence call"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Write me an interview guide for persona research with HR directors.",
+      "expected_output": "Produces a story-framed guide mapped to the five rings (priority initiatives, success factors, perceived barriers, buyer's journey, decision criteria), with open-ended questions, 'why' follow-ups, and specific-information-source probes. Notes: neutral interviewer (not sales), record, 8-10 interviews per persona.",
+      "assertions": [
+        "Guide is mapped to all five rings",
+        "Questions are open-ended, not yes/no",
+        "Includes a probe for specific information sources",
+        "States the interviewer should not be from sales",
+        "States 8-10 interviews per persona"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Can our sales team run the persona interviews? They talk to buyers all day.",
+      "expected_output": "Says no, citing the lesson: buyers open up when they know they're not being sold to, so use a neutral party. Adds that sales is still a useful internal source for a first pass.",
+      "assertions": [
+        "Says sales should not run the interviews",
+        "Gives the reason: buyers open up to a neutral party",
+        "Mentions sales as a valid internal information source"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "We did 9 interviews with CFOs. Here are the transcripts. Turn them into a persona.",
+      "expected_output": "Runs Interview mode. Marks each transcript against the five rings, pulls real quotes, and builds a buyer profile with top considerations per ring and a supporting quote each. Uses only quotes that appear in the transcripts. Does not produce messaging, content, or product gaps unless asked; offers them as the next step.",
+      "assertions": [
+        "Maps findings to all five rings",
+        "Uses only quotes present in the transcripts",
+        "Produces the buyer profile format",
+        "Does not generate the apply-personas deliverables unless asked"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Use our personas to write messaging and 3 content ideas that address their objections.",
+      "expected_output": "Applies Bringing it All Together: a customer-needs list from the first four rings (not the buyer's journey), a separate capabilities list, matched with proof points. Then 3 content pieces, each addressing one perceived barrier, with a title and description.",
+      "assertions": [
+        "Builds needs from the first four rings, de-emphasizing the buyer's journey",
+        "Matches needs to capabilities with proof",
+        "Produces exactly 3 content ideas, each tied to one perceived barrier"
+      ],
+      "files": []
+    }
+  ]
+}

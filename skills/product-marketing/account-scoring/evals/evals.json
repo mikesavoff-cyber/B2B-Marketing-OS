@@ -1,0 +1,66 @@
+{
+  "skill_name": "account-scoring",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Build an account scoring model for Skillvue and tier their market.",
+      "expected_output": "Reads icp-definition output for the signal table, or states it is missing. Recognizes there is no CRM access: drafts signals from public data, labels the model an untested hypothesis, does not let tiers drive spend, and marks Measurement N/A. States weights and cutoffs as the skill's judgment. Builds the tier map with one 1/1/1 play for A and one for B, and C/D waste rules. Opens with a one-sentence call. Never invents pipeline numbers.",
+      "assertions": [
+        "Uses or checks for icp-definition output",
+        "Labels the model an untested hypothesis",
+        "Marks Measurement N/A due to no CRM access",
+        "States weights and cutoffs as its own judgment",
+        "Includes one 1/1/1 play for tier A and one for tier B",
+        "Includes C/D waste-elimination rules",
+        "Contains no invented pipeline or conversion numbers"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Here's our list of 15 best customers and 15 DQ leads with firmographics. Build the scoring model.",
+      "expected_output": "Finds positive and negative signals by contrast, discarding traits both lists share. Weights them into a 0-100 model with stated reasoning. Tests it: best customers should score high (A/B) and DQ leads mostly C/D. Reports the test result and re-weights if needed. Sets tier cutoffs from where the test separated the groups.",
+      "assertions": [
+        "Discards traits shared by both lists",
+        "Produces a 0-100 model with weights and reasoning",
+        "Tests the model against both lists and reports the result",
+        "Derives tier cutoffs from the test separation"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "A big enterprise account scored C in our model but sales really wants to go after it with ABM. Should we?",
+      "expected_output": "Says no targeted spend, per the source: a low-scoring enterprise account lacks a strong business need, so cut waste. Offers to check whether the model is missing a signal for this account (re-test) rather than overriding the tier ad hoc.",
+      "assertions": [
+        "Advises against targeted ABM spend on a C account",
+        "Cites fit over size",
+        "Suggests re-checking the model rather than an ad hoc override"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Set up a weekly report on how our target accounts are progressing.",
+      "expected_output": "Produces the Pipeline Weather Report: intro, a Sunny/Cloudy/Rainy forecast per A and B tier, leading indicators week over week (meetings, engaged accounts, stage moves), and lagging indicators (opportunities, pipeline, closed-won). Notes that MQLs count only from target accounts. Mentions the TAM penetration view and executive slide as the monthly layer.",
+      "assertions": [
+        "Includes a forecast per tier using sunny/cloudy/rainy",
+        "Includes both leading and lagging indicators",
+        "Counts MQLs only from target accounts",
+        "Mentions the TAM penetration view or executive slide"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Write an ABM play for our A-tier accounts.",
+      "expected_output": "Produces one play card with exactly one message, one audience (one segment inside tier A, not 'all A accounts'), and one offer, plus channels, teams, expected CAC, and desired outcome. Refuses to write one play covering all A accounts with several messages.",
+      "assertions": [
+        "Picks one segment inside tier A as the audience",
+        "Has exactly one message and one offer",
+        "Includes channels, teams, expected CAC, and outcome"
+      ],
+      "files": []
+    }
+  ]
+}
