@@ -3,35 +3,47 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "Segment the market for Skillvue (skillvue.ai). We'll use this to pick an ICP.",
-      "expected_output": "Answers the four influencing factors (B2B vs B2C, top-down vs bottoms-up, company stage, corporate strategy) before choosing types. Picks segmentation types with a stated reason, defaulting to firmographic plus technographic for B2B. Produces 4 or fewer segments, each with defining attributes, source, competitors in the segment (from competitor-research output if present), and a MASA check. Since there is no customer access, labels the map a hypothesis built from public sources and names the survey that would validate it. Opens with one sentence naming the lead segment. Hands off to icp-definition.",
+      "prompt": "Segment the market for Skillvue (skillvue.ai). We'll use this to define ICPs, buyer profiles, and positioning.",
+      "expected_output": "States the market in scope as the whole target market (enterprises with 1,000+ employees, any industry, Italy then Europe), not just industries where Skillvue has customers. Answers the four influencing factors. Cuts the market by buying situation (population or decision plus the buyer who owns it), with industries listed as 'where you find them.' Produces 4 or fewer segments, each with definition, where you find them, how to recognize them, problem, trigger, who's involved, current alternatives (from competitor-research), how Skillvue fits with customers as examples, how to attack it, and a MASA check. Does not rank segments or pick a lead. Includes how the segments relate. Labels the map a hypothesis. Hands prioritization to icp-definition.",
       "assertions": [
-        "Answers all four influencing factors before choosing types",
-        "Produces 4 or fewer segments",
+        "Market in scope covers the whole target market, not only industries with existing customers",
+        "Segments cut across industries, with industries as 'where you find them'",
+        "Does not rank segments, pick a lead, or drop a segment for lack of proof",
+        "Each segment has a 'how to attack it' section",
+        "Each segment names buyer, users, and influencers",
         "Each segment has a MASA check",
-        "Labels the map a hypothesis because no survey or usage data exists",
-        "Uses competitor-research output for per-segment competitors if it exists",
-        "Opens with a one-sentence call",
-        "Hands off to icp-definition"
+        "Uses competitor-research output for current alternatives",
+        "Hands prioritization to icp-definition"
       ],
       "files": []
     },
     {
       "id": 2,
       "prompt": "We've got 9 customer segments right now and marketing is spread thin. Help.",
-      "expected_output": "Applies the 4-or-fewer rule and states it explicitly. Collapses or deprioritizes segments using MASA and size, and flags that anything beyond 4 is a separate segmentation effort. Warns about segments that are too small or specialized. Does not simply reformat all 9.",
+      "expected_output": "Applies the 4-or-fewer rule and states it. Consolidates the 9 into 4 or fewer by buying situation, using MASA to merge overlapping ones (same buyer, same trigger). Does not decide which one marketing should focus on; hands that decision to icp-definition.",
       "assertions": [
         "States the limit of 4 segments or fewer",
-        "Uses MASA or size to collapse or cut segments",
-        "Does not return all 9 segments reformatted",
-        "Warns about segments that are too small"
+        "Consolidates by buyer and trigger, using MASA",
+        "Does not pick a focus segment itself",
+        "Hands the focus decision to icp-definition"
       ],
       "files": []
     },
     {
       "id": 3,
+      "prompt": "All our customers are in retail. Map our market.",
+      "expected_output": "Maps the whole target market, not just retail. Uses the retail customers as examples inside a segment. Says existing customers are examples, not the boundary, and that a startup's job is to win new segments and then build proof.",
+      "assertions": [
+        "Includes segments beyond retail",
+        "Uses the retail customers as examples inside a segment",
+        "Does not limit the map to where proof exists"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
       "prompt": "Write me a segmentation survey for our customers.",
-      "expected_output": "Uses the survey template. Opens with structured filter questions (firmographic or demographic), then questions for the chosen segmentation types with structured answers, then a small number of open-ended questions. Answer options are mutually exclusive and collectively exhaustive. Around 15 questions. Asks which segmentation types matter if not stated.",
+      "expected_output": "Uses the survey template. Opens with structured filter questions, then questions for the chosen segmentation types with structured answers, then a few open-ended questions. Answer options are mutually exclusive and collectively exhaustive. Around 15 questions.",
       "assertions": [
         "Opens with structured filter questions",
         "Most answers are structured, not free-form",
@@ -41,24 +53,23 @@
       "files": []
     },
     {
-      "id": 4,
-      "prompt": "What's technographic segmentation and should a B2B SaaS use it?",
-      "expected_output": "Defines technographic segmentation as grouping by technologies used. Explains it is often overlooked and valuable when the product only works with specific tools. Names data sources (DataFox, BuiltWith, enrichment tools). Gives the Dooly Salesforce-login example. Short answer, no full segment map.",
+      "id": 5,
+      "prompt": "Which of our segments should we go after first?",
+      "expected_output": "Explains that this skill maps and defines segments but doesn't prioritize them, and that the decision belongs to icp-definition (deal data, size, company goals). Offers to run icp-definition, or to build the segment map first if none exists.",
       "assertions": [
-        "Defines it as technologies used",
-        "Names at least one data source from the course",
-        "Gives a concrete example",
-        "Does not produce a full segment map for a definitional question"
+        "Does not pick a segment",
+        "Routes the decision to icp-definition",
+        "Offers the next step"
       ],
       "files": []
     },
     {
-      "id": 5,
+      "id": 6,
       "prompt": "Build our buyer personas and segment the market for us.",
-      "expected_output": "Does the segmentation and stops at segments. States that people-level persona work belongs to buyer-personas and hands off, instead of producing personas inside the segment map.",
+      "expected_output": "Does the segmentation, naming the buyer, users, and influencers in each segment, and stops there. States that people-level persona work belongs to buyer-personas and hands off.",
       "assertions": [
         "Produces the segment map",
-        "Does not produce full buyer personas inside this skill",
+        "Names roles per segment without building full personas",
         "Explicitly hands off persona work to buyer-personas"
       ],
       "files": []
