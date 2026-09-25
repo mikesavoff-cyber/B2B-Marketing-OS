@@ -1,18 +1,20 @@
 ---
 name: market-segmentation
 description: >-
-  Split a company's market into a small set of usable customer segments, and
-  decide which segmentation types to use. Use whenever the task involves
-  "segment our market," "customer segmentation," "market segments," "how
-  should we segment," "which segments exist," "firmographic" or
-  "technographic segmentation," "segmentation survey," or "break the market
-  into groups." Produces a segment map of 4 or fewer segments, each tested
-  as measurable, accessible, substantial, and actionable. Feeds icp-definition,
-  buyer-personas, and account-scoring. Built from the Segmentation and
-  Persona Research course in `Product Marketing/Segmentation & Persona Research/`.
+  Map and define the segments in a company's whole target market: who each
+  segment is, what triggers them to buy, who is involved, what they use today,
+  and how to attack it. Use whenever the task involves "segment our market,"
+  "customer segmentation," "market segments," "how should we segment," "which
+  segments exist," "map our market," "segmentation survey," or "break the
+  market into groups." Produces a segment map of 4 or fewer segments that cut
+  across industries, each tested as measurable, accessible, substantial, and
+  actionable. Does not rank segments or pick a lead: that decision belongs to
+  icp-definition. Feeds icp-definition, buyer-personas, account-scoring,
+  positioning, and messaging. Built from the Segmentation and Persona Research
+  course in `Product Marketing/Segmentation & Persona Research/`.
 allowed-tools: Read Write Edit Bash WebSearch WebFetch
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Market Segmentation
@@ -21,95 +23,126 @@ metadata:
 (*Course Introduction*). The goal is to avoid "boiling the ocean" and find groups "you can easily
 pursue with targeted and efficient strategies."
 
+## Map the market, don't rank it
+
+*Added after the Skillvue run, 2026-09-25. The first map led with the industry where Skillvue
+already had customers, and Mike rejected it: "you shouldn't prioritize industries and verticals only
+based on whether you have proof in them — that's the whole point of a startup — to win those and
+then do the proof."*
+
+- The map defines and describes segments. It does not rank them, pick a lead, or drop a segment
+  because the company has no customers there yet.
+- The market in scope is the **whole target market** (for example, "enterprises with 1,000+
+  employees, any industry"), not the industries the company has already sold into.
+- Existing customers show up as **examples** inside a segment, never as its boundary.
+- Choosing where to go first belongs to `icp-definition`, which has the data to make that call.
+- Early companies need "bigger segments" because they are "still learning" (*Understanding
+  Segmentation*). A few broad segments, each big enough to learn in, beat narrow niches.
+
 ## Inputs
 
 - **Company name and URL.** Required.
-- **`competitor-research` final output**, if one exists for this company
-  (`competitor-profiles/<company>-competitive-research-<date>.md`). Each segment has its own
-  competitors: "for each segment, there's a different set of competition, a different set of
-  players" (*Understanding Segmentation*). Use it to name the competitors per segment.
-- **Any existing segmentation.** "Most businesses naturally segment their market" (*Understanding
-  Segmentation*). Start from what they already do, then test it.
+- **The market in scope:** size threshold, geographies, and expansion path. Take it from the user
+  or the company's own site (offices, languages, "European enterprises"). Ask if it's unclear.
+- **`competitor-research` final output**, if one exists
+  (`competitor-profiles/<company>-competitive-research-<date>.md`). "For each segment, there's a
+  different set of competition" (*Understanding Segmentation*). Use it to fill each segment's
+  Current alternatives.
+- **Any existing segmentation.** "Most businesses naturally segment their market." Read the
+  company's own solutions page and customer-story filters first: they show how it already slices
+  the market.
 
 ## Initial Assessment
 
 Four factors decide how to segment (*Understanding Segmentation*). Answer each before choosing types:
 
-1. **B2B or B2C?** B2B skews to firmographic, technographic, and some psychographic data. B2C skews
-   to behavioral and geographic.
-2. **Top-down or bottoms-up?** Top-down starts from a commercial goal ("where can we actually hit
-   that revenue target?"). Bottoms-up starts from how individuals think about buying.
-3. **Company stage.** Early-stage companies get bigger, broader segments: they are resource
-   constrained and "still learning." Mature companies look for niche emerging segments.
-4. **Corporate strategy.** Disrupting an existing category means segments are "pretty defined."
-   Creating a new category means "a lot more research" to find them.
+1. **B2B or B2C?** B2B uses company traits to recognize segments. Role-level detail belongs to
+   `buyer-personas`.
+2. **Top-down or bottoms-up?** Top-down starts from a revenue goal. Bottoms-up starts from how
+   buyers experience the problem.
+3. **Company stage.** Early-stage companies get a few broad segments. Mature companies look for
+   niche emerging ones.
+4. **Corporate strategy.** Disrupting an existing category means buyers already shop for
+   alternatives. Creating a new category means "a lot more research" to find the segments.
 
-## The Five Segmentation Types
+## How to cut the market
 
-Demographic, behavioral, psychographic, geographic, and firmographic + technographic
-(*Segmentation Deep Dives*). "It's not going to be one or none. It's probably going to be a mix of
-a few." Attributes, benefits, data sources, and examples for each type:
-`references/segmentation-types.md`.
+The five types are demographic, behavioral, psychographic, geographic, and firmographic +
+technographic (*Segmentation Deep Dives*). "It's probably going to be a mix of a few." Attributes,
+data sources, and examples: `references/segmentation-types.md`.
 
-For B2B, firmographic + technographic is the default backbone. Technographic ("technologies used")
-is "often overlooked" and valuable when the product only works with certain tools.
+**B2B default** *(added after the Skillvue run, 2026-09-25)*: cut by **buying situation**, not
+industry. A buying situation is the population or decision a company is trying to fix, plus the
+buyer who owns it. One large company usually holds several buying situations at once, each with
+its own trigger, budget owner, need, and competitors.
+- **Behavioral** (the decision being made and what triggers the purchase) is the main cut.
+- **Firmographic** (size, workforce or org shape) is how you recognize each segment from outside.
+- **Geographic** maps the expansion path.
+- **Technographic** is usually a fit signal for `account-scoring`, not a segment on its own.
+- Industries go inside each segment as "where you find them."
+
+The course's own advice supports cutting this way: "Be creative and experimental... don't be afraid
+to slice your customer segments in ways that you haven't tried before" (*How to Build Segments*).
 
 ## Process: Five Steps
 
 From *How to Build Segments*:
 
 1. **Preliminary research.** Ask customers "a combination of open-ended and structured questions."
-   "Simply talking to your customers is extremely valuable and helps you get to insights quicker."
-2. **Decide the segmentation types.** "There's no hard and fast rule here." Pick from the Initial
-   Assessment and the five types.
-3. **Gather the data.** Instrumented usage, website analytics, third-party databases, and surveys.
-   Survey rules: open with the demographic or firmographic filter questions your team agreed on,
-   keep answers structured, and make options "mutually exclusive and collectively exhaustive."
-   Survey skeleton: `references/templates.md` → *Segmentation Survey*.
-4. **Identify the segments.** "Limit yourself to four segments or less." More than four is
-   "another segmentation effort altogether." "Be creative and experimental." "Take your time. This
-   is the hardest part of the process."
+   With no customer access, use public sources: solutions pages, customer stories, industry pages,
+   job posts, and `competitor-research` output.
+2. **Decide the segmentation types.** Use the Initial Assessment and the B2B default above.
+3. **Gather the data.** Instrumented usage, analytics, databases, and surveys. Survey rules: open
+   with filter questions, keep answers structured, and make options "mutually exclusive and
+   collectively exhaustive." Survey skeleton: `references/templates.md` → *Segmentation Survey*.
+4. **Identify the segments.** "Limit yourself to four segments or less." "Be creative and
+   experimental." "Take your time. This is the hardest part of the process."
 5. **Test and iterate.** Every segment must pass MASA:
-   - **Measurable:** can you tell whether someone is in the segment from the data?
-   - **Accessible:** can you reach and act on this data?
-   - **Substantial:** can this segment actually buy your product?
-   - **Actionable:** segments are ideally mutually exclusive and collectively exhaustive.
+   - **Measurable:** can you tell from data or public signals who is in it?
+   - **Accessible:** can you reach its buyers?
+   - **Substantial:** is it big enough, and able to buy?
+   - **Actionable:** is it distinct, with a different buyer or trigger from the others?
 
 ## Common Mistakes
 
 From *How to Build Segments*:
 
-- **Wrong size.** Too small or specialized gives messaging "no room to breathe." You want
-  one-to-many, not one-to-one.
+- **Wrong size.** Too small or specialized gives messaging "no room to breathe."
 - **Frozen segments.** "You're not going to define a set of segments and they're going to stay
-  static forever." Set a revisit cadence.
+  static forever."
 - **Ignoring new personas.** "Be aware that new types of people may be entering your business
   audience."
+- **Segmenting by where the proof is** *(Skillvue run, 2026-09-25)*: that draws the map around
+  past sales, not the market.
 
 ## Output
 
 One file: `competitor-profiles/<company>-segment-map-<YYYY-MM-DD>.md`, built from
 `references/templates.md` → *Segment Map*. It holds:
 
-1. **The call.** One sentence naming the segment to lead with and the one to deprioritize.
-2. **Segmentation approach.** The four factors and the types chosen, with the reason for each.
-3. **Segment map.** 4 segments or fewer. Each gets a name, defining attributes, estimated size,
-   data source, competitors in this segment, and a MASA check.
+1. **How to read this map:** the market in scope, how it's cut and why, the four factors, and the
+   types used. State plainly that the map doesn't rank segments.
+2. **Up to 4 segments.** Each gets a definition; where you find them (industries); how to recognize
+   them from outside; the problem they're trying to fix; what triggers a purchase; who's involved
+   (buyer, users, influencers); current alternatives; how the company fits, with customer examples;
+   how to attack it (entry point, message, buyer); and a MASA check.
+3. **How the segments relate:** different buyers and budgets, the land-and-expand path between
+   segments, and how competition changes by segment.
 4. **Open questions**, each naming the evidence that would resolve it.
-5. **Hands off to:** `icp-definition` (which segments to prove and prioritize), `buyer-personas`
-   (who sits inside each segment), and `account-scoring` (firmographic and technographic
-   attributes to score on).
+5. **Hands off to:** `icp-definition` (which segment and geography to go after first),
+   `buyer-personas` (the roles named in each segment), `account-scoring` (the signals that
+   recognize each segment), and positioning and messaging (the entry message per segment).
 
 ## Constraints
 
-- Every segment attribute cites its source: a survey, a database, usage data, a live page, or
-  `competitor-research` output. An attribute with no source is marked **[Hypothesis]**.
-- For arm's-length research with no customer access, no survey or usage data exists. Build the
-  map from public sources (the company's solutions and customer pages, review-site filters,
-  job posts) and label the whole map a hypothesis to validate with a survey.
+- **Never rank the segments, pick a lead, or drop a segment for lack of proof.** Prioritization
+  belongs to `icp-definition`.
+- Every segment claim cites its source: a live page, a survey, a database, or `competitor-research`
+  output. Company claims (stats, customer counts) are labeled as the company's own.
+- For arm's-length research with no customer access, label the whole map a hypothesis and name the
+  survey or conversations that would validate it.
 - Never exceed 4 segments in one map.
-- Segmentation is not personas. A segment is "a portion of your market." A persona is "the people
-  that might make up that segment" (*Buyer Personas*). Stop at the segment and hand people-level
+- Segmentation is not personas. Name the roles involved in each segment, then hand the people-level
   work to `buyer-personas`.
 
 ## Grounding
@@ -119,7 +152,7 @@ One file: `competitor-profiles/<company>-segment-map-<YYYY-MM-DD>.md`, built fro
 
 ## Related skills
 
-- `competitor-research`: runs first. Supplies the competitors per segment.
-- `icp-definition`: next step. Proves which segments are real and prioritizes them.
-- `buyer-personas`: builds the people inside a segment.
-- `account-scoring`: turns segment attributes into a 0-100 fit score.
+- `competitor-research`: runs first. Supplies each segment's current alternatives.
+- `icp-definition`: next step. Decides which segments to go after first, and proves them.
+- `buyer-personas`: builds the people inside each segment.
+- `account-scoring`: turns each segment's recognition signals into a 0-100 fit score.
