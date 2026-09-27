@@ -61,7 +61,8 @@ Use when:
 ### pmm-positioning
 Use when:
 - ICP is approved and the question is how to frame the product against alternatives.
-- Produces: Positioning statement (who it's for, what it beats, why it's different).
+- Inputs: `icp-definition`, `market-segmentation`, and `competitor-research` outputs, plus any founder/team transcripts.
+- Produces: the positioning constitution in `competitor-profiles/` (core statement + one per situation), with working notes kept outside the project.
 
 ### Planned skills (build when a task demands them, not before)
 - `messaging`, `storytelling-sales-narratives`, `product-launch`, `pricing-packaging` — same pattern: KB method → live checkpoints where judgment is needed → validated artifact.
