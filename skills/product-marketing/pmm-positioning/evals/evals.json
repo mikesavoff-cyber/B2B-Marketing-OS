@@ -1,0 +1,122 @@
+{
+  "skill_name": "pmm-positioning",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Define the positioning for Skillvue (skillvue.ai).",
+      "expected_output": "Classifies as Case A. Checks for icp-definition, market-segmentation, and competitor-research outputs by path, and asks Mike for insider material (founder, product, or sales transcripts). States what's missing and offers to run upstream skills or proceed as hypothesis. Does not pick the best customer from where the case studies sit. Runs Stages 1-2 into the working notes, then stops at checkpoint 1 with a short chat summary: audience, situations, specific current ways, and 2-3 readings. Does not simulate interviews; any interview guide goes in the notes, not the constitution.",
+      "assertions": [
+        "Classifies the request as Case A",
+        "Checks for upstream outputs by path",
+        "Asks for insider material such as founder or product transcripts",
+        "Does not choose the audience by where the proof sits",
+        "Stops at checkpoint 1 after Stage 2 with a chat summary, not a document",
+        "Does not invent customer interview quotes",
+        "Interview guide, if produced, is in the working notes only"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Here's our positioning: 'The AI-native platform that helps revenue teams grow faster.' Is it any good?",
+      "expected_output": "Classifies as Case D. Runs the Stage 3 gates. Fails it on: no clear who (MKT1 3.5 'too broad'), 'grow faster' as a category-level outcome (MKT1 §12 Pocus principle 4), no comparator (Fletch §17 question 2), invented category language (Fletch §14 failure mode), name-swap test. Routes to Stage 2 because the comparator is missing. Does not rewrite it into a new statement without a comparator decision.",
+      "assertions": [
+        "Classifies the request as Case D",
+        "Each failure cites a specific source rule",
+        "Flags the missing comparator and routes to Stage 2",
+        "Flags 'grow faster' as a category-level outcome, not a differentiator",
+        "Does not produce a replacement statement that skips the comparator decision"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "We're a new way to do X and nobody has a budget line for it. Should we create a category called 'Autonomous X Orchestration'?",
+      "expected_output": "Reads conflicts.md entry 4. States that Dell (take the leap) and MKT1/Fletch (don't, use existing category and JTBD anchor) disagree, and that MKT1/Fletch win by default. Applies Fletch §18 budget question and §14 JTBD anchor sequence, flags the invented label as the Fletch §14 failure mode, and names what would flip the ruling. Presents the call to Mike rather than deciding.",
+      "assertions": [
+        "Names the Dell vs. MKT1/Fletch disagreement explicitly",
+        "Applies the Fletch §18 budget-line question",
+        "Recommends anchoring on an existing job to be done before any category name",
+        "States the condition under which category creation would be justified",
+        "Leaves the final call to Mike"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Write our simple promise. Make it bold, like 'Slack replaces email.'",
+      "expected_output": "Checks that Stages 1-3 are approved; if not, says Stage 4 can't start and why. If they are, drafts 3-5 options scored on Dell's six elements, and each option names the proof that backs it. Applies conflicts.md entry 6: 'feels true' does not permit claims the proof doesn't support.",
+      "assertions": [
+        "Checks for an approved Stage 3 statement before drafting",
+        "Produces 3-5 options, not one",
+        "Each option is scored against Dell's six elements",
+        "Each option names its supporting proof",
+        "Refuses bold claims with no proof, citing Fletch §20"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Our homepage says 'Turn any signal into revenue.' Audit it.",
+      "expected_output": "Case B. Pulls the live homepage, reverse-engineers the comparator, product type, who, what, and why. Runs MKT1 §12 mistakes, 3.5 signs, Dunford §9, Fletch §17 and §20, Dell L1 questions. Routes each finding to a stage via the audit table. Separates positioning findings from copy findings that belong to messaging.",
+      "assertions": [
+        "Fetches the live homepage",
+        "Reverse-engineers all five fields and flags blanks",
+        "Every finding cites a source rule",
+        "Produces a rerun plan by stage",
+        "Routes copy-only issues to messaging"
+      ],
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "Here's a transcript of my interview with Skillvue's Head of Product, plus our competitive research and segment map. Build the full positioning, Mike's not available for checkpoints.",
+      "expected_output": "Reads the transcript as class 2 insider evidence and lets it override public signals (recruiting may become free, so hiring is not the lead). Writes two files: working notes in ~/competitor-research-work/ and a constitution in competitor-profiles/ of about 150 lines at most, labeled hypothesis. The constitution has a core positioning statement and one statement per situation (hiring, reskilling and L&D, mobility and succession, performance and resourcing, restructuring, strategy and AI readiness), each with its proof or 'not yet public'. It contains no gates, source citations, interview guide, stage headers, or scoring tables.",
+      "assertions": [
+        "Two files: constitution in competitor-profiles/, notes in ~/competitor-research-work/",
+        "Constitution is about 150 lines or fewer",
+        "Constitution contains a core positioning statement",
+        "Constitution contains one statement per situation or segment",
+        "Constitution contains no gates, citations, interview guide, or scoring tables",
+        "Uses the transcript to drop hiring as the lead"
+      ],
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "Our product's data informs hiring, promotion, reskilling, performance reviews, project staffing, and layoffs. What category are we in?",
+      "expected_output": "Applies conflicts.md entry 11. Rejects any frame that covers one use case. Tests at least three frames: an existing category, an existing category plus a modifier carrying the differentiator, and the company's own label. Recommends one and gives each rejected frame one line with the reason. Keeps the landing use case in the situation statements, not the category name.",
+      "assertions": [
+        "Rejects single-use-case frames such as 'hiring assessment'",
+        "Tests at least three frames",
+        "Recommends an existing category plus a modifier, or explains why not",
+        "Gives one-line reasons for rejected frames"
+      ],
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "List what we replace. Gut feel, spreadsheets, competitors, legacy tools.",
+      "expected_output": "Refuses generic category rows. For each situation, names the specific current way: the actual spreadsheet or ritual, the named vendor, the consultancy, who does it, and why it breaks for this buyer. Applies the specificity test: any row that would fit another company's positioning is rewritten.",
+      "assertions": [
+        "Each row names a specific method, vendor, or ritual",
+        "Each row names who does it",
+        "Each row says why it breaks for this buyer",
+        "No row is a bare category like 'gut feel' or 'spreadsheets'"
+      ],
+      "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "Our differentiators are: verified data, transparent scoring, and scale. Write the why-we-win section.",
+      "expected_output": "Collapses the three into one differentiator stated as one sentence, naming the trade-off every current way accepts (accuracy or scale) and why only this product escapes it. The three items appear only as proof of how the one idea is true. Checks every 'X, not Y' contrast for near-synonyms.",
+      "assertions": [
+        "States one differentiator in one sentence",
+        "Names the trade-off current ways accept",
+        "Lists capabilities only as proof, not as separate differentiators",
+        "No near-synonym contrasts"
+      ],
+      "files": []
+    }
+  ]
+}
