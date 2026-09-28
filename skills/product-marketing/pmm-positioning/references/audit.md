@@ -6,7 +6,7 @@ Goal: diagnose existing positioning and say which stage is broken. Don't rebuild
 
 1. Dell L1: the five "do you have a positioning problem" questions.
 2. MKT1 Complete §12: five mistakes, root causes, and the Pocus teardown's six principles.
-3. MKT1 Complete §4 Step 3.5: signs positioning isn't differentiated.
+3. MKT1 guide Step 3.5: signs positioning isn't differentiated.
 4. Dunford §9: quality checks and common gaps.
 5. Fletch §17 (homepage test), §8 (anti-fluff), §15 (four ways companies outgrow positioning),
    §20 (credibility gap).
@@ -22,7 +22,7 @@ Goal: diagnose existing positioning and say which stage is broken. Don't rebuild
 3. **Run the diagnostics.** Each finding cites the source rule it fails:
    - MKT1 five mistakes (bad research, forest for the trees, kitchen sink, inside baseball,
      game of telephone).
-   - MKT1 Complete §4 Step 3.5 signs.
+   - MKT1 guide Step 3.5 signs.
    - Dunford §9 checks.
    - Fletch §17 three questions, §8 fluff test, §20 credibility question.
    - Dell L1 five questions.
@@ -37,7 +37,8 @@ Goal: diagnose existing positioning and say which stage is broken. Don't rebuild
 | Claims outrun proof | Stage 2 credibility, then Stage 3 |
 | Clear positioning, weak copy (game of telephone) | Not positioning. Hand to `messaging`. |
 | No urgency, "nice to have" reactions | Stage 4 |
-| Never tested with buyers | Stage 5 |
+| Claims collapse under a competitor's "we do that too" | Stage 5 red team, then Stage 3 |
+| Never tested with buyers | Stage 6 |
 
 ## Output
 
