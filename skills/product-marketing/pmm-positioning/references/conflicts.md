@@ -11,7 +11,7 @@ Format: the disagreement, what each school says, the ruling, and what flips the 
 
 - **Dell (L1):** Drop the positioning statement. "You should use a story rather than a
   positioning statement, because story is more effective and more memorable."
-- **MKT1 Complete §4 (Step 3):** The answer is a three-blank statement: who, what, why better. Story and brand
+- **MKT1 guide (Step 3):** The answer is a three-blank statement: who, what, why better. Story and brand
   sit in outer layers of the story stack (§5).
 - **Dunford (§5, §6):** The output is a canvas. The story appears as the sales pitch, built on
   top of the canvas.
@@ -83,7 +83,7 @@ the Fletch §1 strategy 3 risks in writing in the strategy memo.
 
 ## 5. How many differentiators?
 
-- **MKT1 Complete §4 (Steps 3, 3.5):** One. "Why it's better has 2-3 differentiators: pick one."
+- **MKT1 guide (Steps 3, 3.5):** One. "Why it's better has 2-3 differentiators: pick one."
 - **Dunford (§3):** 1-3 value themes.
 - **Dell (L6):** Superpowers, up to the top five features customers love.
 
@@ -100,7 +100,7 @@ theme.
   never actually replaced email.
 - **Fletch (§20):** Claim only what current credibility supports. "Claiming a position you
   can't back up... trains the market to distrust you."
-- **MKT1 Complete §4 (Step 3.5):** "Positioning is too aspirational: write a future positioning statement
+- **MKT1 guide (Step 3.5):** "Positioning is too aspirational: write a future positioning statement
   separately."
 
 **Ruling:** Fletch and MKT1 win. The simple promise can compress and dramatize a real
@@ -121,7 +121,7 @@ proof doesn't show. Every simple promise option in Stage 4 names the proof that 
 
 **Ruling:** This skill is structurally solo. It's an agent. So every output is **[Hypothesis]**
 until someone who talks to customers confirms it. Stage 1 names who to ask (sales, customer
-success, product). Stage 5's sales-pitch test is the substitute for Dunford's team exercise.
+success, product). Stage 5's red team and Stage 6's sales-pitch test substitute for Dunford's team exercise.
 
 **Flips when:** Mike supplies team input (call notes, a workshop output). Then the relevant
 fields can move from hypothesis to confirmed.
@@ -160,8 +160,10 @@ comparator: a villain unrelated to what you're positioned against creates two st
 
 *Ruled by Mike after the Skillvue run, 2026-09-27.*
 
-- **MKT1 Complete §4 (Step 3):** "Cannot write effective positioning for multiple audiences
-  simultaneously." Adapting positioning to each audience is messaging.
+- **MKT1 guide (Step 3):** "You can't write effective positioning for a million audiences." With
+  multiple audiences, "choose your primary audience as the focus of positioning. For the remaining
+  segments, you typically just need to refine your messaging." With multiple products, "re-run the
+  entire process."
 - **Fletch §16:** Horizontal products have product-markets-fit: each market needs its own fit.
   §4: every persona needs its own message.
 - **Mike:** Stage 3 must deliver positioning statements based on the segments (who) or the
