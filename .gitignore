@@ -3,3 +3,5 @@ competitor-profiles/
 
 # macOS
 .DS_Store
+skills/**/*.zip
+skills/**/references/vault-snapshot.md
