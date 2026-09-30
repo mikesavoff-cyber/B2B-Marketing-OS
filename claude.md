@@ -29,7 +29,7 @@ Capable of full strategy → tactics → execution, end to end.
   → built. Six function agents: `b2b-marketing-director` (orchestrator — receives every request first, routes, sequences, and gates every step on approval) plus five leads (`product-marketing-lead`, `gtm-lead`, `growth-lead`, `content-lead`, `demand-gen-lead`). Each agent file carries its own lane, grounding pointers, skill list, and output contract. `agents.md` is the operating-model summary these implement.
 
 - `skills/`
-  → one skill per function, grouped by agent: `skills/<function>/<skill>/` holding `SKILL.md` + `references/` + `evals/`. **Built:** `product-marketing/competitor-research`, `market-segmentation`, `icp-definition`, `buyer-personas`, `account-scoring`, `pmm-positioning`. Every other skill named in agent files (e.g. messaging) is designed-but-not-yet-present, not available to run.
+  → one skill per function, grouped by agent: `skills/<function>/<skill>/` holding `SKILL.md` + `references/` + `evals/`. **Built:** `product-marketing/competitor-research`, `market-segmentation`, `icp-definition`, `buyer-personas`, `account-scoring`, `pmm-positioning`; `shared/mike-voice` (cross-function). Every other skill named in agent files (e.g. messaging) is designed-but-not-yet-present, not available to run.
 
 - `Workflows/`
   → the MKT1 prompt-library CSV, plus `battlecard-weekly-refresh.md` and `market-intelligence-scan.md` (both extend `competitor-research`). More workflows get added as skills exist to chain together.
@@ -151,6 +151,9 @@ Agents do not silently decide when to use a skill. For every task or prompt:
 
 ## demand-gen
 - none yet — blocked on the planned demand-gen knowledge folder
+
+## shared (cross-function)
+- `mike-voice` **(built)** — writes or rewrites anything in Mike's voice (posts, copy, messaging, decks, enablement, resumes); retrieves his real writing and stances from the Obsidian vault; never used for positioning; `skills/shared/mike-voice/`
 
 ---
 # Workflow Usage

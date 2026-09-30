@@ -1,0 +1,132 @@
+{
+  "skill_name": "mike-voice",
+  "evals": [
+    {
+      "id": 1,
+      "name": "holdout-author",
+      "prompt": "Write a LinkedIn post about why marketing and leadership keep clashing at startups.",
+      "setup": "Holdout test. Hide 'why marketing is struggling so much.md' and 'marketing marketing to founders.md' from retrieval. Afterwards, compare the draft to the hidden notes: same stances reached? Blind-rate which one sounds more like Mike.",
+      "expected_output": "Routes to author register. Pulls a stance from the bank (e.g. 5, 6, 7) and at least one published LinkedIn post as an exemplar. Opens with a hot first line with personal stakes. Uses only biography facts from the stance bank. Ends on a line, not a summary. Names the notes it drew from.",
+      "assertions": [
+        "Routes to the author register",
+        "Reads at least one note under 'linkedin posts/'",
+        "Does not read the held-out notes",
+        "First line is a claim with stakes, not a warm-up",
+        "Sentence case, uses ' - ' and zero em-dashes",
+        "Contains no Claude tells from red-team.md section 3",
+        "Every biography fact is in the stance bank",
+        "Final paragraph does not summarize the post",
+        "Ends with a one-line list of source notes"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "copy-register",
+      "prompt": "Write a homepage hero and three supporting lines for PostHog's LLM analytics, for engineers worried about AI token spend.",
+      "expected_output": "Routes to copy register. Checks for approved messaging and, finding none, labels the draft [Hypothesis]. Writes as the engineer. Problem before product. One lead benefit. Draws on posthog/messaging ideas.md and copy/atomus.md.",
+      "assertions": [
+        "Routes to the copy register",
+        "Labels the copy [Hypothesis] or cites approved messaging",
+        "Headline is in the customer's words (token burn, cost, things breaking), not a feature label",
+        "The problem appears before the product",
+        "One benefit leads, and the others support it",
+        "At least one supporting line is a scene, not a label",
+        "No banned words"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "rewrite-ai-draft",
+      "prompt": "Rewrite my note 'competing with competitors vs competing with what customers think about them' so it sounds like me, as a LinkedIn post.",
+      "expected_output": "Recognizes the note is tagged voice-sample: false. Keeps the belief-map argument (stance 25). Strips every Claude tell. Rebuilds it in the author register from a published exemplar. Adds lived detail only from the stance bank, otherwise leaves [Mike: ...] gaps.",
+      "assertions": [
+        "Keeps the core argument: buyers carry a story about the competitor",
+        "Removes the em-dashes and 'Here's what it means in practice' / 'That's the whole job.'",
+        "Removes the bold mini-headers",
+        "Invents no anecdote; gaps are marked [Mike: ...]",
+        "Output is shorter than the source"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "negative-positioning",
+      "prompt": "Write the positioning statement for Skillvue in my voice.",
+      "expected_output": "Does not apply the voice. Says positioning belongs to pmm-positioning and offers to run it. Once the positioning is approved, offers to use this skill for the messaging or copy built on it.",
+      "assertions": [
+        "Does not draft a positioning statement",
+        "Routes to pmm-positioning",
+        "Offers mike-voice for downstream messaging or copy"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "no-stance",
+      "prompt": "Write a LinkedIn post about whether PMMs should learn SQL.",
+      "expected_output": "Finds no matching stance in the bank. Does not draft a full post. Offers 2-3 candidate angles built from adjacent stances (e.g. 3 data without context, 13 what AI is good for, 19 generalist by force), labeled [Hypothesis], and asks which is Mike's.",
+      "assertions": [
+        "Does not produce a finished post",
+        "Says no stance on this topic is on file",
+        "Offers 2-3 angles, each tied to a named stance",
+        "Labels the angles [Hypothesis] and asks Mike to choose or give his own"
+      ],
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "resume-facts",
+      "prompt": "Write 4 resume bullets for my Tactiq role.",
+      "expected_output": "Operator register. Uses only the verified Tactiq facts: 300K to 1M+ users, messaging for launches, website scaling, lifecycle marketing, enterprise GTM from scratch. Uses no slang or emojis. Leaves [Mike: metric?] gaps where a result is missing instead of inventing numbers.",
+      "assertions": [
+        "Routes to the operator register",
+        "Contains no numbers other than 300K and 1,000,000 unless marked [Mike: ...]",
+        "Contains no slang, jokes, or emojis",
+        "Covers the enterprise GTM built from scratch",
+        "Marks missing metrics with [Mike: ...]"
+      ],
+      "files": []
+    },
+    {
+      "id": 7,
+      "name": "right-size",
+      "prompt": "Punch up this line for my post: 'Marketing teams often struggle to get buy-in from leadership.'",
+      "expected_output": "Returns 2-3 rewritten lines, with no essay and no full retrieval run. Example direction: 'The hardest part of marketing isn't the customer. It's your boss.' Adds no source list beyond one line, if any.",
+      "assertions": [
+        "Returns 3 or fewer alternative lines",
+        "Does not write a full post",
+        "Removes 'often' and the corporate phrasing",
+        "No em-dashes"
+      ],
+      "files": []
+    },
+    {
+      "id": 8,
+      "name": "vault-unreadable",
+      "prompt": "Write a short LinkedIn post about AI slop in product marketing.",
+      "setup": "Run with no filesystem access to the vault (e.g. claude.ai).",
+      "expected_output": "Says in one line that the vault isn't readable and that it's working from vault-snapshot.md. Uses stances 12-14 and pmm is not getting replaced.md from the snapshot. Otherwise meets the same bar as eval 1.",
+      "assertions": [
+        "States that it's using the snapshot",
+        "Draws on stance 12, 13, or 14",
+        "Sentence case, with no em-dashes and no Claude tells"
+      ],
+      "files": []
+    },
+    {
+      "id": 9,
+      "name": "operator-enablement",
+      "prompt": "Turn this competitor research into a one-page battle card for sales, in my voice.",
+      "expected_output": "Operator register. Structure comes from the research artifact or sales-enablement. Mike's framing shows up as the buyer's belief about the competitor (stance 25) and problem framing (stance 1). Plain declarative sentences. At most one joke. Sentence case, no em-dashes. Asks for the research file if none is given.",
+      "assertions": [
+        "Asks for or uses a research artifact and adds no new claims",
+        "Frames at least one entry as what buyers believe going in",
+        "At most one joke and no emojis",
+        "No sentence longer than 25 words"
+      ],
+      "files": []
+    }
+  ]
+}
