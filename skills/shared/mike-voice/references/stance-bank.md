@@ -40,6 +40,8 @@ If a topic isn't covered here, ask Mike. Don't extrapolate a new belief and pres
 | 31 | Growth over safety; every change is a chance to win | "Learning and growing matters more than safety" · "as a PMM, I know that every change is a chance to win." | `linkedin posts/tactiq and whats next.md` |
 | 32 | The PMM job: move messaging from what the product is to why it's worth buying | "the messaging that needs to evolve from what the product is to why it's worth buying." | `linkedin posts/tactiq and whats next.md` |
 | 33 | Compound long-term wins; don't chase trends | "focused on compounding wins in the long run instead of chasing trends." | `linkedin posts/tactiq and whats next.md` |
+| 34 | You can't audit human skills on paper. Build a culture where they show up, then notice who shines | Chosen by Mike 2026-09-29 (from [Hypothesis] built on #16/#27) for "the problem of standing out in the AI era". No verbatim quote yet | cxl-content-engine session, 2026-09-29 |
+| 35 | Every channel role leads back to a product marketing core | "the journey is the goal - my journey from content and seo, then demand gen, then marketing, and then growth made me realize none of those work without a strong product marketing core - and i also realized i've been doing product marketing all along without even knowing it" | Mike, cxl-content-engine session, 2026-09-29 |
 
 Stated but not argued yet (ask Mike before writing): emotional storytelling in B2B has "a
 specific time and place ... and it's not most people think"; defending a purchase to a CFO;
@@ -57,12 +59,13 @@ building a marketing function that drives results.
 - Currently looking for a job. Not looking for fractional roles, consulting, or short-term
   contracts.
 - Drummer, snowboarder. Jokes about becoming a boxing instructor.
+- Always the only marketer, in founder-led, dev-focused, PLG startups. (OK'd by Mike 2026-09-29)
+- Contract at a 10-20 person startup ended. He puts it down to internal politics and visibility. (OK'd by Mike 2026-09-29)
+- Career path: content and SEO, then demand gen, then marketing, then growth, before realising it was product marketing all along. (Mike, 2026-09-29)
 
 **Private** (only in unpublished notes). Don't put these in a draft. Leave
 `[Mike: OK to mention X?]` and let him decide.
 
-- Always the only marketer, in founder-led, dev-focused, PLG startups.
-- Contract at a 10-20 person startup ended. He puts it down to internal politics and visibility.
 - Went into marketing "both for money and the love of writing".
 - Has never written a brief, whitepaper, or strategy deck. One webinar.
 - Wrote the Atomus copy (a design component product for designers).
